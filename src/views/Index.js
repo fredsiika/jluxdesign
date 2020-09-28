@@ -1,16 +1,17 @@
 /*!
 
 =========================================================
-* Argon Design System React - v1.1.0
+* J Lux Design System - v1.0.1
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/argon-design-system-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
+* Product Page: https://fredsiika.github.io/jluxdesign.com
+* Copyright 2020 Fred Siika (https://www.github.com/fredsiika)
 * Licensed under MIT (https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md)
 
-* Coded by Creative Tim
+* Coded by Fred C. Siika
 
 =========================================================
+*
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
@@ -21,11 +22,12 @@ import React from "react";
 import { Container, Row } from "reactstrap";
 
 // core components
-import DemoNavbar from "components/Navbars/DemoNavbar.js";
+import HomeNavbar from "components/Navbars/HomeNavbar.js";
 import CardsFooter from "components/Footers/CardsFooter.js";
+import SimpleFooter from "components/Footers/SimpleFooter.js";
 
 // index page sections
-import Hero from "./IndexSections/Hero.js";
+import HeroSection from "../components/Heros/HeroSection.js";
 import Buttons from "./IndexSections/Buttons.js";
 import Inputs from "./IndexSections/Inputs.js";
 import CustomControls from "./IndexSections/CustomControls.js";
@@ -46,6 +48,7 @@ import Icons from "./IndexSections/Icons.js";
 import Login from "./IndexSections/Login.js";
 import Download from "./IndexSections/Download.js";
 
+
 class Index extends React.Component {
   componentDidMount() {
     document.documentElement.scrollTop = 0;
@@ -55,42 +58,46 @@ class Index extends React.Component {
   render() {
     return (
       <>
-        <DemoNavbar />
+        <HomeNavbar />
         <main ref="main">
-          <Hero />
-          <Buttons />
-          <Inputs />
+          <HeroSection />
+          {/* <Buttons />
+          <Inputs /> */}
           <section className="section">
             <Container>
-              <CustomControls />
-              <Menus />
+              {/* <CustomControls />
+              <Menus /> */}
             </Container>
           </section>
-          <Navbars />
+
+          {/* <Navbars /> */}
+
           <section className="section section-components">
             <Container>
               <Tabs />
               <Row className="row-grid justify-content-between align-items-center mt-lg">
-                <Progress />
-                <Pagination />
+                {/* <Progress /> */}
+                {/* <Pagination /> */}
               </Row>
               <Row className="row-grid justify-content-between">
-                <Pills />
-                <Labels />
+                {/* <Pills /> */}
+                {/* <Labels /> */}
               </Row>
-              <Alerts />
+              {/* <Alerts /> */}
               <Typography />
-              <Modals />
-              <Datepicker />
-              <TooltipPopover />
+              {/* <Modals /> */}
+              {/* <Datepicker /> */}
+              {/* <TooltipPopover /> */}
             </Container>
           </section>
-          <Carousel />
-          <Icons />
-          <Login />
-          <Download />
+
+          {/* <Carousel /> */}
+          {/* <Icons /> */}
+          {/* <Login /> */}
+          {/* <Download /> */}
         </main>
-        <CardsFooter />
+        {/* <CardsFooter /> */}
+        <SimpleFooter />
       </>
     );
   }
