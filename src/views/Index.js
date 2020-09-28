@@ -33,7 +33,7 @@ import Inputs from "./IndexSections/Inputs.js";
 import CustomControls from "./IndexSections/CustomControls.js";
 import Menus from "./IndexSections/Menus.js";
 import Navbars from "./IndexSections/Navbars.js";
-import Tabs from "./IndexSections/Tabs.js";
+import TabSection from "../components/all/TabSection.js";
 import Progress from "./IndexSections/Progress.js";
 import Pagination from "./IndexSections/Pagination.js";
 import Pills from "./IndexSections/Pills.js";
@@ -61,20 +61,30 @@ class Index extends React.Component {
         <HomeNavbar />
         <main ref="main">
           <HeroSection />
+          <section className="section">
+          <Container>
+            <TabSection />
+          </Container>
+          <Container className="mt-2">
+            <Services />
+          </Container>
+          </section>
+          
+          
           {/* <Buttons />
           <Inputs /> */}
-          <section className="section">
+          {/* <section className="section">
             <Container>
-              {/* <CustomControls />
-              <Menus /> */}
+              <CustomControls />
+              <Menus />
             </Container>
-          </section>
+          </section> */}
 
           {/* <Navbars /> */}
 
           <section className="section section-components">
             <Container>
-              <Tabs />
+              {/* <Tabs /> */}
               <Row className="row-grid justify-content-between align-items-center mt-lg">
                 {/* <Progress /> */}
                 {/* <Pagination /> */}
@@ -84,7 +94,7 @@ class Index extends React.Component {
                 {/* <Labels /> */}
               </Row>
               {/* <Alerts /> */}
-              <Typography />
+              {/* <Typography /> */}
               {/* <Modals /> */}
               {/* <Datepicker /> */}
               {/* <TooltipPopover /> */}
@@ -104,3 +114,31 @@ class Index extends React.Component {
 }
 
 export default Index;
+
+function Services() {
+  return (
+    <div class="container">
+      <div class="text-center">
+        <h3 class="text-muted">Services</h3>
+      </div>
+    <div class="row">
+      <div class="col">
+        <h4 class="text-primary">Distributor</h4>
+        <p class="lead">We cut out the middleman as distributors</p>
+      </div>
+      <div class="col">
+        <h4 class="text-primary">Fabricator</h4>
+        <p class="lead">Elimate additional costs and the liability of working third-party subcontractors. Our fabrication crew.</p>     
+          <h4 class="text-primary">Benefit</h4>
+          <p class="text-muted">Finding third-party subcontractors qualified to handle your project is a hit or miss.<br />
+          <p class="text-muted">Our specialized team of stone fabricators use the highest quality do one thing and one thing only. </p>
+          </p>
+        </div>
+      <div class="col">
+        <h4 class="text-primary">Installation</h4>
+        <p class="lead">Our in-house team of stone installation specialists willElimate the added cost and liability of working with a separate fabrication team</p>
+      </div>
+    </div>
+  </div>
+  );
+}
