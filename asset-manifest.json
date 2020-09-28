@@ -1,21 +1,20 @@
 {
   "files": {
-    "main.css": "/jluxdesign/static/css/main.97a7ab48.chunk.css",
-    "main.js": "/jluxdesign/static/js/main.7f9d1f83.chunk.js",
-    "main.js.map": "/jluxdesign/static/js/main.7f9d1f83.chunk.js.map",
+    "main.css": "/jluxdesign/static/css/main.97db7ae5.chunk.css",
+    "main.js": "/jluxdesign/static/js/main.40c17869.chunk.js",
+    "main.js.map": "/jluxdesign/static/js/main.40c17869.chunk.js.map",
     "runtime-main.js": "/jluxdesign/static/js/runtime-main.eb2daac2.js",
     "runtime-main.js.map": "/jluxdesign/static/js/runtime-main.eb2daac2.js.map",
-    "static/js/2.7ca06aa2.chunk.js": "/jluxdesign/static/js/2.7ca06aa2.chunk.js",
-    "static/js/2.7ca06aa2.chunk.js.map": "/jluxdesign/static/js/2.7ca06aa2.chunk.js.map",
+    "static/js/2.4b483265.chunk.js": "/jluxdesign/static/js/2.4b483265.chunk.js",
+    "static/js/2.4b483265.chunk.js.map": "/jluxdesign/static/js/2.4b483265.chunk.js.map",
     "index.html": "/jluxdesign/index.html",
-    "precache-manifest.1f8d4da06b9d633aaabed016bfb7ef4d.js": "/jluxdesign/precache-manifest.1f8d4da06b9d633aaabed016bfb7ef4d.js",
+    "precache-manifest.7deb4ea3f279b04921e2eb90f4c1ad2b.js": "/jluxdesign/precache-manifest.7deb4ea3f279b04921e2eb90f4c1ad2b.js",
     "service-worker.js": "/jluxdesign/service-worker.js",
-    "static/css/main.97a7ab48.chunk.css.map": "/jluxdesign/static/css/main.97a7ab48.chunk.css.map",
-    "static/js/2.7ca06aa2.chunk.js.LICENSE.txt": "/jluxdesign/static/js/2.7ca06aa2.chunk.js.LICENSE.txt",
-    "static/js/main.7f9d1f83.chunk.js.LICENSE.txt": "/jluxdesign/static/js/main.7f9d1f83.chunk.js.LICENSE.txt",
+    "static/css/main.97db7ae5.chunk.css.map": "/jluxdesign/static/css/main.97db7ae5.chunk.css.map",
+    "static/js/2.4b483265.chunk.js.LICENSE.txt": "/jluxdesign/static/js/2.4b483265.chunk.js.LICENSE.txt",
+    "static/js/main.40c17869.chunk.js.LICENSE.txt": "/jluxdesign/static/js/main.40c17869.chunk.js.LICENSE.txt",
     "static/media/argon-react-white.png": "/jluxdesign/static/media/argon-react-white.275a2629.png",
     "static/media/argon-react.png": "/jluxdesign/static/media/argon-react.f38ddea9.png",
-    "static/media/creativetim-white-slim.png": "/jluxdesign/static/media/creativetim-white-slim.f7cb2d39.png",
     "static/media/font-awesome.min.css": "/jluxdesign/static/media/fontawesome-webfont.fee66e71.woff",
     "static/media/github.svg": "/jluxdesign/static/media/github.4ffd4fe7.svg",
     "static/media/google.svg": "/jluxdesign/static/media/google.87be59a1.svg",
@@ -33,8 +32,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.eb2daac2.js",
-    "static/js/2.7ca06aa2.chunk.js",
-    "static/css/main.97a7ab48.chunk.css",
-    "static/js/main.7f9d1f83.chunk.js"
+    "static/js/2.4b483265.chunk.js",
+    "static/css/main.97db7ae5.chunk.css",
+    "static/js/main.40c17869.chunk.js"
   ]
 }

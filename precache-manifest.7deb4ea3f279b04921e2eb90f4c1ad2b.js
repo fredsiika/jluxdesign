@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "12d929fd0a414b927c93917941a85e1c",
+    "revision": "e74dca7d509932a869d617b8d2071ebe",
     "url": "/jluxdesign/index.html"
   },
   {
-    "revision": "b58337ddbdd9242bd12a",
-    "url": "/jluxdesign/static/css/main.97a7ab48.chunk.css"
+    "revision": "18ebbb3db399c497daf6",
+    "url": "/jluxdesign/static/css/main.97db7ae5.chunk.css"
   },
   {
-    "revision": "3008faa16df25f1f0e6a",
-    "url": "/jluxdesign/static/js/2.7ca06aa2.chunk.js"
+    "revision": "b8f1522bae02cfdfa17a",
+    "url": "/jluxdesign/static/js/2.4b483265.chunk.js"
   },
   {
     "revision": "6904dfd75471649aa9b5801f3774a8c5",
-    "url": "/jluxdesign/static/js/2.7ca06aa2.chunk.js.LICENSE.txt"
+    "url": "/jluxdesign/static/js/2.4b483265.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b58337ddbdd9242bd12a",
-    "url": "/jluxdesign/static/js/main.7f9d1f83.chunk.js"
+    "revision": "18ebbb3db399c497daf6",
+    "url": "/jluxdesign/static/js/main.40c17869.chunk.js"
   },
   {
-    "revision": "7a6956e196ccd2e4ccc8856708b02847",
-    "url": "/jluxdesign/static/js/main.7f9d1f83.chunk.js.LICENSE.txt"
+    "revision": "0a65648a903b33f77aab86c761e16fe5",
+    "url": "/jluxdesign/static/js/main.40c17869.chunk.js.LICENSE.txt"
   },
   {
     "revision": "7263707b5d6f8e031806",
@@ -34,10 +34,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f38ddea9dedadea03c5d43c596dac13f",
     "url": "/jluxdesign/static/media/argon-react.f38ddea9.png"
-  },
-  {
-    "revision": "f7cb2d390498c2969b2b1050f3e024ce",
-    "url": "/jluxdesign/static/media/creativetim-white-slim.f7cb2d39.png"
   },
   {
     "revision": "674f50d287a8c48dc19ba404d20fe713",
