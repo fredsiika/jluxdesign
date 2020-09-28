@@ -37,7 +37,8 @@ import {
 } from "reactstrap";
 
 // core components
-import DemoNavbar from "components/Navbars/DemoNavbar.js";
+// import DemoNavbar from "components/Navbars/DemoNavbar.js";
+import HomeNavbar from '../../components/Navbars/HomeNavbar';
 import CardsFooter from "components/Footers/CardsFooter.js";
 
 // index page sections
@@ -53,7 +54,8 @@ class Landing extends React.Component {
   render() {
     return (
       <>
-        <DemoNavbar />
+        {/* <DemoNavbar /> */}
+        <HomeNavbar />
         <main ref="main">
           <div className="position-relative">
             {/* shape Hero */}
@@ -74,24 +76,22 @@ class Landing extends React.Component {
                   <Row>
                     <Col lg="6">
                       <h1 className="display-3 text-white">
-                        A beautiful Design System{" "}
-                        <span>completed with examples</span>
+                        Launch the perfect home renovation project{" "}
+                        <span>Professional Countertop Stone Installation, distribution and fabrication services in the Dallas/Fort-Worth Area</span>
                       </h1>
-                      <p className="lead text-white">
-                        The design system comes with four pre-built pages to
-                        help you get started faster. You can change the text and
-                        images and you're good to go.
+                      <p className="lead text-white"> We'll help you locate, select and install your custom stone contertop and backsplash.<br />
+                      Start designing your dream home.
                       </p>
                       <div className="btn-wrapper">
                         <Button
                           className="btn-icon mb-3 mb-sm-0"
                           color="info"
-                          href="https://demos.creative-tim.com/argon-design-system-react/#/documentation/alerts?ref=adsr-landing-page"
+                          href="/services-page"
                         >
                           <span className="btn-inner--icon mr-1">
                             <i className="fa fa-code" />
                           </span>
-                          <span className="btn-inner--text">Components</span>
+                          <span className="btn-inner--text">Services</span>
                         </Button>
                         <Button
                           className="btn-white btn-icon mb-3 mb-sm-0 ml-1"
@@ -102,7 +102,7 @@ class Landing extends React.Component {
                             <i className="ni ni-cloud-download-95" />
                           </span>
                           <span className="btn-inner--text">
-                            Download React
+                            Get Started
                           </span>
                         </Button>
                       </div>
@@ -129,6 +129,7 @@ class Landing extends React.Component {
             </section>
             {/* 1st Hero Variation */}
           </div>
+
           <section className="section section-lg pt-lg-0 mt--200">
             <Container>
               <Row className="justify-content-center">
@@ -141,7 +142,7 @@ class Landing extends React.Component {
                             <i className="ni ni-check-bold" />
                           </div>
                           <h6 className="text-primary text-uppercase">
-                            Download Argon
+                            Installation
                           </h6>
                           <p className="description mt-3">
                             Argon is a great free UI package based on Bootstrap
@@ -262,12 +263,8 @@ class Landing extends React.Component {
                     <div className="icon icon-lg icon-shape icon-shape-success shadow rounded-circle mb-5">
                       <i className="ni ni-settings-gear-65" />
                     </div>
-                    <h3>Awesome features</h3>
-                    <p>
-                      The kit comes with three pre-built pages to help you get
-                      started faster. You can change the text and images and
-                      you're good to go.
-                    </p>
+                    <h3>From concept to completion</h3>
+                    <p>Professional Countertop Stone Installation, Distribution and Fabrication Services in the Dallas/Fort-Worth Area - all in one place.</p>
                     <ul className="list-unstyled mt-5">
                       <li className="py-2">
                         <div className="d-flex align-items-center">
