@@ -21,6 +21,7 @@ import { Link } from "react-router-dom";
 import Headroom from "headroom.js";
 // reactstrap components
 import {
+  Alert,
   Button,
   UncontrolledCollapse,
   DropdownMenu,
@@ -39,7 +40,7 @@ import {
   UncontrolledTooltip
 } from "reactstrap";
 
-class DemoNavbar extends React.Component {
+class HomeNavbar extends React.Component {
   componentDidMount() {
     let headroom = new Headroom(document.getElementById("navbar-main"));
     // initialise
@@ -65,9 +66,9 @@ class DemoNavbar extends React.Component {
   render() {
     return (
       <>
-        <header className="header-global">
+        <header className="navbar-global">   
           <Navbar
-            className="navbar-main navbar-transparent navbar-light headroom"
+            className="navbar-main navbar-transparent navbar-light bg-dark headroom"
             expand="lg"
             id="navbar-main"
           >
@@ -77,7 +78,7 @@ class DemoNavbar extends React.Component {
                   alt="..."
                   src={require("../../assets/img/brand/brickwall/brickwall-black-60.png")}
                 />
-                <span className="text-white">JLuxDesign</span>
+                <span className="brand dark d-inline">J Lux Design</span>
               </NavbarBrand>
               <button className="navbar-toggler" id="navbar_global">
                 <span className="navbar-toggler-icon" />
@@ -97,7 +98,7 @@ class DemoNavbar extends React.Component {
                           alt="JLuxDesign-Logo"
                           src={require("../../assets/img/brand/brickwall/brickwall-black-90.png")}
                         />
-                        <span >JLuxDesign</span>
+                        <span className="brand">J Lux Design</span>
                       </Link>
                     </Col>
                     <Col className="collapse-close" xs="6">
@@ -118,30 +119,21 @@ class DemoNavbar extends React.Component {
                     </DropdownToggle>
                     
                     <DropdownMenu>
-
+                      {/* Installation */}
                       <DropdownItem to="/installation-page" tag={Link}>
                         Installation
                       </DropdownItem>
-
+                      {/* Distribution */}
                       <DropdownItem to="/distribution-page" tag={Link}>
                         Distribution
                       </DropdownItem>
-                      
+                      {/* Fabrication */}
                       <DropdownItem to="/fabrication-page" tag={Link}>
                         Fabrication
                       </DropdownItem>
                       
                       <DropdownItem to="/landing-page" tag={Link}>
-                        Landing
-                      </DropdownItem>
-                      <DropdownItem to="/profile-page" tag={Link}>
-                        Profile
-                      </DropdownItem>
-                      <DropdownItem to="/login-page" tag={Link}>
-                        Login
-                      </DropdownItem>
-                      <DropdownItem to="/register-page" tag={Link}>
-                        Register
+                        
                       </DropdownItem>
                     </DropdownMenu>
                   </UncontrolledDropdown>
@@ -303,4 +295,4 @@ class DemoNavbar extends React.Component {
   }
 }
 
-export default DemoNavbar;
+export default HomeNavbar;

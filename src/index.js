@@ -23,16 +23,29 @@ import "assets/scss/argon-design-system-react.scss?v1.1.0";
 
 import Index from "views/Index.js";
 import Landing from "views/examples/Landing.js";
-import Login from "views/examples/Login.js";
-import Profile from "views/examples/Profile.js";
-import Register from "views/examples/Register.js";
+// import Login from "views/examples/Login.js";
+// import Profile from "views/examples/Profile.js";
+// import Register from "views/examples/Register.js";
 import About from "views/examples/About.js";
 import Contact from "views/examples/Contact.js";
 import KnowledgeBase from "views/examples/KnowledgeBase.js";
 import Services from "views/examples/Services.js";
 import Products from "views/examples/Products.js";
 
+import { Alert } from 'reactstrap'
+
+const AlertBanner = () => (
+  <>
+    <Alert className="alert-success">
+      <strong>COVID-19 Update!</strong>We are now offering Virtual Stone Selection in DFW!
+    </Alert>
+  </>
+)
+
+export default Alert
+
 ReactDOM.render(
+  <>
   <BrowserRouter>
     <Switch>
       <Route
@@ -40,18 +53,9 @@ ReactDOM.render(
           exact
           render={props => <Landing {...props} />}
         />
-      <Route path="/" exact render={props => <Index {...props} />} />
-      
-      <Route path="/login-page" exact render={props => <Login {...props} />} />
-      <Route
-        path="/profile-page"
-        exact
-        render={props => <Profile {...props} />}
-      />
-      <Route
-        path="/register-page"
-        exact
-        render={props => <Register {...props} />}
+      <Route 
+        path="/" 
+        exact render={props => <Index {...props} />} 
       />
       <Route
         path="/about"
@@ -79,7 +83,20 @@ ReactDOM.render(
         render={props => <Products {...props} />}
       />
       <Redirect to="/landing-page" />
+      {/* <Route 
+        path="/login-page" 
+        exact render={props => <Login {...props} />} 
+      /> */}
+      {/* <Route
+        path="/profile-page"
+        exact render={props => <Profile {...props} />}
+      /> */}
+      {/* <Route
+        path="/register-page"
+        exact render={props => <Register {...props} />}
+      /> */}
     </Switch>
-  </BrowserRouter>,
+  </BrowserRouter>
+  </>,
   document.getElementById("root")
 );

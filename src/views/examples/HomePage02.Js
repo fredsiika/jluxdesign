@@ -19,7 +19,7 @@
 import React from "react";
 
 // reactstrap components
-import { Container, Row, Col, Navbar, Alert } from "reactstrap";
+import { Container, Row } from "reactstrap";
 
 // core components
 import HomeNavbar from "components/Navbars/HomeNavbar.js";
@@ -47,7 +47,7 @@ import Carousel from "./IndexSections/Carousel.js";
 import Icons from "./IndexSections/Icons.js";
 import Login from "./IndexSections/Login.js";
 import Download from "./IndexSections/Download.js";
-import HeroSecondary from '../components/Heros/HeroSecondary'
+
 
 class Index extends React.Component {
   componentDidMount() {
@@ -58,12 +58,9 @@ class Index extends React.Component {
   render() {
     return (
       <>
-        <HomeNavbar />
+        <HomeNavbar className="bg-secondary"/>
         <main ref="main">
-        {/* Hero Section */}
-        <HeroSecondary />
-        {/* Alert */}
-
+          <HeroSection />
           <section className="section">
           <Container>
             <TabSection />
@@ -72,36 +69,8 @@ class Index extends React.Component {
             <Services />
           </Container>
           </section>
-
-          <section className="section">
-          <div clasName="container">
-          <Row>
-            <Col className="col-sm">
-              <Navbar className="bg-dark text-white">
-                <p className="text-white">Navbar section</p>
-              </Navbar>
-            </Col>
-            <Col className="col-sm">
-              <Navbar className="bg-secondary text-white">
-                <p className="text-white">Navbar section</p>
-              </Navbar>
-            </Col>
-            <Col className="col-sm">
-              <Navbar className="bg-warning text-white">
-                <p className="text-white">Navbar section</p>
-              </Navbar>
-            </Col>
-            </Row>
-          </div>
-          </section>
           
           
-           <Container>
-           <div class="alert alert-darker text-center" role="alert">
-          <strong className="text-info">COVID-19 Update! </strong>
-          <span className="text-white">We are now offering Virtual Stone Selection in DFW!</span>
-        </div>
-           </Container>
           {/* <Buttons />
           <Inputs /> */}
           {/* <section className="section">

@@ -27,9 +27,9 @@ class AnimatedHero extends React.Component {
         <div class="col-md-6"> 
           <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/illustration.jpg" class="illustration"> </img> 
         </div> 
-    </div> 
+      </div> 
     
-    <div class="space-110"></div> 
+      <div class="space-110"></div> 
     
       <div class="card card-plain"> 
         <div class="card-featured-content"> 
@@ -38,8 +38,7 @@ class AnimatedHero extends React.Component {
           <a href="https://www.producthunt.com/" target="_blank"> <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/who/product-hunt.jpg" style="width: 145px"> </a> 
           <a href="https://www.awwwards.com/" target="_blank"> <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/who/awwwards.jpg" style="width: 125px"> </a> 
           <a href="https://www.creativebloq.com/" target="_blank"> <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/who/creativebloq.jpg" style="width: 120px"> </a> 
-          <a href="https://speckyboy.com/" target="_blank"> <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/who/speckyboy.jpg"> </a> 
-        </div> 
+          <a href="https://speckyboy.com/" target="_blank"> <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/who/speckyboy.jpg"> </img> </a> 
         </div> 
       </div>
       </div>

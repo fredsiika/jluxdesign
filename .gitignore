@@ -9,6 +9,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .DS_Store
+*/*.DS_Store
+src/assets/img/brand/*.DS_Store
 
 # Runtime data
 pids
@@ -74,3 +76,7 @@ public
 
 # Local Netlify folder
 .netlify
+
+# zip files
+.zip
+*.zip

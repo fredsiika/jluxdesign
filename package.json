@@ -27,7 +27,7 @@
     "bugs": {
         "url": "https://github.com/creativetimofficial/argon-design-system-react/issues"
     },
-    "homepage": "https://fredsiika.github.io/jluxdesign/",
+    "homepage": "https://fredsiika.github.io/jluxdesign",
     "scripts": {
         "start": "NODE_PATH=./src react-scripts start",
         "build": "react-scripts build && gulp licenses",
