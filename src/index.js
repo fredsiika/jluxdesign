@@ -26,10 +26,10 @@ import Landing from "views/examples/Landing.js";
 // import Login from "views/examples/Login.js";
 // import Profile from "views/examples/Profile.js";
 // import Register from "views/examples/Register.js";
-import About from "views/examples/About.js";
+import AboutPage from "views/examples/AboutPage.js";
 import Contact from "views/examples/Contact.js";
 import KnowledgeBase from "views/examples/KnowledgeBase.js";
-import Services from "views/examples/Services.js";
+import ServicesPage from "views/examples/ServicesPage.js";
 import Products from "views/examples/Products.js";
 
 import { Alert } from 'reactstrap'
@@ -43,6 +43,7 @@ const AlertBanner = () => (
 )
 
 export default Alert
+
 
 ReactDOM.render(
   <>
@@ -60,7 +61,7 @@ ReactDOM.render(
       <Route
         path="/about"
         exact
-        render={props => <About {...props} />}
+        render={props => <AboutPage title="About Us" {...props} />}
       />
       <Route
         path="/contact"
@@ -75,7 +76,7 @@ ReactDOM.render(
       <Route
         path="/services"
         exact
-        render={props => <Services {...props} />}
+        render={props => <ServicesPage title="Our Services" {...props} />}
       />
       <Route
         path="/products"
