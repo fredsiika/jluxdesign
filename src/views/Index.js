@@ -48,6 +48,8 @@ import Icons from "./IndexSections/Icons.js";
 import Login from "./IndexSections/Login.js";
 import Download from "./IndexSections/Download.js";
 import HeroSecondary from '../components/Heros/HeroSecondary'
+import Card from '../components/Cards/Card'
+import '../components/Cards/Card.css'
 
 class Index extends React.Component {
   componentDidMount() {
@@ -69,6 +71,11 @@ class Index extends React.Component {
             <TabSection />
           </Container>
           <Container className="mt-2">
+            <Card
+              title="Distribution"
+              text="We do distrubution"
+              image="../../assets/img/backgrounds/cool-background.png"
+            />
             <Services />
           </Container>
           </section>
