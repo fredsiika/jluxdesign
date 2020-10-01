@@ -47,9 +47,10 @@ import Carousel from "./IndexSections/Carousel.js";
 import Icons from "./IndexSections/Icons.js";
 import Login from "./IndexSections/Login.js";
 import Download from "./IndexSections/Download.js";
-import HeroSecondary from '../components/Heros/HeroSecondary'
+// import HeroSecondary from '../components/Heros/HeroSecondary'
 import Card from '../components/Cards/Card'
 import '../components/Cards/Card.css'
+import SectionGroup from '../components/Sections/Section'
 
 class Index extends React.Component {
   componentDidMount() {
@@ -62,8 +63,8 @@ class Index extends React.Component {
       <>
         <HomeNavbar />
         <main ref="main">
-        {/* Hero Section */}
-        <HeroSecondary />
+        Hero Section
+        {/* <HeroSecondary /> */}
         {/* Alert */}
 
           <section className="section">
@@ -174,7 +175,7 @@ function Services() {
         </div>
       <div class="col">
         <h4 class="text-primary">Installation</h4>
-        <p class="lead">Our in-house team of stone installation specialists willElimate the added cost and liability of working with a separate fabrication team</p>
+        <p class="lead">Our in-house team of stone installation specialists will elimate the added cost and liability of working with a separate fabrication team</p>
       </div>
     </div>
   </div>

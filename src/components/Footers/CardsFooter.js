@@ -44,7 +44,7 @@ class CardsFooter extends React.Component {
                   <Link to="/landing-page">
                     <CardImg
                       alt="..."
-                      src={require("assets/img/theme/landing.jpg")}
+                      src={require("../../assets/img/backgrounds/cool-background.png")}
                     />
                   </Link>
                 </Card>
@@ -54,7 +54,7 @@ class CardsFooter extends React.Component {
                   <Link to="/profile-page">
                     <CardImg
                       alt="..."
-                      src={require("assets/img/theme/profile.jpg")}
+                      src={require("../../assets/img/theme/img-1-1200x1000.jpg")}
                     />
                   </Link>
                 </Card>
@@ -75,7 +75,7 @@ class CardsFooter extends React.Component {
                 <Button
                   className="btn-icon-only rounded-circle"
                   color="twitter"
-                  href="https://twitter.com/creativetim"
+                  href="https://twitter.com/jluxdesign"
                   id="tooltip475038074"
                   target="_blank"
                 >
@@ -89,7 +89,7 @@ class CardsFooter extends React.Component {
                 <Button
                   className="btn-icon-only rounded-circle ml-1"
                   color="facebook"
-                  href="https://www.facebook.com/creativetim"
+                  href="https://www.facebook.com/jluxdesign"
                   id="tooltip837440414"
                   target="_blank"
                 >
@@ -103,7 +103,7 @@ class CardsFooter extends React.Component {
                 <Button
                   className="btn-icon-only rounded-circle ml-1"
                   color="dribbble"
-                  href="https://dribbble.com/creativetim"
+                  href="https://dribbble.com/jluxdesign"
                   id="tooltip829810202"
                   target="_blank"
                 >
@@ -117,7 +117,7 @@ class CardsFooter extends React.Component {
                 <Button
                   className="btn-icon-only rounded-circle ml-1"
                   color="github"
-                  href="https://github.com/creativetimofficial"
+                  href="https://github.com/fredsiika/jluxdesign"
                   id="tooltip495507257"
                   target="_blank"
                 >
@@ -136,10 +136,10 @@ class CardsFooter extends React.Component {
                 <div className="copyright">
                   © {new Date().getFullYear()}{" "}
                   <a
-                    href="https://www.creative-tim.com?ref=adsr-footer"
+                    href="https://jluxdesign.com"
                     target="_blank"
                   >
-                    Creative Tim
+                    JLuxDesign
                   </a>
                   .
                 </div>
@@ -148,15 +148,15 @@ class CardsFooter extends React.Component {
                 <Nav className="nav-footer justify-content-end">
                   <NavItem>
                     <NavLink
-                      href="https://www.creative-tim.com?ref=adsr-footer"
+                      href="/services"
                       target="_blank"
                     >
-                      Creative Tim
+                      Services
                     </NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink
-                      href="https://www.creative-tim.com/presentation?ref=adsr-footer"
+                      href="/about"
                       target="_blank"
                     >
                       About Us
@@ -164,7 +164,7 @@ class CardsFooter extends React.Component {
                   </NavItem>
                   <NavItem>
                     <NavLink
-                      href="http://blog.creative-tim.com?ref=adsr-footer"
+                      href="/blog"
                       target="_blank"
                     >
                       Blog
@@ -172,10 +172,10 @@ class CardsFooter extends React.Component {
                   </NavItem>
                   <NavItem>
                     <NavLink
-                      href="https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md"
+                      href="/contact"
                       target="_blank"
                     >
-                      MIT License
+                      Contact
                     </NavLink>
                   </NavItem>
                 </Nav>

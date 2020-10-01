@@ -1,0 +1,44 @@
+{
+    "cells": [ {
+            "title": "Countertops - Overview",
+            "subtitle": "Discover what you need to know about countertops—from material choices and installation to the pros and cons of each.",
+            "image": "https://cdn.vox-cdn.com/thumbor/pnYzBKjmr9JLwbOhag8xUvq8yc0=/0x0:1280x960/600x450/filters:focal(0x0:1280x960):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/19610487/Countertops_Westerly_Kitchen_Details-529.0.jpg"
+        },
+        {
+            "title": "How to's and DIY",
+            "subtitle": "Improve the value of your home by discovering our countertop step-by-step tips & ideas.",
+            "image": "https://images.unsplash.com/photo-1556594472-e9b933db923c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
+            "url": "https://www.thisoldhouse.com/countertops-how-to"
+        },
+        {
+            "title": "Ideas and Inspiration",
+            "subtitle": "Explore inspiring countertop ideas that will drastically make your home more efficient & appealing.",
+            "image": "https://cdn.vox-cdn.com/thumbor/pnYzBKjmr9JLwbOhag8xUvq8yc0=/0x0:1280x960/600x450/filters:focal(0x0:1280x960):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/19610487/Countertops_Westerly_Kitchen_Details-529.0.jpg",
+            "url": "https://www.thisoldhouse.com/countertops-ideas-inspiration"
+        },
+        {
+            "title": "Countertop Installation",
+            "subtitle": "Read through step-by-step tutorials to help you prepare for any installation pertaining to your countertop.",
+            "image": "https://images.unsplash.com/photo-1505798577917-a65157d3320a?ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
+            "url": "https://www.thisoldhouse.com/countertops-installation"
+        },
+        {
+            "title": "Planning Your Next Project",
+            "subtitle": "Prepare for your next countertop project by discovering our planning ideas & tips.",
+            "image": "https://images.unsplash.com/photo-1587177139620-987629766ec7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3193&q=80",
+            "url": "https://www.thisoldhouse.com/countertops-planning"
+        },
+        {
+            "title": "Countertop Videos",
+            "subtitle": "These This Old House videos showcase all of our countertop projects, how-tos, and designs.",
+            "image": "https://cdn.vox-cdn.com/thumbor/pnYzBKjmr9JLwbOhag8xUvq8yc0=/0x0:1280x960/600x450/filters:focal(0x0:1280x960):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/19610487/Countertops_Westerly_Kitchen_Details-529.0.jpg",
+            "url": "https://www.thisoldhouse.com/countertops-videos"
+        },
+        {
+            "title": "Find a Pro",
+            "subtitle": "Need to find a trusted professional for a job in your home this spring? Home Advisor connects you to a local pro for any job, big or small.",
+            "image": "https://images.unsplash.com/photo-1601155474324-8f3481386742?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80",
+            "url": "https://www.thisoldhouse.com/21073531/find-a-pro"
+        }
+    ]
+}

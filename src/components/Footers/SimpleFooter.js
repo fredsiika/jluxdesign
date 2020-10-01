@@ -75,7 +75,7 @@ class SimpleFooter extends React.Component {
                 </UncontrolledTooltip>
                 <Button
                   className="btn-icon-only rounded-circle ml-1"
-                  color="houzz"
+                  color="success"
                   href="#!"
                   id="tooltip829810202"
                   target="_blank"
@@ -89,17 +89,17 @@ class SimpleFooter extends React.Component {
                 </UncontrolledTooltip>
                 <Button
                   className="btn-icon-only rounded-circle ml-1"
-                  color="github"
-                  href="https://fredsiika.github.io/jluxdesign"
+                  color="instagram"
+                  href="#0"
                   id="tooltip495507257"
                   target="_blank"
                 >
                   <span className="btn-inner--icon">
-                    <i className="fa fa-github" />
+                    <i className="fa fa-instagram" />
                   </span>
                 </Button>
                 <UncontrolledTooltip delay={0} target="tooltip495507257">
-                  Star on Github
+                  Follow us on Instagram
                 </UncontrolledTooltip>
               </Col>
             </Row>
@@ -112,7 +112,7 @@ class SimpleFooter extends React.Component {
                     href="https://github.com/fredsiika"
                     target="_blank"
                   >
-                    J Lux Design, LLC
+                    JLuxDesign, LLC.
                   </a>
                   .
                 </div>

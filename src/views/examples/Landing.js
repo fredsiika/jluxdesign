@@ -74,14 +74,12 @@ class Landing extends React.Component {
               <Container className="py-lg-md d-flex">
                 <div className="col px-0">
                   <Row>
-                    <Col lg="6">
+                    <Col lg="12">
                       <h1 className="display-3 text-white">
                         Launch the perfect home renovation project{" "}
-                        <span>Professional Countertop Stone Installation, distribution and fabrication services in the Dallas/Fort-Worth Area</span>
+                        <span>We'll help you locate, select and install your custom stone contertop and backsplash.</span>
                       </h1>
-                      <p className="lead text-white"> We'll help you locate, select and install your custom stone contertop and backsplash.<br />
-                      Start designing your dream home.
-                      </p>
+                      <p className="lead text-white">Start designing your dream home.</p>
                       <div className="btn-wrapper">
                         <Button
                           className="btn-icon mb-3 mb-sm-0"
@@ -142,22 +140,26 @@ class Landing extends React.Component {
                             <i className="ni ni-check-bold" />
                           </div>
                           <h6 className="text-primary text-uppercase">
-                            Installation
+                            First-class Stone distribution.
                           </h6>
                           <p className="description mt-3">
-                            Argon is a great free UI package based on Bootstrap
-                            4 that includes the most important components and
-                            features.
+                            Choosing the right countertop surface is vital to the project.<br /> 
+                            Having the it in stock is even more critical.<br />
+                            With well over 50,000 slabs of stone in stock, JLuxDesign is ready to handle your project.
                           </p>
                           <div>
+                            <p className="lead">Customer Segment</p>
                             <Badge color="primary" pill className="mr-1">
-                              design
+                              Homeowners
                             </Badge>
                             <Badge color="primary" pill className="mr-1">
-                              system
+                              Designers
                             </Badge>
                             <Badge color="primary" pill className="mr-1">
-                              creative
+                              Builders
+                            </Badge>
+                            <Badge color="primary" pill className="mr-1">
+                              Architects
                             </Badge>
                           </div>
                           <Button
@@ -178,12 +180,12 @@ class Landing extends React.Component {
                             <i className="ni ni-istanbul" />
                           </div>
                           <h6 className="text-success text-uppercase">
-                            Build Something
+                            State-of-the-art Stone Fabrication
                           </h6>
                           <p className="description mt-3">
-                            Argon is a great free UI package based on Bootstrap
-                            4 that includes the most important components and
-                            features.
+                            Eliminate wasted time and money of outsourcing stone fabrication.
+                            Our in-house team of professional fabricators guarantee the level of craftsmanship for the perfect stone cut.
+                            JLuxDesign processes hundreds of countertops every week with CNC enabled machinery
                           </p>
                           <div>
                             <Badge color="success" pill className="mr-1">
@@ -214,22 +216,21 @@ class Landing extends React.Component {
                             <i className="ni ni-planet" />
                           </div>
                           <h6 className="text-warning text-uppercase">
-                            Prepare Launch
+                            Stone Countertop Installation
                           </h6>
                           <p className="description mt-3">
-                            Argon is a great free UI package based on Bootstrap
-                            4 that includes the most important components and
-                            features.
+                            Custom installation teams work with homeowners to ensure a hassle-free experience.<br />
+                            From template to installation, our customer server team is here to create the home of your dreams.
                           </p>
                           <div>
                             <Badge color="warning" pill className="mr-1">
-                              marketing
+                              Homeowners
                             </Badge>
                             <Badge color="warning" pill className="mr-1">
-                              product
+                              House flippers
                             </Badge>
                             <Badge color="warning" pill className="mr-1">
-                              launch
+                              Custom Home Developers
                             </Badge>
                           </div>
                           <Button
