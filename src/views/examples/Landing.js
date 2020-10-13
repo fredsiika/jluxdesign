@@ -16,6 +16,7 @@
 
 */
 import React from "react";
+import { Link } from 'react-router-dom'
 // nodejs library that concatenates classes
 import classnames from "classnames";
 
@@ -38,8 +39,9 @@ import {
 
 // core components
 // import DemoNavbar from "components/Navbars/DemoNavbar.js";
-import HomeNavbar from '../../components/Navbars/HomeNavbar';
-import CardsFooter from "components/Footers/CardsFooter.js";
+import NavbarBasic from '../../components/Navbars/NavbarBasic';
+// import CardsFooter from "components/Footers/CardsFooter.js";
+import SimpleFooter from '../../components/Footers/SimpleFooter'
 
 // index page sections
 import Download from "../IndexSections/Download.js";
@@ -54,12 +56,129 @@ class Landing extends React.Component {
   render() {
     return (
       <>
-        {/* <DemoNavbar /> */}
-        <HomeNavbar />
+        <NavbarBasic />
+        {/* Hero  */}
+        <div className="Hero">
+          <div className="HeroGroup">
+            <h1>Launch the <br />perfect home renovation project</h1>
+            <p>We'll help you select, cut and install your custom stone and tile countertop.</p>            
+            <div className="btn-wrapper">
+              <Button
+                className="btn-icon mb-3 mb-sm-0"
+                color="info"
+                href="/services-page"
+              >
+                <span className="btn-inner--icon mr-1">
+                  <i className="ni ni-settings" />
+                </span>
+                <span className="btn-inner--text">Services</span>
+              </Button>
+
+              <Button 
+                className="btn-neutral btn-icon mb-3 mb-sm-0" 
+                color="success" 
+                outline type="button"
+                href="/start"
+              >
+                <span className="bt-inner--icon mr-1">
+                  <i className="ni ni-spaceship" />
+                </span>
+                <span className="nav-link-inner--text ml-1">
+                  Get Started
+                </span>
+              </Button>
+            </div>
+          </div>
+        </div>
+        {/* End Hero Section */}
+
         <main ref="main">
+          {/* Our process */}
+          <section className="section section-lg">
+            <Container>
+              <Row className="row-grid align-items-center">
+                
+                {/* Floating image */}
+                <Col className="order-md-2" md="6">
+                  <img
+                    alt="..."
+                    className="img-fluid floating"
+                    src={require("assets/img/theme/promo-1.png")}
+                  />
+                </Col>
+
+                {/* Web copy */}
+                <Col className="order-md-1" md="6">
+                  <div className="pr-md-5">
+                    <div className="icon icon-lg icon-shape icon-shape-danger shadow rounded-circle mb-5">
+                      <i className="ni ni-diamond" />
+                    </div>
+                    <h3>From concept to completion</h3>
+                    <p>Professional Countertop Stone Installation, Distribution and Fabrication Services in the Dallas/Fort-Worth Area - all in one place.</p>
+                    <ul className="list-unstyled mt-5">
+                      <li className="py-2">
+                        <div className="d-flex align-items-center">
+                          <div>
+                            <Badge
+                              className="badge-circle mr-3"
+                              color="default"
+                            >
+                              <i className="ni ni-world" />
+                            </Badge>
+                          </div>
+                          <div>
+                            <h6 className="mb-0">
+                              Products sourced from around the world
+                            </h6>
+                          </div>
+                        </div>
+                      </li>
+                      <li className="py-2">
+                        <div className="d-flex align-items-center">
+                          <div>
+                            <Badge
+                              className="badge-circle mr-3"
+                              color="default"
+                            >
+                              <i className="ni ni-shop" />
+                            </Badge>
+                          </div>
+                          <div>
+                            <h6 className="mb-0">Design Consultants, fabricators, and installers are 100% in-house.</h6>
+                          </div>
+                        </div>
+                      </li>
+                      <li className="py-2">
+                        <div className="d-flex align-items-center">
+                          <div>
+                            <Badge
+                              className="badge-circle mr-3"
+                              color="default"
+                            >
+                              <i className="ni ni-books" />
+                            </Badge>
+                          </div>
+                          <div>
+                            <h6 className="mb-0">
+                              Amazing knowledge base of stone and tile resources
+                            </h6>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </Col>
+              </Row>
+            </Container>
+          </section>
+          {/* End Our Process */}
+
+
+          {/* Services Section */}
           <div className="position-relative">
             {/* shape Hero */}
             <section className="section section-lg section-shaped pb-250">
+              {/* Background Bubbles */}
               <div className="shape shape-style-1 shape-default">
                 <span />
                 <span />
@@ -71,43 +190,21 @@ class Landing extends React.Component {
                 <span />
                 <span />
               </div>
+              {/* End Background Bubbles */}
+
               <Container className="py-lg-md d-flex">
                 <div className="col px-0">
                   <Row>
                     <Col lg="12">
-                      <h1 className="display-3 text-white">
-                        Launch the perfect home renovation project{" "}
-                        <span>We'll help you locate, select and install your custom stone contertop and backsplash.</span>
-                      </h1>
-                      <p className="lead text-white">Start designing your dream home.</p>
-                      <div className="btn-wrapper">
-                        <Button
-                          className="btn-icon mb-3 mb-sm-0"
-                          color="info"
-                          href="/services-page"
-                        >
-                          <span className="btn-inner--icon mr-1">
-                            <i className="fa fa-code" />
-                          </span>
-                          <span className="btn-inner--text">Services</span>
-                        </Button>
-                        <Button
-                          className="btn-white btn-icon mb-3 mb-sm-0 ml-1"
-                          color="default"
-                          href="https://www.creative-tim.com/product/argon-design-system-react?ref=adsr-landing-page"
-                        >
-                          <span className="btn-inner--icon mr-1">
-                            <i className="ni ni-cloud-download-95" />
-                          </span>
-                          <span className="btn-inner--text">
-                            Get Started
-                          </span>
-                        </Button>
-                      </div>
+                      <h3 className="display-3 text-white text-center">
+                        Start designing your new home{" "}
+                        <span>Distribution, fabrication and Installation Services in DFW Area</span>
+                      </h3>
                     </Col>
                   </Row>
                 </div>
               </Container>
+
               {/* SVG separator */}
               <div className="separator separator-bottom separator-skew">
                 <svg
@@ -127,6 +224,7 @@ class Landing extends React.Component {
             </section>
             {/* 1st Hero Variation */}
           </div>
+          {/* End Services Section */}
 
           <section className="section section-lg pt-lg-0 mt--200">
             <Container>
@@ -249,79 +347,9 @@ class Landing extends React.Component {
               </Row>
             </Container>
           </section>
-          <section className="section section-lg">
-            <Container>
-              <Row className="row-grid align-items-center">
-                <Col className="order-md-2" md="6">
-                  <img
-                    alt="..."
-                    className="img-fluid floating"
-                    src={require("assets/img/theme/promo-1.png")}
-                  />
-                </Col>
-                <Col className="order-md-1" md="6">
-                  <div className="pr-md-5">
-                    <div className="icon icon-lg icon-shape icon-shape-success shadow rounded-circle mb-5">
-                      <i className="ni ni-settings-gear-65" />
-                    </div>
-                    <h3>From concept to completion</h3>
-                    <p>Professional Countertop Stone Installation, Distribution and Fabrication Services in the Dallas/Fort-Worth Area - all in one place.</p>
-                    <ul className="list-unstyled mt-5">
-                      <li className="py-2">
-                        <div className="d-flex align-items-center">
-                          <div>
-                            <Badge
-                              className="badge-circle mr-3"
-                              color="success"
-                            >
-                              <i className="ni ni-settings-gear-65" />
-                            </Badge>
-                          </div>
-                          <div>
-                            <h6 className="mb-0">
-                              Carefully crafted components
-                            </h6>
-                          </div>
-                        </div>
-                      </li>
-                      <li className="py-2">
-                        <div className="d-flex align-items-center">
-                          <div>
-                            <Badge
-                              className="badge-circle mr-3"
-                              color="success"
-                            >
-                              <i className="ni ni-html5" />
-                            </Badge>
-                          </div>
-                          <div>
-                            <h6 className="mb-0">Amazing page examples</h6>
-                          </div>
-                        </div>
-                      </li>
-                      <li className="py-2">
-                        <div className="d-flex align-items-center">
-                          <div>
-                            <Badge
-                              className="badge-circle mr-3"
-                              color="success"
-                            >
-                              <i className="ni ni-satisfied" />
-                            </Badge>
-                          </div>
-                          <div>
-                            <h6 className="mb-0">
-                              Super friendly support team
-                            </h6>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </Col>
-              </Row>
-            </Container>
-          </section>
+
+
+
           <section className="section bg-secondary">
             <Container>
               <Row className="row-grid align-items-center">
@@ -329,7 +357,7 @@ class Landing extends React.Component {
                   <Card className="bg-default shadow border-0">
                     <CardImg
                       alt="..."
-                      src={require("assets/img/theme/img-1-1200x1000.jpg")}
+                      src={require("../../assets/img/backgrounds/eco-thinking.jpg")}
                       top
                     />
                     <blockquote className="card-blockquote">
@@ -350,12 +378,11 @@ class Landing extends React.Component {
                         />
                       </svg>
                       <h4 className="display-3 font-weight-bold text-white">
-                        Design System
+                        Eco-Thinking
                       </h4>
+                      <p className="lead">Being mindful of the planet.</p>
                       <p className="lead text-italic text-white">
-                        The Arctic Ocean freezes every winter and much of the
-                        sea-ice then thaws every summer, and that process will
-                        continue whatever happens.
+                        Our Eco-Thinking means high-quality, long-lasting materials that tread lightly on the environment.
                       </p>
                     </blockquote>
                   </Card>
@@ -367,26 +394,20 @@ class Landing extends React.Component {
                     </div>
                     <h3>Our customers</h3>
                     <p className="lead">
-                      Don't let your uses guess by attaching tooltips and
-                      popoves to any element. Just make sure you enable them
-                      first via JavaScript.
+                      Here's some random text that has to do with our customers and what they expect from J Lux Design.
                     </p>
                     <p>
-                      The kit comes with three pre-built pages to help you get
-                      started faster. You can change the text and images and
-                      you're good to go.
+                      Here's some random text that has to do with our customers and what they expect from J Lux Design.
                     </p>
                     <p>
-                      The kit comes with three pre-built pages to help you get
-                      started faster. You can change the text and images and
-                      you're good to go.
+                      Here's some random text that has to do with our customers and what they expect from J Lux Design.
                     </p>
                     <a
                       className="font-weight-bold text-warning mt-5"
-                      href="#pablo"
+                      href="#"
                       onClick={e => e.preventDefault()}
                     >
-                      A beautiful UI Kit for impactful websites
+                      Discovery more about Eco-Thinking
                     </a>
                   </div>
                 </Col>
@@ -413,11 +434,10 @@ class Landing extends React.Component {
                       </div>
                     </div>
                     <div className="pl-4">
-                      <h4 className="display-3 text-white">Modern Interface</h4>
+                      <h4 className="display-3 text-white">Planning is key</h4>
+                      <p className="lead">Service and skill to match.</p>
                       <p className="text-white">
-                        The Arctic Ocean freezes every winter and much of the
-                        sea-ice then thaws every summer, and that process will
-                        continue whatever.
+                        At J Lux Design we plan just about every minute detail to ensure smooth completion of every project.
                       </p>
                     </div>
                   </div>
@@ -425,18 +445,16 @@ class Landing extends React.Component {
                     <CardBody>
                       <div className="d-flex px-3">
                         <div>
-                          <div className="icon icon-shape bg-gradient-success rounded-circle text-white">
+                          <div className="icon icon-shape bg-gradient-success rounded-circle text-default">
                             <i className="ni ni-satisfied" />
                           </div>
                         </div>
                         <div className="pl-4">
                           <h5 className="title text-success">
-                            Awesome Support
+                            Bespoke service
                           </h5>
                           <p>
-                            The Arctic Ocean freezes every winter and much of
-                            the sea-ice then thaws every summer, and that
-                            process will continue whatever.
+                            When it comes to creating colors, patterns and textures, our level of experience and expertise is unique. Share your inspiration. If you can dream it, we can probably do it—from stone to glass, Victorian to Art Deco, Arts and Crafts to contemporary.
                           </p>
                           <a
                             className="text-success"
@@ -449,30 +467,82 @@ class Landing extends React.Component {
                       </div>
                     </CardBody>
                   </Card>
+
+                  
                   <Card className="shadow shadow-lg--hover mt-5">
                     <CardBody>
                       <div className="d-flex px-3">
                         <div>
-                          <div className="icon icon-shape bg-gradient-warning rounded-circle text-white">
+                          <div className="icon icon-shape bg-gradient-danger rounded-circle text-default">
                             <i className="ni ni-active-40" />
                           </div>
                         </div>
                         <div className="pl-4">
-                          <h5 className="title text-warning">
-                            Modular Components
+                          <h5 className="title text-danger">
+                            Custom Capabilities
                           </h5>
                           <p>
-                            The Arctic Ocean freezes every winter and much of
-                            the sea-ice then thaws every summer, and that
-                            process will continue whatever.
+                            We welcome custom orders as one more opportunity to help you find just the right tile.
                           </p>
                           <a
-                            className="text-warning"
+                            className="text-danger"
                             href="#pablo"
                             onClick={e => e.preventDefault()}
                           >
-                            Learn more
+                            See Options
                           </a>
+                        </div>
+                      </div>
+                    </CardBody>
+                  </Card>
+
+                  <Card className="shadow shadow-lg--hover mt-5">
+                    <CardBody>
+                      <div className="d-flex px-3">
+                        <div>
+                          <div className="icon icon-shape bg-gradient-info rounded-circle text-default">
+                            <i className="ni ni-active-40" />
+                          </div>
+                        </div>
+                        <div className="pl-4">
+                          <h5 className="title text-info">
+                            Custom colors, sizes, designs
+                          </h5>
+                          <p>
+                            We're here to help you find just the right tile—whether it already exists, or not. We offer custom color matching, custom sizes and custom designs. (This doesn’t apply to all collections, so look for the Custom callout.) In addition, many of our artists offer field sizes, colors and designs not shown here on the website.
+                          </p>
+                          <a
+                            className="text-info"
+                            href="#pablo"
+                            onClick={e => e.preventDefault()}
+                          >
+                            See Options
+                          </a>
+                        </div>
+                      </div>
+                    </CardBody>
+                  </Card>
+                  
+                  <Card className="shadow shadow-lg--hover mt-5">
+                    <CardBody>
+                      <div className="d-flex px-3">
+                        <div>
+                          <div className="icon icon-shape bg-gradient-primary rounded-circle text-default">
+                            <i className="ni ni-settings" />
+                          </div>
+                          <div className="pl-4">
+                            <h5 className="title text-primary">
+                              Matching samples
+                            </h5>
+                            <p>Put us to the test. Bring in a sample of the color you wish to match. In 2-3 weeks, a sample will be sent from Ann Sacks Collection manufacturing to the showroom for your inspection.</p>
+                            <a
+                            className="text-primary"
+                            href="#pablo"
+                            onClick={e => e.preventDefault()}
+                          >
+                            See Options
+                          </a>
+                          </div>
                         </div>
                       </div>
                     </CardBody>
@@ -503,9 +573,7 @@ class Landing extends React.Component {
                 <Col lg="8">
                   <h2 className="display-3">The amazing Team</h2>
                   <p className="lead text-muted">
-                    According to the National Oceanic and Atmospheric
-                    Administration, Ted, Scambos, NSIDClead scentist, puts the
-                    potentially record maximum.
+                    What makes us special is a direct result of our hard working team who work tirelessley to deliver the best quality work.
                   </p>
                 </Col>
               </Row>
@@ -520,8 +588,8 @@ class Landing extends React.Component {
                     />
                     <div className="pt-4 text-center">
                       <h5 className="title">
-                        <span className="d-block mb-1">Ryan Tompson</span>
-                        <small className="h6 text-muted">Web Developer</small>
+                        <span className="d-block mb-1">Jon Moraa</span>
+                        <small className="h6 text-muted">Founder/CEO</small>
                       </h5>
                       <div className="mt-3">
                         <Button
@@ -683,19 +751,20 @@ class Landing extends React.Component {
               </Row>
             </Container>
           </section>
+          
+        {/* Newsletter */}
           <section className="section section-lg pt-0">
             <Container>
-              <Card className="bg-gradient-warning shadow-lg border-0">
+              <Card className="bg-gradient-success shadow-lg border-0">
                 <div className="p-5">
                   <Row className="align-items-center">
                     <Col lg="8">
                       <h3 className="text-white">
-                        We made website building easier for you.
+                        We're making countertop and backsplash projects easier for you.
                       </h3>
                       <p className="lead text-white mt-3">
-                        I will be the leader of a company that ends up being
-                        worth billions of dollars, because I got the answers. I
-                        understand culture.
+                        Sign up for the latest news on promotions, products and events!
+
                       </p>
                     </Col>
                     <Col className="ml-lg-auto" lg="3">
@@ -703,10 +772,10 @@ class Landing extends React.Component {
                         block
                         className="btn-white"
                         color="default"
-                        href="https://www.creative-tim.com/product/argon-design-system-react?ref=adsr-landing-page"
+                        href="#!"
                         size="lg"
                       >
-                        Download React
+                        Subscribe to our newletter
                       </Button>
                     </Col>
                   </Row>
@@ -714,48 +783,44 @@ class Landing extends React.Component {
               </Card>
             </Container>
           </section>
+          {/* End Newsletter */}
+
           <section className="section section-lg bg-gradient-default">
             <Container className="pt-lg pb-300">
               <Row className="text-center justify-content-center">
                 <Col lg="10">
-                  <h2 className="display-3 text-white">Build something</h2>
+                  <h2 className="display-3 text-white">Work with us</h2>
                   <p className="lead text-white">
-                    According to the National Oceanic and Atmospheric
-                    Administration, Ted, Scambos, NSIDClead scentist, puts the
-                    potentially record low maximum sea ice extent tihs year down
-                    to low ice.
+                    Now more than ever is it easier to get started with J Lux Design. In only three steps.
                   </p>
                 </Col>
               </Row>
               <Row className="row-grid mt-5">
                 <Col lg="4">
                   <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
-                    <i className="ni ni-settings text-primary" />
+                    <i className="ni ni-collection text-primary" />
                   </div>
-                  <h5 className="text-white mt-3">Building tools</h5>
+                  <h5 className="text-white mt-3">Fill out form</h5>
                   <p className="text-white mt-3">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    Fill out this simple form to get started on your next custom stone and tile project. 
                   </p>
                 </Col>
                 <Col lg="4">
                   <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
-                    <i className="ni ni-ruler-pencil text-primary" />
+                    <i className="ni ni-calendar-grid-58 text-primary" />
                   </div>
-                  <h5 className="text-white mt-3">Grow your market</h5>
+                  <h5 className="text-white mt-3">Schedule onboarding call</h5>
                   <p className="text-white mt-3">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    Once your form is submitted you'll be given the option to schedule an initial client call. This is where will discuss the details of your project.
                   </p>
                 </Col>
                 <Col lg="4">
                   <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
-                    <i className="ni ni-atom text-primary" />
+                    <i className="ni ni-diamond text-primary" />
                   </div>
-                  <h5 className="text-white mt-3">Launch time</h5>
+                  <h5 className="text-white mt-3">Project Launch</h5>
                   <p className="text-white mt-3">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    If we're a good fit for your project, then the next step is to come into our showroom where we'll help you find and select the perfect stone and/or tile for your project.
                   </p>
                 </Col>
               </Row>
@@ -777,6 +842,10 @@ class Landing extends React.Component {
               </svg>
             </div>
           </section>
+
+          
+
+          {/* Work with us */}
           <section className="section section-lg pt-lg-0 section-contact-us">
             <Container>
               <Row className="justify-content-center mt--300">
@@ -852,9 +921,11 @@ class Landing extends React.Component {
               </Row>
             </Container>
           </section>
-          <Download />
+          {/* End Work with us */}
+          
+          {/* <Download /> */}
         </main>
-        <CardsFooter />
+        <SimpleFooter />
       </>
     );
   }

@@ -133,7 +133,7 @@ class HomeNavbar extends React.Component {
                       </DropdownItem>
                       
                       <DropdownItem to="/landing-page" tag={Link}>
-                        
+                        Landing
                       </DropdownItem>
                     </DropdownMenu>
                   </UncontrolledDropdown>

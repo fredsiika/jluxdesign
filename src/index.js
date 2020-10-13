@@ -32,6 +32,7 @@ import Contact from "views/examples/Contact.js";
 import KnowledgeBase from "views/examples/KnowledgeBase.js";
 import ServicesPage from "views/examples/ServicesPage.js";
 import Products from "views/examples/Products.js";
+import NotFound from "views/examples/404.js";
 
 import { Alert } from 'reactstrap'
 
@@ -54,10 +55,20 @@ ReactDOM.render(
           path="/landing-page"
           exact
           render={props => <Landing {...props} />}
-        />
+      />
+      <Route
+        path="/landing"
+        exact
+        render={props => <Landing {...props} />}
+      />
       <Route 
         path="/" 
-        exact render={props => <Index {...props} />} 
+        exact render={props => <Landing {...props} />} 
+      />
+      <Route
+        path="/home"
+        exact
+        render={props => <Landing {...props} />}
       />
       <Route
         path="/about"
@@ -84,7 +95,12 @@ ReactDOM.render(
         exact
         render={props => <Products {...props} />}
       />
-      <Redirect to="/landing-page" />
+      <Route
+        path="/404"
+        exact
+        render={props => <NotFound {...props} />}
+      />
+      <Redirect to="/404" />
       {/* <Route 
         path="/login-page" 
         exact render={props => <Login {...props} />} 

@@ -22,7 +22,7 @@ import React from "react";
 import { Container, Row, Col, Navbar, Alert } from "reactstrap";
 
 // core components
-import HomeNavbar from "components/Navbars/HomeNavbar.js";
+import NavbarBasic from "components/Navbars/NavbarBasic";
 import CardsFooter from "components/Footers/CardsFooter.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
 
@@ -61,7 +61,7 @@ class Index extends React.Component {
   render() {
     return (
       <>
-        <HomeNavbar />
+        <NavbarBasic />
         <main ref="main">
         Hero Section
         {/* <HeroSecondary /> */}

@@ -9,11 +9,13 @@
   <defs>
     <style>
       .cls-1 {
-        font-size: 134.744px;
+                                                                                                                                                                                                <!-- font-size: 134.744px; -->
+font-size: 590.19px;
       }
 
       .cls-1, .cls-2, .cls-3 {
-        fill: #120606;
+                                                                                                                                                                                                                                                                                      <!-- fill: #120606; -->
+        fill: white;
         text-anchor: middle;
       }
 
@@ -23,7 +25,9 @@
       }
 
       .cls-2 {
-        font-size: 61.539px;
+                                                      <!-- font-size: 61.539px; -->
+      <!-- font-size: 300.695px; -->
+      <!-- font-size: 600.00px; -->
       }
 
       .cls-3 {
@@ -32,7 +36,7 @@
       }
     </style>
   </defs>
-  <text id="LUX" class="cls-1" transform="translate(1444.259 1083.75) scale(2.163 2.162)">
+  <text id="LUX" class="cls-1" transform="translate(1444.259 1083.75) scale(2.163 2.163)">
     <tspan x="0">LUX</tspan>
   </text>
   <text id="D_E_S_I_G_N_" data-name="D E S I G N " class="cls-2" transform="translate(1473.043 1192.254) scale(1.723 1.746)">
@@ -41,7 +45,7 @@
   <text id="J" class="cls-3" transform="translate(1034.224 973.015) scale(2.556 2.555)">
     <tspan x="0">J</tspan>
   </text>
-  <text id="LUX_copy" data-name="LUX copy" class="cls-1" transform="translate(1444.259 2297.75) scale(2.163 2.162)">
+  <!-- <text id="LUX_copy" data-name="LUX copy" class="cls-1" transform="translate(1444.259 2297.75) scale(2.163 2.162)">
     <tspan x="0">LUX</tspan>
   </text>
   <text id="D_E_S_I_G_N_copy" data-name="D E S I G N  copy" class="cls-2" transform="translate(1473.043 2406.254) scale(1.723 1.746)">
@@ -49,6 +53,6 @@
   </text>
   <text id="J_copy" data-name="J copy" class="cls-3" transform="translate(1034.224 2187.016) scale(2.556 2.555)">
     <tspan x="0">J</tspan>
-  </text>
+  </text> -->
   <rect x="1190" y="1094" width="532" height="7"/>
 </svg>
