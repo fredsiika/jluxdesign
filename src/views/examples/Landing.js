@@ -16,7 +16,7 @@
 
 */
 import React from "react";
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 // nodejs library that concatenates classes
 import classnames from "classnames";
 
@@ -44,7 +44,7 @@ import NavbarBasic from '../../components/Navbars/NavbarBasic';
 import SimpleFooter from '../../components/Footers/SimpleFooter'
 
 // index page sections
-import Download from "../IndexSections/Download.js";
+// import Download from "../IndexSections/Download.js";
 
 class Landing extends React.Component {
   state = {};
@@ -404,7 +404,7 @@ class Landing extends React.Component {
                     </p>
                     <a
                       className="font-weight-bold text-warning mt-5"
-                      href="#"
+                      href="#!"
                       onClick={e => e.preventDefault()}
                     >
                       Discovery more about Eco-Thinking

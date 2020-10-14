@@ -1,35 +1,35 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import classnames from "classnames"
+// import classnames from "classnames"
 
 // reactstrap components
 import {
-  Badge,
-  Button,
-  Card,
-  CardBody,
-  CardImg,
-  FormGroup,
-  Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
-  Container,
-  Row,
-  Col
+  // Badge,
+  // Button,
+  // Card,
+  // CardBody,
+  // CardImg,
+  // FormGroup,
+  // Input,
+  // InputGroupAddon,
+  // InputGroupText,
+  // InputGroup,
+  // Container,
+  // Row,
+  // Col
 } from "reactstrap";
 // core components
 // import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import HomeNavbar from '../../components/Navbars/HomeNavbar';
-import CardsFooter from "components/Footers/CardsFooter.js";
-import Download from "../IndexSections/Download.js";
+// import CardsFooter from "components/Footers/CardsFooter.js";
+// import Download from "../IndexSections/Download.js";
 import CustomCard from '../../components/Cards/Card'
-import Section from '../../components/Sections/Section'
-import WaveSVG from '../../components/Sections/WaveSVG'
+// import Section from '../../components/Sections/Section'
+// import WaveSVG from '../../components/Sections/WaveSVG'
 import Footer from '../../components/Footers/CardsFooter'
-import articleresources from '../../assets/data/about-page.json' 
-import Cell from 'components/Cells/Cell'
+// import articleresources from '../../assets/data/about-page.json' 
+// import Cell from 'components/Cells/Cell'
 
 const ServicesPage = (props) => (
   <div>

@@ -22,7 +22,7 @@ import "assets/vendor/font-awesome/css/font-awesome.min.css";
 import "assets/scss/argon-design-system-react.scss?v1.1.0";
 import "./views/app.css"
 
-import Index from "views/Index.js";
+// import Index from "views/Index.js";
 import Landing from "views/examples/Landing.js";
 // import Login from "views/examples/Login.js";
 // import Profile from "views/examples/Profile.js";
@@ -33,19 +33,6 @@ import KnowledgeBase from "views/examples/KnowledgeBase.js";
 import ServicesPage from "views/examples/ServicesPage.js";
 import Products from "views/examples/Products.js";
 import NotFound from "views/examples/404.js";
-
-import { Alert } from 'reactstrap'
-
-const AlertBanner = () => (
-  <>
-    <Alert className="alert-success">
-      <strong>COVID-19 Update!</strong>We are now offering Virtual Stone Selection in DFW!
-    </Alert>
-  </>
-)
-
-export default Alert
-
 
 ReactDOM.render(
   <>
