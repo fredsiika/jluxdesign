@@ -22,7 +22,7 @@ import "assets/vendor/font-awesome/css/font-awesome.min.css";
 import "assets/scss/argon-design-system-react.scss?v1.1.0";
 import "./views/app.css"
 
-import Index from "views/Index.js";
+// import Index from "views/Index.js";
 import Landing from "views/examples/Landing.js";
 // import Login from "views/examples/Login.js";
 // import Profile from "views/examples/Profile.js";

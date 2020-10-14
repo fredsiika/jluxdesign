@@ -16,7 +16,7 @@
 
 */
 import React from "react";
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 // nodejs library that concatenates classes
 import classnames from "classnames";
 
@@ -38,11 +38,12 @@ import {
 } from "reactstrap";
 
 // core components
-// import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import NavbarBasic from '../../components/Navbars/NavbarBasic';
 // import CardsFooter from "components/Footers/CardsFooter.js";
 import SimpleFooter from '../../components/Footers/SimpleFooter'
-
+import SearchBarSimple from '../../components/Forms/SearchBarSimple'
+import SearchBarAdvanced from '../../components/Forms/SearchBarAdvanced'
+import HeroProducts from '../../components/Heros/HeroProducts'
 // index page sections
 import Download from "../IndexSections/Download.js";
 
@@ -58,15 +59,19 @@ class Landing extends React.Component {
       <>
         <NavbarBasic />
         {/* Hero  */}
-        <div className="Hero">
-          <div className="HeroGroup">
-            <h1>Launch the <br />perfect home renovation project</h1>
-            <p>We'll help you select, cut and install your custom stone and tile countertop.</p>            
+        <div className="hero-bg gradient-overlay-dark-v1 bg-img-hero">
+          <div className="hero-bg-group w-lg-50 w-md-80 mx-md-auto space-2 space-3--sm space-4--lg text-center text-white">
+            {/* Title */}
+            <div className="mb-6">
+              <h2 class="h1 text-white text-lh-xs mb-3">Install your next stone and tile countertop with us. <br className="d-none d-sm-inline-block" />Satisfaction is Guaranteed</h2>
+              <p className="text-white">The modern way to seamless and efficient<br className="d-none d-lg-inline-block" /> stone and tile countertop renovation.</p> 
+            </div>
+            {/* End Title */}  
             <div className="btn-wrapper">
               <Button
                 className="btn-icon mb-3 mb-sm-0"
                 color="info"
-                href="/services-page"
+                href="/services"
               >
                 <span className="btn-inner--icon mr-1">
                   <i className="ni ni-settings" />
@@ -89,13 +94,33 @@ class Landing extends React.Component {
               </Button>
             </div>
           </div>
+          {/* Hero Products */}
+          <HeroProducts />
         </div>
         {/* End Hero Section */}
-
         <main ref="main">
+        
+        {/* TODO */}
+        {/*
+        <section className="section section-lg">
+        <Container>
+          <Row className="row-grid align-items-center">
+            <Col className="col-12">
+              <div>
+                <h2 className="text-default text-center">Launch the <br className="d-none d-sm-inline-block" />perfect home renovation project</h2>
+                <p className="lead text-center">We'll help you select, cut and install your custom stone and tile countertop.</p>
+              <SearchBarAdvanced />
+            </div> 
+            </Col>
+          </Row>
+        </Container>
+        </section>
+        */}
+        {/* End TODO */}
+
           {/* Our process */}
           <section className="section section-lg">
-            <Container>
+            <Container> 
               <Row className="row-grid align-items-center">
                 
                 {/* Floating image */}
