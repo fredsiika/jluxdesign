@@ -19,38 +19,38 @@
 import React from "react";
 
 // reactstrap components
-import { Container, Row, Col, Navbar, Alert } from "reactstrap";
+import { Container, Row, Col, Navbar } from "reactstrap";
 
 // core components
 import NavbarBasic from "components/Navbars/NavbarBasic";
-import CardsFooter from "components/Footers/CardsFooter.js";
+// import CardsFooter from "components/Footers/CardsFooter.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
 
 // index page sections
-import HeroSection from "../components/Heros/HeroSection.js";
-import Buttons from "./IndexSections/Buttons.js";
-import Inputs from "./IndexSections/Inputs.js";
-import CustomControls from "./IndexSections/CustomControls.js";
-import Menus from "./IndexSections/Menus.js";
-import Navbars from "./IndexSections/Navbars.js";
+// import HeroSection from "../components/Heros/HeroSection.js";
+// import Buttons from "./IndexSections/Buttons.js";
+// import Inputs from "./IndexSections/Inputs.js";
+// import CustomControls from "./IndexSections/CustomControls.js";
+// import Menus from "./IndexSections/Menus.js";
+// import Navbars from "./IndexSections/Navbars.js";
 import TabSection from "../components/all/TabSection.js";
-import Progress from "./IndexSections/Progress.js";
-import Pagination from "./IndexSections/Pagination.js";
-import Pills from "./IndexSections/Pills.js";
-import Labels from "./IndexSections/Labels.js";
-import Alerts from "./IndexSections/Alerts.js";
-import Typography from "./IndexSections/Typography.js";
-import Modals from "./IndexSections/Modals.js";
-import Datepicker from "./IndexSections/Datepicker.js";
-import TooltipPopover from "./IndexSections/TooltipPopover.js";
-import Carousel from "./IndexSections/Carousel.js";
-import Icons from "./IndexSections/Icons.js";
-import Login from "./IndexSections/Login.js";
-import Download from "./IndexSections/Download.js";
+// import Progress from "./IndexSections/Progress.js";
+// import Pagination from "./IndexSections/Pagination.js";
+// import Pills from "./IndexSections/Pills.js";
+// import Labels from "./IndexSections/Labels.js";
+// import Alerts from "./IndexSections/Alerts.js";
+// import Typography from "./IndexSections/Typography.js";
+// import Modals from "./IndexSections/Modals.js";
+// import Datepicker from "./IndexSections/Datepicker.js";
+// import TooltipPopover from "./IndexSections/TooltipPopover.js";
+// import Carousel from "./IndexSections/Carousel.js";
+// import Icons from "./IndexSections/Icons.js";
+// import Login from "./IndexSections/Login.js";
+// import Download from "./IndexSections/Download.js";
 // import HeroSecondary from '../components/Heros/HeroSecondary'
 import Card from '../components/Cards/Card'
 import '../components/Cards/Card.css'
-import SectionGroup from '../components/Sections/Section'
+// import SectionGroup from '../components/Sections/Section'
 
 class Index extends React.Component {
   componentDidMount() {

@@ -21,7 +21,7 @@ import { Link } from "react-router-dom";
 import Headroom from "headroom.js";
 // reactstrap components
 import {
-  Alert,
+  // Alert,
   Button,
   UncontrolledCollapse,
   DropdownMenu,
