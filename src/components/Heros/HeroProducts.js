@@ -1,11 +1,8 @@
 import React from 'react'
-import './HeroProducts'
-
-import Card from '../Cards/Card'
-import Cell from '../Cards/Cell'
+import './HeroProducts.css'
 import CardScroll from '../Cards/CardScroll'
 
-const HeroProducts = (props) => {
+const HeroProducts = () => {
   return (
     <div className="bg-dark text-white space-2 overflow-hidden">
       <div className="container-fluid">

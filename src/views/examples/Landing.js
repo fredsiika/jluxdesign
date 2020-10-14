@@ -39,13 +39,12 @@ import {
 
 // core components
 import NavbarBasic from '../../components/Navbars/NavbarBasic';
-// import CardsFooter from "components/Footers/CardsFooter.js";
 import SimpleFooter from '../../components/Footers/SimpleFooter'
-import SearchBarSimple from '../../components/Forms/SearchBarSimple'
-import SearchBarAdvanced from '../../components/Forms/SearchBarAdvanced'
 import HeroProducts from '../../components/Heros/HeroProducts'
+import ProcessSection from '../../components/Containers/ProcessSection'
+import OverviewSection from '../../components/Containers/OverviewSection'
+import ProcessTabs from '../../components/Tabs/ProcessTabs'
 // index page sections
-import Download from "../IndexSections/Download.js";
 
 class Landing extends React.Component {
   state = {};
@@ -118,87 +117,16 @@ class Landing extends React.Component {
         */}
         {/* End TODO */}
 
-          {/* Our process */}
-          <section className="section section-lg">
-            <Container> 
-              <Row className="row-grid align-items-center">
-                
-                {/* Floating image */}
-                <Col className="order-md-2" md="6">
-                  <img
-                    alt="..."
-                    className="img-fluid floating"
-                    src={require("assets/img/theme/promo-1.png")}
-                  />
-                </Col>
+          {/* Overview */}
+          <OverviewSection />
 
-                {/* Web copy */}
-                <Col className="order-md-1" md="6">
-                  <div className="pr-md-5">
-                    <div className="icon icon-lg icon-shape icon-shape-danger shadow rounded-circle mb-5">
-                      <i className="ni ni-diamond" />
-                    </div>
-                    <h3>From concept to completion</h3>
-                    <p>Professional Countertop Stone Installation, Distribution and Fabrication Services in the Dallas/Fort-Worth Area - all in one place.</p>
-                    <ul className="list-unstyled mt-5">
-                      <li className="py-2">
-                        <div className="d-flex align-items-center">
-                          <div>
-                            <Badge
-                              className="badge-circle mr-3"
-                              color="default"
-                            >
-                              <i className="ni ni-world" />
-                            </Badge>
-                          </div>
-                          <div>
-                            <h6 className="mb-0">
-                              Products sourced from around the world
-                            </h6>
-                          </div>
-                        </div>
-                      </li>
-                      <li className="py-2">
-                        <div className="d-flex align-items-center">
-                          <div>
-                            <Badge
-                              className="badge-circle mr-3"
-                              color="default"
-                            >
-                              <i className="ni ni-shop" />
-                            </Badge>
-                          </div>
-                          <div>
-                            <h6 className="mb-0">Design Consultants, fabricators, and installers are 100% in-house.</h6>
-                          </div>
-                        </div>
-                      </li>
-                      <li className="py-2">
-                        <div className="d-flex align-items-center">
-                          <div>
-                            <Badge
-                              className="badge-circle mr-3"
-                              color="default"
-                            >
-                              <i className="ni ni-books" />
-                            </Badge>
-                          </div>
-                          <div>
-                            <h6 className="mb-0">
-                              Amazing knowledge base of stone and tile resources
-                            </h6>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </Col>
-              </Row>
-            </Container>
+          {/* Our Process */}
+          {/* <ProcessSection /> */}
+
+          <section className="section section-sm section-shaped pb-250">
+            <ProcessTabs />
           </section>
-          {/* End Our Process */}
-
-
+        
           {/* Services Section */}
           <div className="position-relative">
             {/* shape Hero */}
@@ -592,6 +520,7 @@ class Landing extends React.Component {
               </svg>
             </div>
           </section>
+
           <section className="section section-lg">
             <Container>
               <Row className="justify-content-center text-center mb-lg">

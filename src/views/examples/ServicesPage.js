@@ -24,7 +24,7 @@ import {
 import HomeNavbar from '../../components/Navbars/HomeNavbar';
 import CardsFooter from "components/Footers/CardsFooter.js";
 import Download from "../IndexSections/Download.js";
-import CustomCard from '../../components/Cards/Card'
+// import CustomCard from '../../components/Cards/CardCustom'
 import Section from '../../components/Sections/Section'
 import WaveSVG from '../../components/Sections/WaveSVG'
 import Footer from '../../components/Footers/CardsFooter'
@@ -40,7 +40,7 @@ const ServicesPage = (props) => (
         <Link to="/knowledge-base">Check out our knowledge Base</Link>
       </div>
     </div>
-    <div className="cards">
+    {/* <div className="cards">
       <div className="CardGroup">
         <CustomCard text-dark
           title="Distribution" 
@@ -61,7 +61,7 @@ const ServicesPage = (props) => (
           logo='../../assets/data/img/brand/logo-jluxdesign.svg'
         />
       </div>
-    </div>
+    </div> */}
     {/* <Section
       image='https://p75.f0.n0.cdn.getcloudapp.com/items/4guJbv1Y/wallpaper4.jpg?source=viewer&v=576eaabc2d1c0df2d4cdc7127a9e7626'
       logo='https://cdn.vox-cdn.com/uploads/chorus_asset/file/19624670/HomeAdvisor_logo.0.png'

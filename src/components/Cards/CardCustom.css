@@ -1,4 +1,4 @@
-.Card {
+.CardCustom {
     width: 300px;
     height: 225px;
     position: relative;
@@ -10,16 +10,16 @@
     transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.Card:hover {
+.CardCustom:hover {
     transform: scale(1.1, 1.1);
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
 }
 
-.Card:hover img {
+.CardCustom:hover img {
     transform: translateY(-20px);
 }
 
-.Card img {
+.CardCustom img {
     position: absolute;
     top: 0;
     height: 110%;
@@ -27,16 +27,16 @@
     transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.Card h3 {
-    color: white;
+.CardCustom h3 {
+    color: #212529;
     font-size: 30px;
     margin: 20px 0 0 20px;
     width: 190px;
 }
 
-.Card p {
-    color: rgba(255, 255, 255, 0.8);
-    text-transform: uppercase;
+.CardCustom p {
+    color: #32325d;
+    /* text-transform: uppercase; */
     font-weight: 600;
     font-size: 18px;
     align-self: end;

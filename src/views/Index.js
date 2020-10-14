@@ -48,7 +48,7 @@ import Icons from "./IndexSections/Icons.js";
 import Login from "./IndexSections/Login.js";
 import Download from "./IndexSections/Download.js";
 // import HeroSecondary from '../components/Heros/HeroSecondary'
-import Card from '../components/Cards/Card'
+// import Card from '../components/Cards/CardCustom'
 import '../components/Cards/Card.css'
 import SectionGroup from '../components/Sections/Section'
 

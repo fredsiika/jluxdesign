@@ -1,12 +1,12 @@
 import React from 'react'
-import './Card.css'
+import './CardCustom.css'
 
-const Card = props => (
-  <div className="Card">
+const CardCustom = (props) => (
+  <div className="CardCustom">
     <img src={props.img} />
     <h3>{props.title}</h3>
     <p>{props.text}</p>
   </div>
 )
 
-export default Card
+// export default CardCustom

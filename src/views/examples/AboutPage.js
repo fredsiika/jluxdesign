@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Card from '../../components/Cards/Card'
+import Card from '../../components/Cards/CardCustom'
 import Section from '../../components/Sections/Section'
 import WaveSVG from '../../components/Sections/WaveSVG'
 import webcopyData from '../../assets/data/about-page.json'
