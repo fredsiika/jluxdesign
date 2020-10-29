@@ -32,26 +32,26 @@ const CardScroll = (props) => {
       }deg)`
     });
   });
-  
+
   return (
     <>
       <div className="container">
         {movies.map(src => (
           <animated.div
             key={src}
-            className="card"
-            style={{ 
-              ...style,
-              background: `url(${src})` 
+            className="card-scroll"
+            style={{
+              // ...style,
+              background: `url(${src})`
             }}
           />
         ))}
         {movies.map(src => (
-          <img 
-            style={{ 
-              ...style, 
-              background: `url(${src})` 
-            }} 
+          <img
+            style={{
+              ...style,
+              background: `url(${src})`
+            }}
           />
         ))}
       </div>
