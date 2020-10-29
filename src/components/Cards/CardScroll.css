@@ -2,13 +2,11 @@
     width: 0px;
 }
 
-.container {
+.container.card-scroll {
     display: flex;
     overflow-x: scroll;
     width: 100%;
-}
-
-.container.card-scroll {
+    width: 100%;
     padding: 20px 0;
     margin-top: 60px;
 }

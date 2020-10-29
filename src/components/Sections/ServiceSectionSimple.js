@@ -6,7 +6,7 @@ import FloatingBtnGroup from '../Buttons/FloatingBtnGroup'
 
 const ServiceSectionSimple = () => {
   return (
-    <section className="section section-sm">c
+    <section className="section section-sm">
       <Container>
         <Row className="row-grid align-items-center">
           <Col className="col-12">
@@ -24,39 +24,3 @@ const ServiceSectionSimple = () => {
 }
 
 export default ServiceSectionSimple
-
-{/*
-<div className="pill-button-group">
-              <button
-                type="button"
-                class="btn btn-sm btn-primary rounded-pill font-weight-medium px-4 py-2 mr-2">
-                  Kitchens
-              </button>
-              <button
-                type="button"
-                class="btn btn-sm btn-primary rounded-pill font-weight-medium px-4 py-2 mr-2">
-                  Bathrooms
-              </button>
-              <button
-                type="button"
-                class="btn btn-sm btn-primary rounded-pill font-weight-medium px-4 py-2 mr-2">
-                  Bath Surrounds
-              </button>
-              <button
-                type="button"
-                class="btn btn-sm btn-primary rounded-pill font-weight-medium px-4 py-2 mr-2">
-                  Fireplaces
-              </button>
-              <button
-                type="button"
-                class="btn btn-sm btn-primary rounded-pill font-weight-medium px-4 py-2 mr-2">
-                  Bar Countertops
-              </button>
-              <button
-                type="button"
-                class="btn btn-sm btn-primary rounded-pill font-weight-medium px-4 py-2 mr-2">
-                  Much More!
-              </button>
-            </div>
-
-            */}

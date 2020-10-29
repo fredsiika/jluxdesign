@@ -35,13 +35,13 @@ const CardScroll = (props) => {
 
   return (
     <>
-      <div className="container">
+      <div className="container card-scroll">
         {movies.map(src => (
           <animated.div
             key={src}
             className="card-scroll"
             style={{
-              // ...style,
+              ...style,
               background: `url(${src})`
             }}
           />

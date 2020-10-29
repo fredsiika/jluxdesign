@@ -41,14 +41,17 @@ import {
 import NavbarBasic from '../../components/Navbars/NavbarBasic';
 import SimpleFooter from '../../components/Footers/SimpleFooter'
 import HeroProducts from '../../components/Heros/HeroProducts'
-import ProcessSection from '../../components/Containers/ProcessSection'
+// import ProcessSection from '../../components/Containers/ProcessSection'
 import OverviewSection from '../../components/Containers/OverviewSection'
-import ProcessTabs from '../../components/Tabs/ProcessTabs'
+// import ProcessTabs from '../../components/Tabs/ProcessTabs'
 import OurProcessSection from '../../components/Sections/OurProcessSection'
 import LandingHero from "components/Heros/LandingHero";
-import SectionCopy from '../../components/Sections/Section'
+// import SectionCopy from '../../components/Sections/Section'
 import ServiceSectionSimple from "components/Sections/ServiceSectionSimple";
-// import SearchBarAdvanced from '../../components/Forms/SearchBarAdvanced';
+import CTABanner from '../../components/Sections/CTABanner'
+import SVGSeperator from '../../components/Icons/SVGSeparator'
+import SVGSeparatorTwo from '../../components/Icons/SVGSeparatorTwo'
+
 // index page sections
 // import Download from "../IndexSections/Download.js";
 
@@ -66,70 +69,12 @@ class Landing extends React.Component {
         <LandingHero />
         {/* End Hero Section */}
         <main ref="main">
-        <ServiceSectionSimple />
-        <hr />
-          {/* Overview */}
+          <ServiceSectionSimple />
+          <hr />
           <OverviewSection />
-
-          {/* Our Process */}
+          {/* Shaped Banner Section */}
+          <CTABanner />
           <OurProcessSection />
-          {/* <ProcessSection /> */}
-
-          <section className="section section-sm section-shaped pb-250">
-            <ProcessTabs />
-          </section>
-
-          {/* Services Section */}
-          <div className="position-relative">
-            {/* shape Hero */}
-            <section className="section section-lg section-shaped pb-250">
-              {/* Background Bubbles */}
-              <div className="shape shape-style-1 shape-default">
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-              </div>
-              {/* End Background Bubbles */}
-
-              <Container className="py-lg-md d-flex">
-                <div className="col px-0">
-                  <Row>
-                    <Col lg="12">
-                      <h3 className="display-3 text-white text-center">
-                        Start designing your new home{" "}
-                        <span>Distribution, fabrication and Installation Services in DFW Area</span>
-                      </h3>
-                    </Col>
-                  </Row>
-                </div>
-              </Container>
-
-              {/* SVG separator */}
-              <div className="separator separator-bottom separator-skew">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  preserveAspectRatio="none"
-                  version="1.1"
-                  viewBox="0 0 2560 100"
-                  x="0"
-                  y="0"
-                >
-                  <polygon
-                    className="fill-white"
-                    points="2560 0 2560 100 0 100"
-                  />
-                </svg>
-              </div>
-            </section>
-            {/* 1st Hero Variation */}
-          </div>
-          {/* End Services Section */}
 
           <section className="section section-lg pt-lg-0 mt--200">
             <Container>
@@ -139,10 +84,10 @@ class Landing extends React.Component {
                     <Col lg="4">
                       <Card className="card-lift--hover shadow border-0">
                         <CardBody className="py-5">
-                          <div className="icon icon-shape icon-shape-primary rounded-circle mb-4">
+                          <div className="icon icon-shape icon-shape-default rounded-circle mb-4">
                             <i className="ni ni-check-bold" />
                           </div>
-                          <h6 className="text-primary text-uppercase">
+                          <h6 className="text-default text-uppercase">
                             First-class Stone distribution.
                           </h6>
                           <p className="description mt-3">
@@ -152,22 +97,22 @@ class Landing extends React.Component {
                           </p>
                           <div>
                             <p className="lead">Customer Segment</p>
-                            <Badge color="primary" pill className="mr-1">
+                            <Badge color="default" pill className="mr-1">
                               Homeowners
                             </Badge>
-                            <Badge color="primary" pill className="mr-1">
+                            <Badge color="default" pill className="mr-1">
                               Designers
                             </Badge>
-                            <Badge color="primary" pill className="mr-1">
+                            <Badge color="default" pill className="mr-1">
                               Builders
                             </Badge>
-                            <Badge color="primary" pill className="mr-1">
+                            <Badge color="default" pill className="mr-1">
                               Architects
                             </Badge>
                           </div>
                           <Button
                             className="mt-4"
-                            color="primary"
+                            color="bg-default bg-info"
                             href="#pablo"
                             onClick={e => e.preventDefault()}
                           >
@@ -179,10 +124,10 @@ class Landing extends React.Component {
                     <Col lg="4">
                       <Card className="card-lift--hover shadow border-0">
                         <CardBody className="py-5">
-                          <div className="icon icon-shape icon-shape-success rounded-circle mb-4">
+                          <div className="icon icon-shape icon-shape-default rounded-circle mb-4">
                             <i className="ni ni-istanbul" />
                           </div>
-                          <h6 className="text-success text-uppercase">
+                          <h6 className="text-default text-uppercase">
                             State-of-the-art Stone Fabrication
                           </h6>
                           <p className="description mt-3">
@@ -191,19 +136,19 @@ class Landing extends React.Component {
                             JLuxDesign processes hundreds of countertops every week with CNC enabled machinery
                           </p>
                           <div>
-                            <Badge color="success" pill className="mr-1">
+                            <Badge color="default" pill className="mr-1">
                               business
                             </Badge>
-                            <Badge color="success" pill className="mr-1">
+                            <Badge color="default" pill className="mr-1">
                               vision
                             </Badge>
-                            <Badge color="success" pill className="mr-1">
+                            <Badge color="default" pill className="mr-1">
                               success
                             </Badge>
                           </div>
                           <Button
                             className="mt-4"
-                            color="success"
+                            color="bg-default bg-info"
                             href="#pablo"
                             onClick={e => e.preventDefault()}
                           >
@@ -215,10 +160,10 @@ class Landing extends React.Component {
                     <Col lg="4">
                       <Card className="card-lift--hover shadow border-0">
                         <CardBody className="py-5">
-                          <div className="icon icon-shape icon-shape-warning rounded-circle mb-4">
+                          <div className="icon icon-shape icon-shape-default rounded-circle mb-4">
                             <i className="ni ni-planet" />
                           </div>
-                          <h6 className="text-warning text-uppercase">
+                          <h6 className="text-default text-uppercase">
                             Stone Countertop Installation
                           </h6>
                           <p className="description mt-3">
@@ -226,19 +171,19 @@ class Landing extends React.Component {
                             From template to installation, our customer server team is here to create the home of your dreams.
                           </p>
                           <div>
-                            <Badge color="warning" pill className="mr-1">
+                            <Badge color="default" pill className="mr-1">
                               Homeowners
                             </Badge>
-                            <Badge color="warning" pill className="mr-1">
+                            <Badge color="default" pill className="mr-1">
                               House flippers
                             </Badge>
-                            <Badge color="warning" pill className="mr-1">
+                            <Badge color="default" pill className="mr-1">
                               Custom Home Developers
                             </Badge>
                           </div>
                           <Button
                             className="mt-4"
-                            color="warning"
+                            color="bg-default bg-info"
                             href="#pablo"
                             onClick={e => e.preventDefault()}
                           >
@@ -253,13 +198,11 @@ class Landing extends React.Component {
             </Container>
           </section>
 
-
-
           <section className="section bg-secondary">
             <Container>
               <Row className="row-grid align-items-center">
                 <Col md="6">
-                  <Card className="bg-default shadow border-0">
+                  <Card className="bg-dark shadow border-0">
                     <CardImg
                       alt="..."
                       src={require("../../assets/img/backgrounds/eco-thinking.jpg")}
@@ -294,7 +237,7 @@ class Landing extends React.Component {
                 </Col>
                 <Col md="6">
                   <div className="pl-md-5">
-                    <div className="icon icon-lg icon-shape icon-shape-warning shadow rounded-circle mb-5">
+                    <div className="icon icon-lg icon-shape icon-shape-primary shadow rounded-circle mb-5">
                       <i className="ni ni-settings" />
                     </div>
                     <h3>Our customers</h3>
@@ -308,7 +251,7 @@ class Landing extends React.Component {
                       Here's some random text that has to do with our customers and what they expect from J Lux Design.
                     </p>
                     <a
-                      className="font-weight-bold text-warning mt-5"
+                      className="font-weight-bold text-blue mt-5"
                       href="#!"
                       onClick={e => e.preventDefault()}
                     >
@@ -319,7 +262,8 @@ class Landing extends React.Component {
               </Row>
             </Container>
           </section>
-          <section className="section pb-0 bg-gradient-warning">
+
+          <section className="section pb-0 bg-gradient-dark">
             <Container>
               <Row className="row-grid align-items-center">
                 <Col className="order-lg-2 ml-lg-auto" md="6">
@@ -732,21 +676,7 @@ class Landing extends React.Component {
               </Row>
             </Container>
             {/* SVG separator */}
-            <div className="separator separator-bottom separator-skew zindex-100">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="none"
-                version="1.1"
-                viewBox="0 0 2560 100"
-                x="0"
-                y="0"
-              >
-                <polygon
-                  className="fill-white"
-                  points="2560 0 2560 100 0 100"
-                />
-              </svg>
-            </div>
+            <SVGSeperator />
           </section>
 
 
