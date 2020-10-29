@@ -1,3 +1,4 @@
+{/*
 .CardCustom {
     width: 300px;
     height: 225px;
@@ -36,9 +37,11 @@
 
 .CardCustom p {
     color: #32325d;
-    /* text-transform: uppercase; */
+    text-transform: uppercase;
     font-weight: 600;
     font-size: 18px;
     align-self: end;
     margin: 0 0 20px 20px;
 }
+
+*/}

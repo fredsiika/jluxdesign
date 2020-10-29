@@ -1,4 +1,4 @@
-html,
+/* html,
 body {
     margin: 0;
 }
@@ -11,11 +11,11 @@ body {
     display: flex;
     overflow-x: scroll;
     width: 100%
-    /* padding: 20px 0; */
-    /* margin-top: 60px; */
-}
+    padding: 20px 0;
+    margin-top: 60px;
+} */
 
-.card {
+/* .card {
     flex-shrink: 0;
     width: 350px;
     height: 300px;
@@ -27,9 +27,9 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
+} */
 
-.card:hover {
+/* .card:hover {
   transform: scale(1.1, 1.1);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
 }
@@ -60,4 +60,4 @@ body {
     font-size: 18px;
     align-self: end;
     margin: 0 0 20px 20px;
-}
+} */

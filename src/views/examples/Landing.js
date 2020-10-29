@@ -44,10 +44,11 @@ import HeroProducts from '../../components/Heros/HeroProducts'
 import ProcessSection from '../../components/Containers/ProcessSection'
 import OverviewSection from '../../components/Containers/OverviewSection'
 import ProcessTabs from '../../components/Tabs/ProcessTabs'
+import OurProcessSection from '../../components/Sections/OurProcessSection'
 import LandingHero from "components/Heros/LandingHero";
 import SectionCopy from '../../components/Sections/Section'
 import ServiceSectionSimple from "components/Sections/ServiceSectionSimple";
-
+// import SearchBarAdvanced from '../../components/Forms/SearchBarAdvanced';
 // index page sections
 // import Download from "../IndexSections/Download.js";
 
@@ -71,6 +72,7 @@ class Landing extends React.Component {
           <OverviewSection />
 
           {/* Our Process */}
+          <OurProcessSection />
           {/* <ProcessSection /> */}
 
           <section className="section section-sm section-shaped pb-250">
