@@ -19,38 +19,38 @@
 import React from "react";
 
 // reactstrap components
-import { Container, Row, Col, Navbar, Alert } from "reactstrap";
+import { Container, Row, Col, Navbar } from "reactstrap";
 
 // core components
 import NavbarBasic from "components/Navbars/NavbarBasic";
-import CardsFooter from "components/Footers/CardsFooter.js";
+// import CardsFooter from "components/Footers/CardsFooter.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
 
 // index page sections
-import HeroSection from "../components/Heros/HeroSection.js";
-import Buttons from "./IndexSections/Buttons.js";
-import Inputs from "./IndexSections/Inputs.js";
-import CustomControls from "./IndexSections/CustomControls.js";
-import Menus from "./IndexSections/Menus.js";
-import Navbars from "./IndexSections/Navbars.js";
+// import HeroSection from "../components/Heros/HeroSection.js";
+// import Buttons from "./IndexSections/Buttons.js";
+// import Inputs from "./IndexSections/Inputs.js";
+// import CustomControls from "./IndexSections/CustomControls.js";
+// import Menus from "./IndexSections/Menus.js";
+// import Navbars from "./IndexSections/Navbars.js";
 import TabSection from "../components/all/TabSection.js";
-import Progress from "./IndexSections/Progress.js";
-import Pagination from "./IndexSections/Pagination.js";
-import Pills from "./IndexSections/Pills.js";
-import Labels from "./IndexSections/Labels.js";
-import Alerts from "./IndexSections/Alerts.js";
-import Typography from "./IndexSections/Typography.js";
-import Modals from "./IndexSections/Modals.js";
-import Datepicker from "./IndexSections/Datepicker.js";
-import TooltipPopover from "./IndexSections/TooltipPopover.js";
-import Carousel from "./IndexSections/Carousel.js";
-import Icons from "./IndexSections/Icons.js";
-import Login from "./IndexSections/Login.js";
-import Download from "./IndexSections/Download.js";
+// import Progress from "./IndexSections/Progress.js";
+// import Pagination from "./IndexSections/Pagination.js";
+// import Pills from "./IndexSections/Pills.js";
+// import Labels from "./IndexSections/Labels.js";
+// import Alerts from "./IndexSections/Alerts.js";
+// import Typography from "./IndexSections/Typography.js";
+// import Modals from "./IndexSections/Modals.js";
+// import Datepicker from "./IndexSections/Datepicker.js";
+// import TooltipPopover from "./IndexSections/TooltipPopover.js";
+// import Carousel from "./IndexSections/Carousel.js";
+// import Icons from "./IndexSections/Icons.js";
+// import Login from "./IndexSections/Login.js";
+// import Download from "./IndexSections/Download.js";
 // import HeroSecondary from '../components/Heros/HeroSecondary'
 // import Card from '../components/Cards/CardCustom'
-import '../components/Cards/Card.css'
-import SectionGroup from '../components/Sections/Section'
+// import '../components/Cards/Card.css'
+// import SectionGroup from '../components/Sections/Section'
 
 class Index extends React.Component {
   componentDidMount() {
@@ -102,13 +102,13 @@ class Index extends React.Component {
             </Row>
           </div>
           </section>
-          
-          
+
+
            <Container>
-           <div class="alert alert-darker text-center" role="alert">
-          <strong className="text-info">COVID-19 Update! </strong>
-          <span className="text-white">We are now offering Virtual Stone Selection in DFW!</span>
-        </div>
+            <div class="alert alert-darker text-center" role="alert">
+              <strong className="text-info">COVID-19 Update! </strong>
+              <span className="text-white">We are now offering Virtual Stone Selection in DFW!</span>
+            </div>
            </Container>
           {/* <Buttons />
           <Inputs /> */}
@@ -167,7 +167,7 @@ function Services() {
       </div>
       <div class="col">
         <h4 class="text-primary">Fabricator</h4>
-        <p class="lead">Elimate additional costs and the liability of working third-party subcontractors. Our fabrication crew.</p>     
+        <p class="lead">Elimate additional costs and the liability of working third-party subcontractors. Our fabrication crew.</p>
           <h4 class="text-primary">Benefit</h4>
           <p class="text-muted">Finding third-party subcontractors qualified to handle your project is a hit or miss.<br />
           <p class="text-muted">Our specialized team of stone fabricators use the highest quality do one thing and one thing only. </p>

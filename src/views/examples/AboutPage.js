@@ -4,14 +4,20 @@ import Card from '../../components/Cards/CardCustom'
 import Section from '../../components/Sections/Section'
 import WaveSVG from '../../components/Sections/WaveSVG'
 import webcopyData from '../../assets/data/about-page.json'
+// import styled from 'styled-components'
+// import Card from '../../components/Cards/Card'
+// import Section from '../../components/Sections/Section'
+// import WaveSVG from '../../components/Sections/WaveSVG'
+// import webcopyData from '../../assets/data/about-page.json'
 import Footer from '../../components/Footers/SimpleFooter'
-import styled from 'styled-components'
-import { CardText } from 'reactstrap';
+// import { CardText } from 'reactstrap';
 import '../app.css'
-import HomeNavbar from '../../components/Navbars/HomeNavbar'
+import NavbarBasic from '../../components/Navbars/NavbarBasic'
+
 const AboutPage = (props) => (
   <>
   <div>
+    <NavbarBasic />
     <div className="Hero">
       <div className="HeroGroup">
         <h1>We are JLuxDesgin</h1>
@@ -23,16 +29,15 @@ const AboutPage = (props) => (
           <p>JLuxDesign, LLC is headquartered in Dallas, Texas.</p>
           <Link to="/services/">Check out our services.</Link>
           <div className="Logos">
-            <img src='/images/logo-sketch.png' width="50" />
-            <img src='/images/logo-figma.png' width="50" />
-            <img src='/images/logo-studio.png' width="50" />
-            <img src='/images/logo-framer.png' width="50" />
-            <img src='/images/logo-react.png' width="50" />
-            <img src='/images/logo-swift.png' width="50" />
+            <img alt='...' src='/images/logo-sketch.png' width="50" />
+            <img alt='...' src='/images/logo-figma.png' width="50" />
+            <img alt='...' src='/images/logo-studio.png' width="50" />
+            <img alt='...' src='/images/logo-framer.png' width="50" />
+            <img alt='...' src='/images/logo-react.png' width="50" />
+            <img alt='...' src='/images/logo-swift.png' width="50" />
           </div>
       </div>
     </div>
-    
   </div>
   <Footer />
   </>

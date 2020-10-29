@@ -44,7 +44,12 @@ import HeroProducts from '../../components/Heros/HeroProducts'
 import ProcessSection from '../../components/Containers/ProcessSection'
 import OverviewSection from '../../components/Containers/OverviewSection'
 import ProcessTabs from '../../components/Tabs/ProcessTabs'
+import LandingHero from "components/Heros/LandingHero";
+import SectionCopy from '../../components/Sections/Section'
+import ServiceSectionSimple from "components/Sections/ServiceSectionSimple";
+
 // index page sections
+// import Download from "../IndexSections/Download.js";
 
 class Landing extends React.Component {
   state = {};
@@ -57,66 +62,11 @@ class Landing extends React.Component {
     return (
       <>
         <NavbarBasic />
-        {/* Hero  */}
-        <div className="hero-bg gradient-overlay-dark-v1 bg-img-hero">
-          <div className="hero-bg-group w-lg-50 w-md-80 mx-md-auto space-2 space-3--sm space-4--lg text-center text-white">
-            {/* Title */}
-            <div className="mb-6">
-              <h2 class="h1 text-white text-lh-xs mb-3">Install your next stone and tile countertop with us. <br className="d-none d-sm-inline-block" />Satisfaction is Guaranteed</h2>
-              <p className="text-white">The modern way to seamless and efficient<br className="d-none d-lg-inline-block" /> stone and tile countertop renovation.</p> 
-            </div>
-            {/* End Title */}  
-            <div className="btn-wrapper">
-              <Button
-                className="btn-icon mb-3 mb-sm-0"
-                color="info"
-                href="/services"
-              >
-                <span className="btn-inner--icon mr-1">
-                  <i className="ni ni-settings" />
-                </span>
-                <span className="btn-inner--text">Services</span>
-              </Button>
-
-              <Button 
-                className="btn-neutral btn-icon mb-3 mb-sm-0" 
-                color="success" 
-                outline type="button"
-                href="/start"
-              >
-                <span className="bt-inner--icon mr-1">
-                  <i className="ni ni-spaceship" />
-                </span>
-                <span className="nav-link-inner--text ml-1">
-                  Get Started
-                </span>
-              </Button>
-            </div>
-          </div>
-          {/* Hero Products */}
-          <HeroProducts />
-        </div>
+        <LandingHero />
         {/* End Hero Section */}
         <main ref="main">
-        
-        {/* TODO */}
-        {/*
-        <section className="section section-lg">
-        <Container>
-          <Row className="row-grid align-items-center">
-            <Col className="col-12">
-              <div>
-                <h2 className="text-default text-center">Launch the <br className="d-none d-sm-inline-block" />perfect home renovation project</h2>
-                <p className="lead text-center">We'll help you select, cut and install your custom stone and tile countertop.</p>
-              <SearchBarAdvanced />
-            </div> 
-            </Col>
-          </Row>
-        </Container>
-        </section>
-        */}
-        {/* End TODO */}
-
+        <ServiceSectionSimple />
+        <hr />
           {/* Overview */}
           <OverviewSection />
 
@@ -126,7 +76,7 @@ class Landing extends React.Component {
           <section className="section section-sm section-shaped pb-250">
             <ProcessTabs />
           </section>
-        
+
           {/* Services Section */}
           <div className="position-relative">
             {/* shape Hero */}
@@ -194,7 +144,7 @@ class Landing extends React.Component {
                             First-class Stone distribution.
                           </h6>
                           <p className="description mt-3">
-                            Choosing the right countertop surface is vital to the project.<br /> 
+                            Choosing the right countertop surface is vital to the project.<br />
                             Having the it in stock is even more critical.<br />
                             With well over 50,000 slabs of stone in stock, JLuxDesign is ready to handle your project.
                           </p>
@@ -357,7 +307,7 @@ class Landing extends React.Component {
                     </p>
                     <a
                       className="font-weight-bold text-warning mt-5"
-                      href="#"
+                      href="#!"
                       onClick={e => e.preventDefault()}
                     >
                       Discovery more about Eco-Thinking
@@ -421,7 +371,7 @@ class Landing extends React.Component {
                     </CardBody>
                   </Card>
 
-                  
+
                   <Card className="shadow shadow-lg--hover mt-5">
                     <CardBody>
                       <div className="d-flex px-3">
@@ -475,7 +425,7 @@ class Landing extends React.Component {
                       </div>
                     </CardBody>
                   </Card>
-                  
+
                   <Card className="shadow shadow-lg--hover mt-5">
                     <CardBody>
                       <div className="d-flex px-3">
@@ -705,7 +655,7 @@ class Landing extends React.Component {
               </Row>
             </Container>
           </section>
-          
+
         {/* Newsletter */}
           <section className="section section-lg pt-0">
             <Container>
@@ -756,7 +706,7 @@ class Landing extends React.Component {
                   </div>
                   <h5 className="text-white mt-3">Fill out form</h5>
                   <p className="text-white mt-3">
-                    Fill out this simple form to get started on your next custom stone and tile project. 
+                    Fill out this simple form to get started on your next custom stone and tile project.
                   </p>
                 </Col>
                 <Col lg="4">
@@ -797,7 +747,7 @@ class Landing extends React.Component {
             </div>
           </section>
 
-          
+
 
           {/* Work with us */}
           <section className="section section-lg pt-lg-0 section-contact-us">
@@ -876,7 +826,7 @@ class Landing extends React.Component {
             </Container>
           </section>
           {/* End Work with us */}
-          
+
           {/* <Download /> */}
         </main>
         <SimpleFooter />

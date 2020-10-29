@@ -34,19 +34,6 @@ import ServicesPage from "views/examples/ServicesPage.js";
 import Products from "views/examples/Products.js";
 import NotFound from "views/examples/404.js";
 
-import { Alert } from 'reactstrap'
-
-const AlertBanner = () => (
-  <>
-    <Alert className="alert-success">
-      <strong>COVID-19 Update!</strong>We are now offering Virtual Stone Selection in DFW!
-    </Alert>
-  </>
-)
-
-export default Alert
-
-
 ReactDOM.render(
   <>
   <BrowserRouter>
