@@ -1,28 +1,8 @@
-/*!
-
-=========================================================
-* Argon Design System React - v1.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-design-system-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 // import { Link } from 'react-router-dom'
 // nodejs library that concatenates classes
 import classnames from "classnames";
-
-// reactstrap components
 import {
-  Badge,
   Button,
   Card,
   CardBody,
@@ -39,21 +19,16 @@ import {
 
 // core components
 import NavbarBasic from '../../components/Navbars/NavbarBasic';
-import SimpleFooter from '../../components/Footers/SimpleFooter'
-import HeroProducts from '../../components/Heros/HeroProducts'
-// import ProcessSection from '../../components/Containers/ProcessSection'
+import SimpleFooter from '../../components/Footers/SimpleFooter';
 import OverviewSection from '../../components/Containers/OverviewSection'
-// import ProcessTabs from '../../components/Tabs/ProcessTabs'
 import OurProcessSection from '../../components/Sections/OurProcessSection'
 import LandingHero from "components/Heros/LandingHero";
-// import SectionCopy from '../../components/Sections/Section'
 import ServiceSectionSimple from "components/Sections/ServiceSectionSimple";
-import CTABanner from '../../components/Sections/CTABanner'
-import SVGSeperator from '../../components/Icons/SVGSeparator'
-import SVGSeparatorTwo from '../../components/Icons/SVGSeparatorTwo'
-
-// index page sections
-// import Download from "../IndexSections/Download.js";
+import CTABanner from '../../components/Sections/CTABanner';
+import SVGSeperator from '../../components/Icons/SVGSeparator';
+import PlanningSection from '../../components/Sections/PlanningSection';
+import BenefitsSection from '../../components/Sections/BenefitsSection';
+import LogoBrandsGroup from '../../components/Icons/LogoBrands';
 
 class Landing extends React.Component {
   state = {};
@@ -73,131 +48,14 @@ class Landing extends React.Component {
           <hr />
           <OverviewSection />
           {/* Shaped Banner Section */}
+          <LogoBrandsGroup title="Our Brands" text="Great Pricing, Premium Quality Product and Excellent Customer Service!" />
           <CTABanner />
           <OurProcessSection />
+          {/* Benefits Section */}
+          <BenefitsSection />
+          {/* End Benefits Section */}
 
-          <section className="section section-lg pt-lg-0 mt--200">
-            <Container>
-              <Row className="justify-content-center">
-                <Col lg="12">
-                  <Row className="row-grid">
-                    <Col lg="4">
-                      <Card className="card-lift--hover shadow border-0">
-                        <CardBody className="py-5">
-                          <div className="icon icon-shape icon-shape-default rounded-circle mb-4">
-                            <i className="ni ni-check-bold" />
-                          </div>
-                          <h6 className="text-default text-uppercase">
-                            First-class Stone distribution.
-                          </h6>
-                          <p className="description mt-3">
-                            Choosing the right countertop surface is vital to the project.<br />
-                            Having the it in stock is even more critical.<br />
-                            With well over 50,000 slabs of stone in stock, JLuxDesign is ready to handle your project.
-                          </p>
-                          <div>
-                            <p className="lead">Customer Segment</p>
-                            <Badge color="default" pill className="mr-1">
-                              Homeowners
-                            </Badge>
-                            <Badge color="default" pill className="mr-1">
-                              Designers
-                            </Badge>
-                            <Badge color="default" pill className="mr-1">
-                              Builders
-                            </Badge>
-                            <Badge color="default" pill className="mr-1">
-                              Architects
-                            </Badge>
-                          </div>
-                          <Button
-                            className="mt-4"
-                            color="bg-default bg-info"
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
-                          >
-                            Learn more
-                          </Button>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                    <Col lg="4">
-                      <Card className="card-lift--hover shadow border-0">
-                        <CardBody className="py-5">
-                          <div className="icon icon-shape icon-shape-default rounded-circle mb-4">
-                            <i className="ni ni-istanbul" />
-                          </div>
-                          <h6 className="text-default text-uppercase">
-                            State-of-the-art Stone Fabrication
-                          </h6>
-                          <p className="description mt-3">
-                            Eliminate wasted time and money of outsourcing stone fabrication.
-                            Our in-house team of professional fabricators guarantee the level of craftsmanship for the perfect stone cut.
-                            JLuxDesign processes hundreds of countertops every week with CNC enabled machinery
-                          </p>
-                          <div>
-                            <Badge color="default" pill className="mr-1">
-                              business
-                            </Badge>
-                            <Badge color="default" pill className="mr-1">
-                              vision
-                            </Badge>
-                            <Badge color="default" pill className="mr-1">
-                              success
-                            </Badge>
-                          </div>
-                          <Button
-                            className="mt-4"
-                            color="bg-default bg-info"
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
-                          >
-                            Learn more
-                          </Button>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                    <Col lg="4">
-                      <Card className="card-lift--hover shadow border-0">
-                        <CardBody className="py-5">
-                          <div className="icon icon-shape icon-shape-default rounded-circle mb-4">
-                            <i className="ni ni-planet" />
-                          </div>
-                          <h6 className="text-default text-uppercase">
-                            Stone Countertop Installation
-                          </h6>
-                          <p className="description mt-3">
-                            Custom installation teams work with homeowners to ensure a hassle-free experience.<br />
-                            From template to installation, our customer server team is here to create the home of your dreams.
-                          </p>
-                          <div>
-                            <Badge color="default" pill className="mr-1">
-                              Homeowners
-                            </Badge>
-                            <Badge color="default" pill className="mr-1">
-                              House flippers
-                            </Badge>
-                            <Badge color="default" pill className="mr-1">
-                              Custom Home Developers
-                            </Badge>
-                          </div>
-                          <Button
-                            className="mt-4"
-                            color="bg-default bg-info"
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
-                          >
-                            Learn more
-                          </Button>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                  </Row>
-                </Col>
-              </Row>
-            </Container>
-          </section>
-
+          {/* Our Customers Section */}
           <section className="section bg-secondary">
             <Container>
               <Row className="row-grid align-items-center">
@@ -228,7 +86,7 @@ class Landing extends React.Component {
                       <h4 className="display-3 font-weight-bold text-white">
                         Eco-Thinking
                       </h4>
-                      <p className="lead">Being mindful of the planet.</p>
+                      <p className="lead text-primary">Being mindful of the planet.</p>
                       <p className="lead text-italic text-white">
                         Our Eco-Thinking means high-quality, long-lasting materials that tread lightly on the environment.
                       </p>
@@ -238,9 +96,9 @@ class Landing extends React.Component {
                 <Col md="6">
                   <div className="pl-md-5">
                     <div className="icon icon-lg icon-shape icon-shape-primary shadow rounded-circle mb-5">
-                      <i className="ni ni-settings" />
+                      <i className="ni ni-settings text-darker" />
                     </div>
-                    <h3>Our customers</h3>
+                    <h3 className="text-primary">Our customers</h3>
                     <p className="lead">
                       Here's some random text that has to do with our customers and what they expect from J Lux Design.
                     </p>
@@ -250,172 +108,28 @@ class Landing extends React.Component {
                     <p>
                       Here's some random text that has to do with our customers and what they expect from J Lux Design.
                     </p>
-                    <a
-                      className="font-weight-bold text-blue mt-5"
+                    <Button
+                      aria-pressed={true}
+                      className="font-weight-bold mt-5"
+                      color="darker"
                       href="#!"
                       onClick={e => e.preventDefault()}
+                      role="button"
+                      size="lg"
+                      block
                     >
                       Discovery more about Eco-Thinking
-                    </a>
+                    </Button>
                   </div>
                 </Col>
               </Row>
             </Container>
           </section>
+          {/* END Our Customers Section */}
 
-          <section className="section pb-0 bg-gradient-dark">
-            <Container>
-              <Row className="row-grid align-items-center">
-                <Col className="order-lg-2 ml-lg-auto" md="6">
-                  <div className="position-relative pl-md-5">
-                    <img
-                      alt="..."
-                      className="img-center img-fluid"
-                      src={require("assets/img/ill/ill-2.svg")}
-                    />
-                  </div>
-                </Col>
-                <Col className="order-lg-1" lg="6">
-                  <div className="d-flex px-3">
-                    <div>
-                      <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
-                        <i className="ni ni-building text-primary" />
-                      </div>
-                    </div>
-                    <div className="pl-4">
-                      <h4 className="display-3 text-white">Planning is key</h4>
-                      <p className="lead">Service and skill to match.</p>
-                      <p className="text-white">
-                        At J Lux Design we plan just about every minute detail to ensure smooth completion of every project.
-                      </p>
-                    </div>
-                  </div>
-                  <Card className="shadow shadow-lg--hover mt-5">
-                    <CardBody>
-                      <div className="d-flex px-3">
-                        <div>
-                          <div className="icon icon-shape bg-gradient-success rounded-circle text-default">
-                            <i className="ni ni-satisfied" />
-                          </div>
-                        </div>
-                        <div className="pl-4">
-                          <h5 className="title text-success">
-                            Bespoke service
-                          </h5>
-                          <p>
-                            When it comes to creating colors, patterns and textures, our level of experience and expertise is unique. Share your inspiration. If you can dream it, we can probably do it—from stone to glass, Victorian to Art Deco, Arts and Crafts to contemporary.
-                          </p>
-                          <a
-                            className="text-success"
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
-                          >
-                            Learn more
-                          </a>
-                        </div>
-                      </div>
-                    </CardBody>
-                  </Card>
-
-
-                  <Card className="shadow shadow-lg--hover mt-5">
-                    <CardBody>
-                      <div className="d-flex px-3">
-                        <div>
-                          <div className="icon icon-shape bg-gradient-danger rounded-circle text-default">
-                            <i className="ni ni-active-40" />
-                          </div>
-                        </div>
-                        <div className="pl-4">
-                          <h5 className="title text-danger">
-                            Custom Capabilities
-                          </h5>
-                          <p>
-                            We welcome custom orders as one more opportunity to help you find just the right tile.
-                          </p>
-                          <a
-                            className="text-danger"
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
-                          >
-                            See Options
-                          </a>
-                        </div>
-                      </div>
-                    </CardBody>
-                  </Card>
-
-                  <Card className="shadow shadow-lg--hover mt-5">
-                    <CardBody>
-                      <div className="d-flex px-3">
-                        <div>
-                          <div className="icon icon-shape bg-gradient-info rounded-circle text-default">
-                            <i className="ni ni-active-40" />
-                          </div>
-                        </div>
-                        <div className="pl-4">
-                          <h5 className="title text-info">
-                            Custom colors, sizes, designs
-                          </h5>
-                          <p>
-                            We're here to help you find just the right tile—whether it already exists, or not. We offer custom color matching, custom sizes and custom designs. (This doesn’t apply to all collections, so look for the Custom callout.) In addition, many of our artists offer field sizes, colors and designs not shown here on the website.
-                          </p>
-                          <a
-                            className="text-info"
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
-                          >
-                            See Options
-                          </a>
-                        </div>
-                      </div>
-                    </CardBody>
-                  </Card>
-
-                  <Card className="shadow shadow-lg--hover mt-5">
-                    <CardBody>
-                      <div className="d-flex px-3">
-                        <div>
-                          <div className="icon icon-shape bg-gradient-primary rounded-circle text-default">
-                            <i className="ni ni-settings" />
-                          </div>
-                          <div className="pl-4">
-                            <h5 className="title text-primary">
-                              Matching samples
-                            </h5>
-                            <p>Put us to the test. Bring in a sample of the color you wish to match. In 2-3 weeks, a sample will be sent from Ann Sacks Collection manufacturing to the showroom for your inspection.</p>
-                            <a
-                            className="text-primary"
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
-                          >
-                            See Options
-                          </a>
-                          </div>
-                        </div>
-                      </div>
-                    </CardBody>
-                  </Card>
-                </Col>
-              </Row>
-            </Container>
-            {/* SVG separator */}
-            <div className="separator separator-bottom separator-skew zindex-100">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="none"
-                version="1.1"
-                viewBox="0 0 2560 100"
-                x="0"
-                y="0"
-              >
-                <polygon
-                  className="fill-white"
-                  points="2560 0 2560 100 0 100"
-                />
-              </svg>
-            </div>
-          </section>
+          {/* Planning - What We Do */}
+          <PlanningSection />
+          {/* End Planning - What We Do */}
 
           <section className="section section-lg">
             <Container>

@@ -19,26 +19,23 @@ import {
   // Row,
   // Col
 } from "reactstrap";
-// core components
-// import DemoNavbar from "components/Navbars/DemoNavbar.js";
-import HomeNavbar from '../../components/Navbars/HomeNavbar';
-import CardsFooter from "components/Footers/CardsFooter.js";
-import Download from "../IndexSections/Download.js";
+
+import NavbarBasic from '../../components/Navbars/NavbarBasic';
+import SimpleFooter from '../../components/Footers/SimpleFooter'
 // import CustomCard from '../../components/Cards/CardCustom'
-import Section from '../../components/Sections/Section'
-import WaveSVG from '../../components/Sections/WaveSVG'
-// import CardsFooter from "components/Footers/CardsFooter.js";
-// import Download from "../IndexSections/Download.js";
-import CustomCard from '../../components/Cards/CardCustom'
 // import Section from '../../components/Sections/Section'
 // import WaveSVG from '../../components/Sections/WaveSVG'
-import Footer from '../../components/Footers/CardsFooter'
+// import CardsFooter from "components/Footers/CardsFooter.js";
+// import Download from "../IndexSections/Download.js";
+// import CustomCard from '../../components/Cards/CardCustom'
+// import Section from '../../components/Sections/Section'
+// import WaveSVG from '../../components/Sections/WaveSVG'
 // import articleresources from '../../assets/data/about-page.json'
 // import Cell from 'components/Cells/Cell'
 
 const ServicesPage = (props) => (
   <div>
-    <HomeNavbar />
+    <NavbarBasic />
     <div className="Hero">
       <div class="HeroGroup">
       <h1>We Design, Build </h1>
@@ -81,14 +78,13 @@ const ServicesPage = (props) => (
           image="https://cdn.vox-cdn.com/thumbor/pnYzBKjmr9JLwbOhag8xUvq8yc0=/0x0:1280x960/600x450/filters:focal(0x0:1280x960):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/19610487/Countertops_Westerly_Kitchen_Details-529.0.jpg"
         /> */}
      </SectionCellGroup>
-    <Footer />
+    <SimpleFooter />
   </div>
 )
 
 export default ServicesPage
 
 // Styled Components
-
 const SectionCaption = styled.p`
   font-weight: 600
 `;

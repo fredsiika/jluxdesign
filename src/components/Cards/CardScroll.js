@@ -1,5 +1,5 @@
 import * as React from "react";
-import { render } from "react-dom";
+// import { render } from "react-dom";
 import { animated, useSpring } from "react-spring";
 import { useScroll } from "react-use-gesture";
 import './CardScroll.css'
@@ -25,6 +25,7 @@ const CardScroll = (props) => {
     transform: "perspective(500px) rotateY(0deg)"
   }));
 
+  // eslint-disable-next-line
   const bind = useScroll(event => {
     set({
       transform: `perspective(500px) rotateY(${
@@ -52,6 +53,7 @@ const CardScroll = (props) => {
               ...style,
               background: `url(${src})`
             }}
+            alt="Design instpiration"
           />
         ))}
       </div>

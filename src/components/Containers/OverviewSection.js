@@ -8,13 +8,13 @@ import {
 } from 'reactstrap'
 
 class OverviewSection extends React.Component {
-  
+
 
   render() {
     return (
     <>
       <section className="section section-lg">
-        <Container> 
+        <Container>
           <Row className="row-grid align-items-center">
             {/* Floating image */}
             <Col className="order-md-2" md="6">
@@ -85,6 +85,16 @@ class OverviewSection extends React.Component {
                   </li>
                 </ul>
               </div>
+              <div >
+                <Button
+                  outline color="default"
+                  size="lg"
+                  aria-label="Get Quote"
+                  block>
+                  Get Quote
+                </Button>
+              </div>
+
             </Col>
           </Row>
         </Container>

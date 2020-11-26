@@ -12,4 +12,4 @@ const CardCustom = props => (
   </div>
 )
 
-// export default CardCustom
+export default CardCustom

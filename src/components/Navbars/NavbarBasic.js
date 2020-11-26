@@ -125,10 +125,10 @@ class NavbarBasic extends React.Component {
                       <i className="ni ni-collection d-lg-none mr-1" />
                       <span className="nav-link-inner--text">Services</span>
                     </DropdownToggle>
-                    
+
                     <DropdownMenu className="dropdown-menu-xl">
                       <div className="dropdown-menu-inner">
-                        
+
                         {/* Distribution */}
                         <Media
                           className="d-flex align-items-center"
@@ -265,14 +265,14 @@ class NavbarBasic extends React.Component {
                       <span className="nav-link-inner--text">About</span>
                     </DropdownToggle>
                     {/* End Tab Title */}
-                     
-                    <DropdownMenu className="dropdown-menu-xl">  
+
+                    <DropdownMenu className="dropdown-menu-xl">
                       {/* Getting Started  */}
                       <div className="dropdown-menu-inner">
                         <Media
                           className="d-flex align-items-center"
-                          href="/about#ourstory"
-                          target="_blank"
+                          href="/about#our-story"
+                          target="_self"
                         >
                           <div className="icon icon-shape bg-gradient-primary rounded-circle text-white">
                             <i className="ni ni-shop" />
@@ -288,8 +288,8 @@ class NavbarBasic extends React.Component {
                         </Media>
                         <Media
                           className="d-flex align-items-center"
-                          href="/about#ourteam"
-                          target="_blank"
+                          href="/about#our-team"
+                          target="_self"
                         >
                           <div className="icon icon-shape bg-gradient-info rounded-circle text-white">
                             <i className="ni ni-key-25" />
@@ -305,8 +305,8 @@ class NavbarBasic extends React.Component {
                         </Media>
                         <Media
                           className="d-flex align-items-center"
-                          href="/about#ourwork"
-                          target="_blank"
+                          href="/about#our-work"
+                          target="_self"
                         >
                           <div className="icon icon-shape bg-gradient-danger rounded-circle text-white">
                             <i className="ni ni-satisfied" />
@@ -316,7 +316,7 @@ class NavbarBasic extends React.Component {
                               Our Work
                             </h5>
                             <p className="description d-none d-md-inline-block mb-0">
-                              Browse through what past clients have to say about our work. 
+                              Browse through completed projects to see what past clients have to say about our work.
                             </p>
                           </Media>
                         </Media>
@@ -324,13 +324,13 @@ class NavbarBasic extends React.Component {
                     </DropdownMenu>
                   </UncontrolledDropdown>
                   {/* End About Us */}
-                  
+
                 </Nav>
                 {/* End Navbar Links Sections */}
 
                 {/* Navbar Social Icons */}
                 <Nav className="align-items-lg-center ml-lg-auto" navbar>
-                  
+
                   {/* Facebook Button */}
                   <NavItem>
                     <NavLink
@@ -402,16 +402,16 @@ class NavbarBasic extends React.Component {
                         Home Advisor
                       </span>
                     </NavLink>
-                    <UncontrolledTooltip 
+                    <UncontrolledTooltip
                       delay={0}
-                      placement="bottom" 
+                      placement="bottom"
                       target="tooltip159654437"
                     >
                       Check us out on Home Advisor
                     </UncontrolledTooltip>
                   </NavItem>
                   {/* End Home Advisor Button */}
-                  
+
                   {/* Houzz Button */}
                   <NavItem>
                     <NavLink
@@ -451,7 +451,7 @@ class NavbarBasic extends React.Component {
 
                 </Nav>
                 {/* End Navbar Social Icons */}
-    
+
               </UncontrolledCollapse>
               {/* End Uncontrolled Collapse */}
             </Container>
