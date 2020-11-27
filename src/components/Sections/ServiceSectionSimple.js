@@ -6,6 +6,7 @@ import FloatingBtnGroup from '../Buttons/FloatingBtnGroup'
 
 const ServiceSectionSimple = () => {
   return (
+    <>
     <section className="section section-sm">
       <Container>
         <Row className="row-grid align-items-center">
@@ -20,6 +21,8 @@ const ServiceSectionSimple = () => {
       </Container>
       {/* <TripleArrowAnimation /> */}
     </section>
+    <hr />
+    </>
   )
 }
 

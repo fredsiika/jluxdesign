@@ -2,6 +2,7 @@ import React from "react";
 // import { Link } from 'react-router-dom'
 // nodejs library that concatenates classes
 import classnames from "classnames";
+
 import {
   Button,
   Card,
@@ -24,13 +25,15 @@ import OurProcessSection from '../../components/Sections/OurProcessSection'
 import LandingHero from "components/Heros/LandingHero";
 import ServiceSectionSimple from "components/Sections/ServiceSectionSimple";
 import CTABanner from '../../components/Sections/CTABanner';
-import SVGSeperator from '../../components/Icons/SVGSeparator';
 import PlanningSection from '../../components/Sections/PlanningSection';
 import BenefitsSection from '../../components/Sections/BenefitsSection';
 import LogoBrandsGroup from '../../components/Icons/LogoBrands';
 import MaterialSelection from '../../components/Sections/MaterialSelection';
 import OurTeamSection from '../../components/Sections/OurTeamSection';
 import NewsletterSection from '../../components/Sections/NewsletterSection';
+import WorkCTAForm from '../../components/Sections/WorkCTAForm';
+
+
 
 class Landing extends React.Component {
   state = {};
@@ -39,6 +42,7 @@ class Landing extends React.Component {
     document.scrollingElement.scrollTop = 0;
     this.refs.main.scrollTop = 0;
   }
+
   render() {
     return (
       <>
@@ -46,67 +50,18 @@ class Landing extends React.Component {
         <LandingHero />
         <main ref="main">
           <ServiceSectionSimple />
-          <hr />
           <OverviewSection />
           <LogoBrandsGroup title="Our Brands" text="Great Pricing, Premium Quality Product and Excellent Customer Service!" />
-          <CTABanner />
           <OurProcessSection />
           <BenefitsSection />
           <MaterialSelection />
           <PlanningSection />
           <OurTeamSection />
-          <NewsletterSection
-            subtitle="We Make Countertop Projects Easy For You."
-            description="Sign up for the latest news on promotions, products and events!"
-            cta="Subscribe to our newletter"
-          />
+          <CTABanner />
+          <NewsletterSection subtitle="We Make Countertop Projects Easy For You." description="Sign up for the latest news on promotions, products and events!" cta="Subscribe to our newletter" />
+          <WorkCTAForm />
 
-          {/* Work With Us Section */}
-          <section className="section section-lg bg-gradient-default">
-            <Container className="pt-lg pb-300">
-              <Row className="text-center justify-content-center">
-                <Col lg="10">
-                  <h2 className="display-3 text-white">Work with us</h2>
-                  <p className="lead text-white">
-                    Now more than ever is it easier to get started with J Lux Design. In only three steps.
-                  </p>
-                </Col>
-              </Row>
-              <Row className="row-grid mt-5">
-                <Col lg="4">
-                  <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
-                    <i className="ni ni-collection text-primary" />
-                  </div>
-                  <h5 className="text-white mt-3">Fill out form</h5>
-                  <p className="text-white mt-3">
-                    Fill out this simple form to get started on your next custom stone and tile project.
-                  </p>
-                </Col>
-                <Col lg="4">
-                  <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
-                    <i className="ni ni-calendar-grid-58 text-primary" />
-                  </div>
-                  <h5 className="text-white mt-3">Schedule onboarding call</h5>
-                  <p className="text-white mt-3">
-                    Once your form is submitted you'll be given the option to schedule an initial client call. This is where will discuss the details of your project.
-                  </p>
-                </Col>
-                <Col lg="4">
-                  <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
-                    <i className="ni ni-diamond text-primary" />
-                  </div>
-                  <h5 className="text-white mt-3">Project Launch</h5>
-                  <p className="text-white mt-3">
-                    If we're a good fit for your project, then the next step is to come into our showroom where we'll help you find and select the perfect stone and/or tile for your project.
-                  </p>
-                </Col>
-              </Row>
-            </Container>
-            {/* SVG separator */}
-            <SVGSeperator />
-          </section>
-
-          {/* Contact Form - Work With Us Section */}
+          {/* CTA Form */}
           <section className="section section-lg pt-lg-0 section-contact-us">
             <Container>
               <Row className="justify-content-center mt--300">
@@ -169,11 +124,11 @@ class Landing extends React.Component {
                         <Button
                           block
                           className="btn-round"
-                          color="default"
+                          color="darker"
                           size="lg"
                           type="button"
                         >
-                          Send Message
+                          Get Started
                         </Button>
                       </div>
                     </CardBody>
@@ -182,8 +137,7 @@ class Landing extends React.Component {
               </Row>
             </Container>
           </section>
-          {/* End Contact Form */}
-          {/* End Work With Us Section */}
+          {/* End CTAForm */}
         </main>
         <SimpleFooter />
       </>
