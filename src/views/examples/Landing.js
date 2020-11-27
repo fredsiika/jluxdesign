@@ -23,16 +23,16 @@ import SimpleFooter from '../../components/Footers/SimpleFooter';
 import OverviewSection from '../../components/Containers/OverviewSection'
 import OurProcessSection from '../../components/Sections/OurProcessSection'
 import LandingHero from "components/Heros/LandingHero";
-import ServiceSectionSimple from "components/Sections/ServiceSectionSimple";
+// import ServiceSectionSimple from "components/Sections/ServiceSectionSimple";
 import CTABanner from '../../components/Sections/CTABanner';
 import PlanningSection from '../../components/Sections/PlanningSection';
-import BenefitsSection from '../../components/Sections/BenefitsSection';
+import ServicesGrid from '../../components/Sections/ServicesGrid';
 import LogoBrandsGroup from '../../components/Icons/LogoBrands';
 import MaterialSelection from '../../components/Sections/MaterialSelection';
 import OurTeamSection from '../../components/Sections/OurTeamSection';
 import NewsletterSection from '../../components/Sections/NewsletterSection';
 import WorkCTAForm from '../../components/Sections/WorkCTAForm';
-
+import BenefitsGrid from '../../components/Features/BenefitsGrid';
 
 
 class Landing extends React.Component {
@@ -49,18 +49,18 @@ class Landing extends React.Component {
         <NavbarBasic />
         <LandingHero />
         <main ref="main">
-          <ServiceSectionSimple />
+          {/* <ServiceSectionSimple /> */}
+          <ServicesGrid />
+          <BenefitsGrid />
           <OverviewSection />
           <LogoBrandsGroup title="Our Brands" text="Great Pricing, Premium Quality Product and Excellent Customer Service!" />
           <OurProcessSection />
-          <BenefitsSection />
           <MaterialSelection />
           <PlanningSection />
           <OurTeamSection />
           <CTABanner />
           <NewsletterSection subtitle="We Make Countertop Projects Easy For You." description="Sign up for the latest news on promotions, products and events!" cta="Subscribe to our newletter" />
           <WorkCTAForm />
-
           {/* CTA Form */}
           <section className="section section-lg pt-lg-0 section-contact-us">
             <Container>
