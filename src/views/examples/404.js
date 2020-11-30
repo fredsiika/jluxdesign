@@ -1,34 +1,33 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {
+  Nav,
+  NavItem,
+  NavLink
+} from 'reactstrap';
+import NavbarBasic from '../../components/Navbars/NavbarBasic';
+import SimpleFooter from '../../components/Footers/SimpleFooter';
+import Jumbotron404 from '../../components/Jumbotrons/Jumbotron404';
 
 const NotFound = (props) => {
   return (
-    <div>
-      <div className="">
-        <h1 className="text-center">404</h1>
-        <p className="text-center text-muted">Oops, looks like you've hit a page that doesn't exist.</p>
+    <>
+      <NavbarBasic />
+      <Jumbotron404 />
+
+      <div className="main">
+        <h2 className="display-3 text-center">Perhaps you meant to be here?</h2>
+        <div className="sitemap">
+          <Nav classNam="ml-auto" light expand="md">
+            <NavItem className="display-4">
+              <NavLink href="/">{' > '}Home</NavLink>
+              <NavLink href="/#services">{' > '}Services</NavLink>
+              <NavLink href="/">{' > '}About Us</NavLink>
+            </NavItem>
+          </Nav>
+        </div>
       </div>
-      <div className="sitemap">
-        <h2>Perhaps you meant to be here?</h2>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/knowledge-base">Knowledge Base</Link>
-          </li>
-          <li>
-            <Link to="/services">Our Services</Link>
-          </li>
-          <li>
-            <Link to="/about">About Us</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
-      </div>
-    </div>
+      <SimpleFooter />
+    </>
   )
 }
 

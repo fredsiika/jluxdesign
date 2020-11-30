@@ -12,11 +12,11 @@ const AboutPage = (props) => (
   <>
   <div>
     <NavbarBasic />
-    <div className="hero-bg gradient-overlay-dark-v1 bg-img-hero">
+    <div className="hero-bg-kitchen gradient-overlay-dark-v1 bg-img-hero">
       <div className="HeroGroup hero-bg-group w-lg-50 w-md-80 mx-md-auto space-2 space-3--sm space-4--lg text-center text-white">
-        <h1 className="text-primary">About Us</h1>
-        <p className="text-secondary display-4">
-          We are <span className="text-secondary">J Lux Design</span>{' '}<br />
+        <h1 className="text-secondary display-1">About Us</h1>
+        <p className="text-left text-secondary display-4">
+          We are J Lux Design.<br />
           Transforming Home Improvement technologies to drive growth.
         </p>
       </div>
