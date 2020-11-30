@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 // import { Link } from 'react-router-dom'
 // nodejs library that concatenates classes
-import classnames from "classnames";
+import classnames from 'classnames';
 
 import {
   Button,
@@ -15,15 +15,15 @@ import {
   Container,
   Row,
   Col
-} from "reactstrap";
+} from 'reactstrap';
 
 // core components
 import NavbarBasic from '../../components/Navbars/NavbarBasic';
 import SimpleFooter from '../../components/Footers/SimpleFooter';
 import OverviewSection from '../../components/Containers/OverviewSection'
 import OurProcessSection from '../../components/Sections/OurProcessSection'
-import LandingHero from "components/Heros/LandingHero";
-// import ServiceSectionSimple from "components/Sections/ServiceSectionSimple";
+import LandingHero from 'components/Heros/LandingHero';
+// import ServiceSectionSimple from 'components/Sections/ServiceSectionSimple';
 import CTABanner from '../../components/Sections/CTABanner';
 import PlanningSection from '../../components/Sections/PlanningSection';
 import ServicesGrid from '../../components/Sections/ServicesGrid';
