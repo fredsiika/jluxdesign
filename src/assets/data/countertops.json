@@ -1,62 +1,64 @@
 {
-    "products": [ {
-            "name": "granite",
-            "image": [
-                "../assets/granite-01.jpg",
-                "../assets/granite-02.jpg",
-                "../assets/granite-03.jpg",
-                "../assets/granite-04.jpg"
-            ],
-            "details": "# Best for kitchen countertops, floors, and other heavily used surfaces. Granite is one of the most popular natural stones on the market.Granite quarried in the countries of China, India, and Brazil comprises approximately 2 / 3 of the granite used worldwide.Its inherent strength, abrasion resistance, and superior weathering durability are likely to keep it one of the preeminent stone material selections available.Available in a striking array of colors, granite’ s durability, longevity, and economy make it idea. for kitchen countertops and other heavily used surfaces, including tabletops and floors."
-        }, {
-            "name": "Marble",
-            "image": [
-                "../assets/marble-01.jpg",
-                "../assets/marble-02.jpg",
-                "../assets/marble-03.jpg",
-                "../assets/marble-04.jpg"
-            ],
-            "details": "# PRODUCT DETAILS Best for foyers, bathrooms, floors, and hearths. Marble is a metamorphic rock found in the mountainous regions of most countries of the world.Marble quarried in India, China, Italy, and Spain represents the majority of marble, in terms of volume, that is utilized worldwide.Because of its beauty and elegance, marble is a popular choice for countertops, floors, foyers, fireplace facings and hearths, walls, and windowsills."
-        },
-        {
-            "name": "Quartzite",
-            "image": [
-                "../assets/quartzite-01.jpg",
-                "../assets/quartzite-02.jpg",
-                "../assets/quartzite-03.jpg",
-                "../assets/quartzite-04.jpg"
-            ],
-            "details": "# PRODUCT DETAILS Best for any project, including kitchens and bathrooms. Quartzite is a metamorphic rock that is formed from sandstone. Quartzite can be of exceptional strength, density, and hardness.The strength, abrasion resistance, and weathering durability of this rock type expand its application possibilities to include most of the common uses for natural, dimension stone.Quartzite works well in kitchens because of its durability and strength."
-        },
-        {
-            "name": "Engineered Quartz",
-            "image": [
-                "../assets/engineered-quartz-01.jpg",
-                "../assets/engineered-quartz-02.jpg",
-                "../assets/engineered-quartz-03.jpg",
-                "../assets/engineered-quartz-04.jpg"
-            ],
-            "details": "# PRODUCT DETAILS Best used in high traffic areas like kitchens and bathrooms because of its durability and ease of use. Quartz is a man - made engineered stone formed by combining 90 % ground quartz( a natural hard mineral ) with 8 - 10 % resins, polymers, and pigments.This forms a very hard granite - like surface.The appearance depends on how the quartz is ground: coarsely ground quartz produces a flecked appearance, while finely ground quartz produces a smooth look.Quartz is extremely hard and durable, has a glossy sheen, is non - porous, and is stain - and - crack resistant.It does not require sealing or resealing and comes in a wide range of colors.Because it is easy to clean with mild soap and water, Quartz is an excellent choice in kitchens."
-        },
-        {
-            "name": "Porcelain",
-            "image": [ "", "", "", "" ],
-            "details": ""
-        },
-        {
-            "name": "Dolomite and Limestone",
-            "image": [ "", "", "", "" ],
-            "details": ""
-        },
-        {
-            "name": "Onyx",
-            "image": [ "", "", "", "" ],
-            "details": ""
-        },
-        {
-            "name": "Engineered Marble",
-            "image": [ "", "", "", "" ],
-            "details": ""
-        }
-    ]
+	"products": [
+		{
+			"name": "granite",
+			"image": [
+				"../assets/granite-01.jpg",
+				"../assets/granite-02.jpg",
+				"../assets/granite-03.jpg",
+				"../assets/granite-04.jpg"
+			],
+			"details": "# Best for kitchen countertops, floors, and other heavily used surfaces. Granite is one of the most popular natural stones on the market.Granite quarried in the countries of China, India, and Brazil comprises approximately 2 / 3 of the granite used worldwide.Its inherent strength, abrasion resistance, and superior weathering durability are likely to keep it one of the preeminent stone material selections available.Available in a striking array of colors, granite’ s durability, longevity, and economy make it idea. for kitchen countertops and other heavily used surfaces, including tabletops and floors."
+		},
+		{
+			"name": "Marble",
+			"image": [
+				"../assets/marble-01.jpg",
+				"../assets/marble-02.jpg",
+				"../assets/marble-03.jpg",
+				"../assets/marble-04.jpg"
+			],
+			"details": "# PRODUCT DETAILS Best for foyers, bathrooms, floors, and hearths. Marble is a metamorphic rock found in the mountainous regions of most countries of the world.Marble quarried in India, China, Italy, and Spain represents the majority of marble, in terms of volume, that is utilized worldwide.Because of its beauty and elegance, marble is a popular choice for countertops, floors, foyers, fireplace facings and hearths, walls, and windowsills."
+		},
+		{
+			"name": "Quartzite",
+			"image": [
+				"../assets/quartzite-01.jpg",
+				"../assets/quartzite-02.jpg",
+				"../assets/quartzite-03.jpg",
+				"../assets/quartzite-04.jpg"
+			],
+			"details": "# PRODUCT DETAILS Best for any project, including kitchens and bathrooms. Quartzite is a metamorphic rock that is formed from sandstone. Quartzite can be of exceptional strength, density, and hardness.The strength, abrasion resistance, and weathering durability of this rock type expand its application possibilities to include most of the common uses for natural, dimension stone.Quartzite works well in kitchens because of its durability and strength."
+		},
+		{
+			"name": "Engineered Quartz",
+			"image": [
+				"../assets/engineered-quartz-01.jpg",
+				"../assets/engineered-quartz-02.jpg",
+				"../assets/engineered-quartz-03.jpg",
+				"../assets/engineered-quartz-04.jpg"
+			],
+			"details": "# PRODUCT DETAILS Best used in high traffic areas like kitchens and bathrooms because of its durability and ease of use. Quartz is a man - made engineered stone formed by combining 90 % ground quartz( a natural hard mineral ) with 8 - 10 % resins, polymers, and pigments.This forms a very hard granite - like surface.The appearance depends on how the quartz is ground: coarsely ground quartz produces a flecked appearance, while finely ground quartz produces a smooth look.Quartz is extremely hard and durable, has a glossy sheen, is non - porous, and is stain - and - crack resistant.It does not require sealing or resealing and comes in a wide range of colors.Because it is easy to clean with mild soap and water, Quartz is an excellent choice in kitchens."
+		},
+		{
+			"name": "Porcelain",
+			"image": ["", "", "", ""],
+			"details": ""
+		},
+		{
+			"name": "Dolomite and Limestone",
+			"image": ["", "", "", ""],
+			"details": ""
+		},
+		{
+			"name": "Onyx",
+			"image": ["", "", "", ""],
+			"details": ""
+		},
+		{
+			"name": "Engineered Marble",
+			"image": ["", "", "", ""],
+			"details": ""
+		}
+	]
 }
