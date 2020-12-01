@@ -26,15 +26,16 @@ import 'semantic-ui-css/semantic.min.css'
 
 // import Index from "views/Index.js";
 import Landing from 'views/examples/Landing.js'
-// import Login from "views/examples/Login.js";
+import Login from "views/examples/Login.js";
 // import Profile from "views/examples/Profile.js";
-// import Register from "views/examples/Register.js";
+import Register from "views/examples/Register.js";
 import AboutPage from 'views/examples/AboutPage.js'
 import Contact from 'views/examples/Contact.js'
 import KnowledgeBase from 'views/examples/KnowledgeBase.js'
 import ServicesPage from 'views/examples/ServicesPage.js'
 import Products from 'views/examples/Products.js'
 import NotFound from 'views/examples/404.js'
+import QuotePage from './views/examples/QuotePage'
 
 ReactDOM.render(
 	<>
@@ -77,20 +78,29 @@ ReactDOM.render(
 					exact
 					render={(props) => <Products {...props} />}
 				/>
-				<Route path="/404" exact render={(props) => <NotFound {...props} />} />
+				<Route
+					path="/login"
+					exact render={props => <Login {...props} />}
+      	/>
+				{/* <Route
+					path="/profile-page"
+					exact render={props => <Profile {...props} />}
+				/> */}
+				<Route
+					path="/register"
+					exact render={props => <Register {...props} />}
+				/>
+				<Route
+					path="/quote"
+					exact
+					render={props => <QuotePage {...props} />}
+				/>
+				<Route
+					path="/404"
+					exact
+					render={(props) => <NotFound {...props} />}
+				/>
 				<Redirect to="/404" />
-				{/* <Route
-        path="/login-page"
-        exact render={props => <Login {...props} />}
-      /> */}
-				{/* <Route
-        path="/profile-page"
-        exact render={props => <Profile {...props} />}
-      /> */}
-				{/* <Route
-        path="/register-page"
-        exact render={props => <Register {...props} />}
-      /> */}
 			</Switch>
 		</BrowserRouter>
 	</>,

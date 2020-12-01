@@ -33,6 +33,7 @@ import OurTeamSection from '../../components/Sections/OurTeamSection'
 import NewsletterSection from '../../components/Sections/NewsletterSection'
 import WorkCTAForm from '../../components/Sections/WorkCTAForm'
 import BenefitsGrid from '../../components/Features/BenefitsGrid'
+import ReactHookForm from '../../components/Forms/ReactHookForm'
 
 class Landing extends React.Component {
 	state = {}
@@ -149,6 +150,7 @@ class Landing extends React.Component {
 						</Container>
 					</section>
 					{/* End CTAForm */}
+					<ReactHookForm />
 				</main>
 				<SimpleFooter />
 			</>
