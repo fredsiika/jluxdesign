@@ -4,20 +4,21 @@ import BenefitsHeader from '../Features/BenefitsHeader'
 
 const ServicesGrid = (props) => {
 	return (
-		<section className="section section-lg pt-lg-0 mt--200">
+		<section className="section section-lg pt-lg-10 mt-200">
 			<Container>
 				<Row className="justify-content-center">
 					<BenefitsHeader
+						className="my-5"
 						tag="all-in-one solution"
 						title="Cut out the middle-man."
 						subtitle={
-							"We'll handle everything from finding, sourcing, templating/measurements, to fabricate, and install your custom stone countertops."
+							"We'll find, fabricate, and install your countertop and backsplash project - all in one place."
 						}
 					/>
 					<Col lg="12">
 						<Row className="row-grid">
 							<Col lg="4">
-								<Card className="card-lift--hover shadow border-0">
+								<Card className="text-left card-lift--hover shadow border-0">
 									<CardBody className="py-5">
 										<div className="icon icon-shape icon-shape-primary rounded-circle mb-4">
 											<i className="ni ni-check-bold text-darker" />
@@ -45,7 +46,7 @@ const ServicesGrid = (props) => {
 								</Card>
 							</Col>
 							<Col lg="4">
-								<Card className="card-lift--hover shadow border-0">
+								<Card className="text-left card-lift--hover shadow border-0">
 									<CardBody className="py-5">
 										<div className="icon icon-shape icon-shape-primary rounded-circle mb-4">
 											<i className="ni ni-istanbul text-darker" />
@@ -74,7 +75,7 @@ const ServicesGrid = (props) => {
 								</Card>
 							</Col>
 							<Col lg="4">
-								<Card className="card-lift--hover shadow border-0">
+								<Card className="text-left card-lift--hover shadow border-0">
 									<CardBody className="py-5">
 										<div className="icon icon-shape icon-shape-primary rounded-circle mb-4">
 											<i className="ni ni-planet text-darker" />
