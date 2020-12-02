@@ -36,7 +36,6 @@ import ServicesPage from './views/examples/ServicesPage.js'
 import Products from './views/examples/Products.js'
 import NotFound from './views/examples/404.js'
 import QuotePage from './views/examples/QuotePage'
-import ReactHookForm from 'components/Forms/ReactHookForm';
 
 ReactDOM.render(
 	<>
@@ -94,7 +93,7 @@ ReactDOM.render(
 				<Route
 					path="/quote"
 					exact
-					render={props => <ReactHookForm {...props} />}
+					render={props => <QuotePage {...props} />}
 				/>
 				<Route
 					path="/404"
