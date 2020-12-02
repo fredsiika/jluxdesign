@@ -32,10 +32,11 @@ import Register from "views/examples/Register.js";
 import AboutPage from 'views/examples/AboutPage.js'
 import Contact from 'views/examples/Contact.js'
 import KnowledgeBase from 'views/examples/KnowledgeBase.js'
-import ServicesPage from 'views/examples/ServicesPage.js'
-import Products from 'views/examples/Products.js'
-import NotFound from 'views/examples/404.js'
+import ServicesPage from './views/examples/ServicesPage.js'
+import Products from './views/examples/Products.js'
+import NotFound from './views/examples/404.js'
 import QuotePage from './views/examples/QuotePage'
+import ReactHookForm from 'components/Forms/ReactHookForm';
 
 ReactDOM.render(
 	<>
@@ -93,7 +94,7 @@ ReactDOM.render(
 				<Route
 					path="/quote"
 					exact
-					render={props => <QuotePage {...props} />}
+					render={props => <ReactHookForm {...props} />}
 				/>
 				<Route
 					path="/404"
