@@ -27,9 +27,9 @@ import 'semantic-ui-css/semantic.min.css'
 
 // import Index from "views/Index.js";
 import Landing from 'views/examples/Landing.js'
-import Login from "views/examples/Login.js";
-import Profile from "views/examples/Profile.js";
-import Register from "views/examples/Register.js";
+import Login from 'views/examples/Login.js'
+import Profile from 'views/examples/Profile.js'
+import Register from 'views/examples/Register.js'
 import AboutPage from 'views/examples/AboutPage.js'
 import Contact from 'views/examples/Contact.js'
 import KnowledgeBase from 'views/examples/KnowledgeBase.js'
@@ -60,7 +60,11 @@ ReactDOM.render(
 						render={(props) => <Landing {...props} />}
 					/>
 					<Route path="/" exact render={(props) => <Landing {...props} />} />
-					<Route path="/home" exact render={(props) => <Landing {...props} />} />
+					<Route
+						path="/home"
+						exact
+						render={(props) => <Landing {...props} />}
+					/>
 					<Route
 						path="/about"
 						exact
@@ -86,25 +90,28 @@ ReactDOM.render(
 						exact
 						render={(props) => <Products {...props} />}
 					/>
-					<Route
-						path="/login"
-						exact render={props => <Login {...props} />}
-					/>
+					<Route path="/login" exact render={(props) => <Login {...props} />} />
 					<Route
 						path="/profile-page"
-						exact render={props => <Profile {...props} />}
+						exact
+						render={(props) => <Profile {...props} />}
 					/>
 					<Route
 						path="/register"
-						exact render={props => <Register {...props} />}
+						exact
+						render={(props) => <Register {...props} />}
 					/>
 					<Route
 						path="/quote"
 						exact
-						render={props => <QuotePage {...props} />}
+						render={(props) => <QuotePage {...props} />}
 					/>
 
-					<Route path="/quote-form" exact render={props => <QuotePage {...props} />} />
+					<Route
+						path="/quote-form"
+						exact
+						render={(props) => <QuotePage {...props} />}
+					/>
 					<Route path="/quote/step-1" exact component={Step1} />
 					<Route path="/quote/step1" exact component={Step1} />
 
@@ -121,7 +128,11 @@ ReactDOM.render(
 					<Route path="/quote/step5" exact component={Step5} />
 
 					<Route path="/quote/result" exact component={Result} />
-					<Route path="/404" exact render={(props) => <NotFound {...props} />} />
+					<Route
+						path="/404"
+						exact
+						render={(props) => <NotFound {...props} />}
+					/>
 					<Redirect to="/404" />
 				</Switch>
 			</BrowserRouter>

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import { Container, Jumbotron } from 'reactstrap'
 import NavbarBasic from '../Navbars/NavbarBasic'
 import SimpleFooter from '../Footers/SimpleFooter'
@@ -20,13 +20,13 @@ import ReactHookForm from './ReactHookForm'
 // }));
 
 export const QuoteFormHeader = (props) => {
-  // const styles = useStyles();
+	// const styles = useStyles();
 
-  return (
-    <>
-      <NavbarBasic />
-      <JumbotronBasic />
-      <ReactHookForm />
-    </>
-  );
-};
+	return (
+		<>
+			<NavbarBasic />
+			<JumbotronBasic />
+			<ReactHookForm />
+		</>
+	)
+}

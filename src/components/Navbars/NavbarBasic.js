@@ -22,8 +22,12 @@ import {
 	UncontrolledTooltip,
 } from 'reactstrap'
 
-const LogoWhite = (<img src={require("../../assets/img/logos/logo-white.png")} alt="..."></img>)
-const LogoBlack = (<img src={require("../../assets/img/logos/logo-black.png")} alt="..."></img>)
+const LogoWhite = (
+	<img src={require('../../assets/img/logos/logo-white.png')} alt="..."></img>
+)
+const LogoBlack = (
+	<img src={require('../../assets/img/logos/logo-black.png')} alt="..."></img>
+)
 
 class NavbarBasic extends React.Component {
 	componentDidMount() {
@@ -278,7 +282,8 @@ class NavbarBasic extends React.Component {
 															About Us
 														</h6>
 														<p className="description d-none d-md-inline-block mb-0">
-																Learn about the history and foundation of J Lux Design.
+															Learn about the history and foundation of J Lux
+															Design.
 														</p>
 													</Media>
 												</Media>
@@ -312,7 +317,9 @@ class NavbarBasic extends React.Component {
 															Contact Us
 														</h5>
 														<p className="description d-none d-md-inline-block mb-0">
-															Let us guide you through every step of the shopping process so you’ll be satisfied with your home renovation project for a lifetime!
+															Let us guide you through every step of the
+															shopping process so you’ll be satisfied with your
+															home renovation project for a lifetime!
 														</p>
 													</Media>
 												</Media>

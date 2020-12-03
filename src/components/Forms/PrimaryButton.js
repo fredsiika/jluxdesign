@@ -1,43 +1,42 @@
-import React from "react";
-import Button from "@material-ui/core/Button";
-import { makeStyles } from "@material-ui/core/styles";
+import React from 'react'
+import Button from '@material-ui/core/Button'
+import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    margin: theme.spacing(3, 0, 2),
-  },
-}));
+	root: {
+		margin: theme.spacing(3, 0, 2),
+	},
+}))
 
 export const PrimaryButton = ({ children, ...props }) => {
-  const styles = useStyles();
+	const styles = useStyles()
 
-  return (
-    <Button
-      type="submit"
-      fullWidth
-      variant="contained"
-      color="primary"
-      className={styles.root}
-      {...props}
-    >
-      {children}
-    </Button>
-  );
-};
+	return (
+		<Button
+			type="submit"
+			fullWidth
+			variant="contained"
+			color="primary"
+			className={styles.root}
+			{...props}>
+			{children}
+		</Button>
+	)
+}
 
 export const BackButton = ({ children, ...props }) => {
-  const styles = useStyles();
+	const styles = useStyles()
 
-  return (
-    <Button
-      type="button"
-      fullWidth
-      variant="contained"
-      outline color="secondary"
-      className={styles.root}
-      {...props}
-    >
-    {children}
-    </Button>
-  )
+	return (
+		<Button
+			type="button"
+			fullWidth
+			variant="contained"
+			outline
+			color="secondary"
+			className={styles.root}
+			{...props}>
+			{children}
+		</Button>
+	)
 }
