@@ -30,11 +30,14 @@ class NavbarReactstrapDefault extends Component {
 	}
 
 	render() {
+		const LogoBlack = (<img src={require("../../assets/img/logos/logo-black.png")}></img>)
+
 		return (
 			<div>
 				<Navbar color="inverse" light expanded="md">
 					<NavbarBrand className="text-darker" href="/">
 						{' '}
+						{/* <span style={{ alignContent: 'left' }}>{LogoBlack}</span> */}
 						JLuxDesign
 					</NavbarBrand>
 					<NavbarToggler onClick={this.toggle} />

@@ -16,6 +16,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
+import { DataProvider } from './DataContext'
 
 import './custom.scss'
 import 'assets/vendor/nucleo/css/nucleo.css'
@@ -27,7 +28,7 @@ import 'semantic-ui-css/semantic.min.css'
 // import Index from "views/Index.js";
 import Landing from 'views/examples/Landing.js'
 import Login from "views/examples/Login.js";
-// import Profile from "views/examples/Profile.js";
+import Profile from "views/examples/Profile.js";
 import Register from "views/examples/Register.js";
 import AboutPage from 'views/examples/AboutPage.js'
 import Contact from 'views/examples/Contact.js'
@@ -36,6 +37,12 @@ import ServicesPage from './views/examples/ServicesPage.js'
 import Products from './views/examples/Products.js'
 import NotFound from './views/examples/404.js'
 import QuotePage from './views/examples/QuotePage'
+import Step1 from './components/Forms/Step1'
+import Step2 from './components/Forms/Step2'
+import Step3 from './components/Forms/Step3'
+import Step4 from './components/Forms/Step4'
+import Step5 from './components/Forms/Step5'
+import Result from './components/Forms/Result'
 
 ReactDOM.render(
 	<>
@@ -81,11 +88,11 @@ ReactDOM.render(
 				<Route
 					path="/login"
 					exact render={props => <Login {...props} />}
-      	/>
-				{/* <Route
+				/>
+				<Route
 					path="/profile-page"
 					exact render={props => <Profile {...props} />}
-				/> */}
+				/>
 				<Route
 					path="/register"
 					exact render={props => <Register {...props} />}
@@ -95,11 +102,25 @@ ReactDOM.render(
 					exact
 					render={props => <QuotePage {...props} />}
 				/>
-				<Route
-					path="/404"
-					exact
-					render={(props) => <NotFound {...props} />}
-				/>
+
+				<Route path="/quote-form" exact render={props => <QuotePage {...props} />} />
+				<Route path="/quote/step-1" exact component={Step1} />
+				<Route path="/quote/step1" exact component={Step1} />
+
+				<Route path="/quote/step-2" exact component={Step2} />
+				<Route path="/quote/step2" exact component={Step2} />
+
+				<Route path="/quote/step-3" exact component={Step3} />
+				<Route path="/quote/step3" exact component={Step3} />
+
+				<Route path="/quote/step-4" exact component={Step4} />
+				<Route path="/quote/step4" exact component={Step4} />
+
+				<Route path="/quote/step-5" exact component={Step5} />
+				<Route path="/quote/step5" exact component={Step5} />
+
+				<Route path="/quote/result" exact component={Result} />
+				<Route path="/404" exact render={(props) => <NotFound {...props} />} />
 				<Redirect to="/404" />
 			</Switch>
 		</BrowserRouter>

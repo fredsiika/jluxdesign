@@ -22,6 +22,9 @@ import {
 	UncontrolledTooltip,
 } from 'reactstrap'
 
+const LogoWhite = (<img src={require("../../assets/img/logos/logo-white.png")} alt="..."></img>)
+const LogoBlack = (<img src={require("../../assets/img/logos/logo-black.png")} alt="..."></img>)
+
 class NavbarBasic extends React.Component {
 	componentDidMount() {
 		let headroom = new Headroom(document.getElementById('navbar-main'))
@@ -51,24 +54,19 @@ class NavbarBasic extends React.Component {
 				<header className="header-global">
 					{/* Navbar Section */}
 					<Navbar
-						className="navbar-main navbar-transparent navbar-light headroom"
+						className="navbar-main navbar-transparent headroom"
 						expand="lg"
 						id="navbar-main">
 						<Container>
 							{/* Navbar Logo */}
-							<NavbarBrand className="mr-lg-5" to="/landing-page" tag={Link}>
+							<NavbarBrand className="mr-lg-5 ml-0" to="/" tag={Link}>
 								{/* Logo Icon */}
-								<img
+								{/* <img
 									alt="..."
 									src={require('assets/img/icons/Diamond-48-96px/icons8-diamond-48.png')}
-								/>
+								/> */}
 								{/* End Logo Icon */}
-
-								<img
-									alt="..."
-									src={require('assets/img/brand/logo-jluxdesign.svg')}
-								/>
-								<span className="text-muted">Design</span>
+								{LogoWhite}
 							</NavbarBrand>
 							{/* End Navbar Logo */}
 
@@ -96,7 +94,7 @@ class NavbarBasic extends React.Component {
 													src={require('assets/img/icons/Diamond-48-96px/icons8-diamond-48.png')}
 												/>
 												{/* End Logo Icon */}
-												<span className="text-muted">J LUX DESIGN</span>
+												{LogoBlack}
 											</Link>
 										</Col>
 										{/* End Opened Navbar Log */}
@@ -128,7 +126,7 @@ class NavbarBasic extends React.Component {
 												<Media
 													className="d-flex align-items-center"
 													href="/services#distribution">
-													<div className="icon icon-shape bg-gradient-green rounded-circle text-black">
+													<div className="icon icon-shape bg-gradient-primary rounded-circle text-darker">
 														<i className="ni ni-delivery-fast" />
 													</div>
 													<Media body className="ml-3">
@@ -148,7 +146,7 @@ class NavbarBasic extends React.Component {
 												<Media
 													className="d-flex align-items-center"
 													href="/services#fabrication">
-													<div className="icon icon-shape bg-gradient-warning rounded-circle text-black">
+													<div className="icon icon-shape bg-gradient-primary rounded-circle text-darker">
 														<i className="ni ni-scissors" />
 													</div>
 													<Media body className="ml-3">
@@ -168,7 +166,7 @@ class NavbarBasic extends React.Component {
 												<Media
 													className="d-flex align-items-center"
 													href="/services#installation">
-													<div className="icon icon-shape bg-gradient-info rounded-circle text-black">
+													<div className="icon icon-shape bg-gradient-primary rounded-circle text-darker">
 														<i className="ni ni-settings" />
 													</div>
 													<Media body className="ml-3">
@@ -202,7 +200,7 @@ class NavbarBasic extends React.Component {
 													className="d-flex align-items-center"
 													href="/contact"
 													target="_blank">
-													<div className="icon icon-shape bg-gradient-primary rounded-circle text-white">
+													<div className="icon icon-shape bg-gradient-primary rounded-circle text-darker">
 														<i className="ni ni-spaceship" />
 													</div>
 													<Media body className="ml-3">
@@ -219,7 +217,7 @@ class NavbarBasic extends React.Component {
 													className="d-flex align-items-center"
 													href="/knowledge-base"
 													target="_blank">
-													<div className="icon icon-shape bg-gradient-success rounded-circle text-white">
+													<div className="icon icon-shape bg-gradient-primary rounded-circle text-darker">
 														<i className="ni ni-hat-3" />
 													</div>
 													<Media body className="ml-3">
@@ -237,11 +235,11 @@ class NavbarBasic extends React.Component {
 													className="d-flex align-items-center"
 													href="#!"
 													target="_blank">
-													<div className="icon icon-shape bg-gradient-warning rounded-circle text-white">
+													<div className="icon icon-shape bg-gradient-primary rounded-circle text-darker">
 														<i className="ni ni-atom" />
 													</div>
 													<Media body className="ml-3">
-														<h5 className="heading text-warning mb-md-1">
+														<h5 className="heading text-primary mb-md-1">
 															Design Lab
 														</h5>
 														<p className="description d-none d-md-inline-block mb-0">
@@ -261,26 +259,26 @@ class NavbarBasic extends React.Component {
 										{/* Tab title */}
 										<DropdownToggle caret color="primary" nav>
 											<i className="ni ni-shop d-lg-none mr-1" />
-											<span className="nav-link-inner--text">About</span>
+											<span className="nav-link-inner--text">Company</span>
 										</DropdownToggle>
 										{/* End Tab Title */}
 
-										<DropdownMenu className="dropdown-menu-xl">
+										<DropdownMenu className="dropdown-menu-lg">
 											{/* Getting Started  */}
 											<div className="dropdown-menu-inner">
 												<Media
 													className="d-flex align-items-center"
-													href="/about#our-story"
+													href="/about"
 													target="_self">
-													<div className="icon icon-shape bg-gradient-primary rounded-circle text-white">
+													<div className="icon icon-shape bg-gradient-primary rounded-circle text-darker">
 														<i className="ni ni-shop" />
 													</div>
 													<Media body className="ml-3">
 														<h6 className="heading text-primary mb-md-1">
-															Our Story
+															About Us
 														</h6>
 														<p className="description d-none d-md-inline-block mb-0">
-															Learn about the history of J Lux Design.
+																Learn about the history and foundation of J Lux Design.
 														</p>
 													</Media>
 												</Media>
@@ -288,7 +286,7 @@ class NavbarBasic extends React.Component {
 													className="d-flex align-items-center"
 													href="/about#our-team"
 													target="_self">
-													<div className="icon icon-shape bg-gradient-info rounded-circle text-white">
+													<div className="icon icon-shape bg-gradient-primary rounded-circle text-darker">
 														<i className="ni ni-key-25" />
 													</div>
 													<Media body className="ml-3">
@@ -304,18 +302,17 @@ class NavbarBasic extends React.Component {
 												</Media>
 												<Media
 													className="d-flex align-items-center"
-													href="/about#our-work"
+													href="/contact"
 													target="_self">
-													<div className="icon icon-shape bg-gradient-danger rounded-circle text-white">
+													<div className="icon icon-shape bg-gradient-primary rounded-circle text-darker">
 														<i className="ni ni-satisfied" />
 													</div>
 													<Media body className="ml-3">
-														<h5 className="heading text-warning mb-md-1">
-															Our Work
+														<h5 className="heading text-primary mb-md-1">
+															Contact Us
 														</h5>
 														<p className="description d-none d-md-inline-block mb-0">
-															Browse through completed projects to see what past
-															clients have to say about our work.
+															Let us guide you through every step of the shopping process so you’ll be satisfied with your home renovation project for a lifetime!
 														</p>
 													</Media>
 												</Media>
