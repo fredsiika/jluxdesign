@@ -23,7 +23,6 @@ import SimpleFooter from '../../components/Footers/SimpleFooter'
 import OverviewSection from '../../components/Containers/OverviewSection'
 import OurProcessSection from '../../components/Sections/OurProcessSection'
 import LandingHero from 'components/Heros/LandingHero'
-// import ServiceSectionSimple from 'components/Sections/ServiceSectionSimple';
 import CTABanner from '../../components/Sections/CTABanner'
 import PlanningSection from '../../components/Sections/PlanningSection'
 import ServicesGrid from '../../components/Sections/ServicesGrid'
@@ -33,7 +32,6 @@ import OurTeamSection from '../../components/Sections/OurTeamSection'
 import NewsletterSection from '../../components/Sections/NewsletterSection'
 import WorkCTAForm from '../../components/Sections/WorkCTAForm'
 import BenefitsGrid from '../../components/Features/BenefitsGrid'
-import ReactHookForm from '../../components/Forms/ReactHookForm'
 
 class Landing extends React.Component {
 	state = {}
@@ -135,11 +133,13 @@ class Landing extends React.Component {
 											</FormGroup>
 											<div>
 												<Button
-													block
+													type="button"
+													href="#quote"
 													className="btn-round"
 													color="darker"
 													size="lg"
-													type="button">
+													onSubmit={e => e.preventDefault()}
+													block>
 													Get Started
 												</Button>
 											</div>
@@ -150,7 +150,6 @@ class Landing extends React.Component {
 						</Container>
 					</section>
 					{/* End CTAForm */}
-					<ReactHookForm />
 				</main>
 				<SimpleFooter />
 			</>

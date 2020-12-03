@@ -74,7 +74,23 @@ class NavbarBasic extends React.Component {
 							</NavbarBrand>
 							{/* End Navbar Logo */}
 
-							{/* Navbar Button Icon Toggler å*/}
+							{/* CTA Button on mobile devices */}
+							<NavItem className="d-lg-none d-sm-block ml-sm-4 ml-md-8 mr-sm-auto mr-md-auto" pills>
+								<Button
+									className="btn-icon"
+									color="primary"
+									href="/quote"
+									target="_self">
+									<span className="btn-inner--icon">
+										<i className="ni ni-spaceship" />
+									</span>
+									<span className="nav-link-inner--text ml-1">
+										Get Started
+									</span>
+								</Button>
+							</NavItem>
+							{/* End CTA Button on mobile devices */}
+							{/* Navbar Button Icon Toggler*/}
 							<button className="navbar-toggler" id="navbar_global">
 								<span className="navbar-toggler-icon" />
 							</button>
@@ -93,10 +109,10 @@ class NavbarBasic extends React.Component {
 										<Col className="collapse-brand" xs="6">
 											<Link to="/landing-page">
 												{/* Logo Icon */}
-												<img
+												{/* <img
 													alt="..."
 													src={require('assets/img/icons/Diamond-48-96px/icons8-diamond-48.png')}
-												/>
+												/> */}
 												{/* End Logo Icon */}
 												{LogoBlack}
 											</Link>
@@ -114,6 +130,28 @@ class NavbarBasic extends React.Component {
 									</Row>
 								</div>
 								{/* End Opened Navbar Logo */}
+
+								{/* Navbar CTA Mobile Section */}
+								<Nav className="navbar-nav-hover align-items-sm-left" navbar>
+									{/* CTA Button on mobile devices */}
+									<NavItem className="d-lg-none d-sm-block ml-sm-2">
+										<Button
+											className="btn-icon"
+											color="primary"
+											href="/quote"
+											target="_self"
+											>
+											<span className="btn-inner--icon">
+												<i className="ni ni-spaceship" />
+											</span>
+											<span className="nav-link-inner--text ml-1">
+												Get Started
+											</span>
+										</Button>
+									</NavItem>
+									{/* End CTA Button on mobile devices */}
+								</Nav>
+								{/* End Navbar CTA Mobile Section */}
 
 								{/* Navbar Links Sections */}
 								<Nav className="navbar-nav-hover align-items-lg-center" navbar>
@@ -330,6 +368,7 @@ class NavbarBasic extends React.Component {
 								</Nav>
 								{/* End Navbar Links Sections */}
 
+								<hr />
 								{/* Navbar Social Icons */}
 								<Nav className="align-items-lg-center ml-lg-auto" navbar>
 									{/* Facebook Button */}
@@ -426,13 +465,13 @@ class NavbarBasic extends React.Component {
 									</NavItem>
 									{/* End Houzz Button */}
 
-									{/* CTA Button */}
+									{/* CTA Button on desktop devices */}
 									<NavItem className="d-none d-lg-block ml-lg-4">
 										<Button
-											className="btn-neutral btn-icon"
-											color="default"
-											href="/start"
-											target="_blank">
+											className="btn-icon"
+											color="primary"
+											href="/quote"
+											target="_self">
 											<span className="btn-inner--icon">
 												<i className="ni ni-spaceship" />
 											</span>
@@ -441,7 +480,7 @@ class NavbarBasic extends React.Component {
 											</span>
 										</Button>
 									</NavItem>
-									{/* End CTA Button */}
+									{/* End CTA Button on desktop devices */}
 								</Nav>
 								{/* End Navbar Social Icons */}
 							</UncontrolledCollapse>

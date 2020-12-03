@@ -26,7 +26,8 @@ export const QuoteFormHeader = (props) => {
 		<>
 			<NavbarBasic />
 			<JumbotronBasic />
-			<ReactHookForm />
 		</>
 	)
 }
+
+export default QuoteFormHeader

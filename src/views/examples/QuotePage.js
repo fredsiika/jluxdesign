@@ -1,10 +1,10 @@
 import React from 'react'
-import { useForm } from 'react-hook-form'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import ReactHookForm from '../../components/Forms/ReactHookForm'
-import SimpleFooter from '../../components/Footers/SimpleFooter.js'
-import NavbarBasic from '../../components/Navbars/NavbarBasic'
-import JumbotronBasic from '../../components/Jumbotrons/JumbotronBasic'
+// import { DataProvider } from '../../DataContext'
+// import ReactHookForm from '../../components/Forms/ReactHookForm'
+// import SimpleFooter from '../../components/Footers/SimpleFooter.js'
+// import NavbarBasic from '../../components/Navbars/NavbarBasic'
+// import JumbotronBasic from '../../components/Jumbotrons/JumbotronBasic'
 // import JumbotronFluid from '../../components/Jumbotrons/JumbotronFluid'
 // const LogoBlack = (<img src={require("../../assets/img/logos/logo-black.png")}></img>)
 // const LogoWhite = (<img src={require("../../assets/img/logos/logo-white.png")}></img>)
@@ -27,7 +27,7 @@ const LogoBlack = (
 const QuotePage = () => {
 	return (
 		<>
-			<QuoteFormHeader />
+      <QuoteFormHeader />
 			<Router>
 				<Switch>
 					<Route
@@ -50,18 +50,6 @@ const QuotePage = () => {
 						render={(props) => (
 							<Step3 title="Step 3 - Upload Pictures " {...props} />
 						)}
-					/>
-					<Route
-						exact
-						path="quote/step4"
-						render={(props) => (
-							<Step4 title="Step 4 - Additional details " {...props} />
-						)}
-					/>
-					<Route
-						exact
-						path="quote/step5"
-						render={(props) => <Step5 title="Step 5 - " {...props} />}
 					/>
 					<Route
 						exact

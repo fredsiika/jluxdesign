@@ -40,9 +40,8 @@ import QuotePage from './views/examples/QuotePage'
 import Step1 from './components/Forms/Step1'
 import Step2 from './components/Forms/Step2'
 import Step3 from './components/Forms/Step3'
-import Step4 from './components/Forms/Step4'
-import Step5 from './components/Forms/Step5'
 import Result from './components/Forms/Result'
+import Complete from './components/Forms/Complete'
 
 ReactDOM.render(
 	<>
@@ -121,18 +120,9 @@ ReactDOM.render(
 					<Route path="/quote/step-3" exact component={Step3} />
 					<Route path="/quote/step3" exact component={Step3} />
 
-					<Route path="/quote/step-4" exact component={Step4} />
-					<Route path="/quote/step4" exact component={Step4} />
-
-					<Route path="/quote/step-5" exact component={Step5} />
-					<Route path="/quote/step5" exact component={Step5} />
-
 					<Route path="/quote/result" exact component={Result} />
-					<Route
-						path="/404"
-						exact
-						render={(props) => <NotFound {...props} />}
-					/>
+					<Route path="/quote/complete" exact render={(props) => <Complete />} />
+					<Route path="/404" exact render={(props) => <NotFound {...props} />} />
 					<Redirect to="/404" />
 				</Switch>
 			</BrowserRouter>
