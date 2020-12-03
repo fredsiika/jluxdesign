@@ -1,7 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
-import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
-
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ReactHookForm from '../../components/Forms/ReactHookForm'
 import SimpleFooter from '../../components/Footers/SimpleFooter.js'
 import NavbarBasic from '../../components/Navbars/NavbarBasic'
@@ -28,18 +27,16 @@ const QuotePage = () => {
   return (
     <>
       <QuoteFormHeader />
-      {/* <ReactHookForm /> */}
       <Router>
         <Switch>
-          <Route exact path="quote/step1" render={(props) => <Step1 title="Step 1" {...props} />} />
-          <Route exact path="quote/step2" render={(props) => <Step2 title="Step 2" {...props} />} />
-          <Route exact path="quote/step3" component={Step3} />
-          <Route exact path="quote/step4" component={Step4} />
-          <Route exact path="quote/step5" component={Step5} />
-          <Route exact path="quote/result" component={Result} />
+          <Route exact path="quote/step1" render={(props) => <Step1 title="Step 1 - Contact Info" {...props} />} />
+          <Route exact path="quote/step2" render={(props) => <Step2 title="Step 2 - Project Type" {...props} />} />
+          <Route exact path="quote/step3" render ={(props) => <Step3 title="Step 3 - Upload Pictures " {...props} />} />
+          <Route exact path="quote/step4" render ={(props) => <Step4 title="Step 4 - Additional details " {...props} />} />
+          <Route exact path="quote/step5" render ={(props) => <Step5 title="Step 5 - " {...props} />} />
+          <Route exact path="quote/result" render ={(props) => <Result title="Results " {...props} />} />
         </Switch>
       </Router>
-      <SimpleFooter />
     </>
   )
 }

@@ -28,7 +28,7 @@ const JumbotronBasic = (props) => {
                   For more information please<a href="/contact">{' '}contact an associate from your nearest JLuxDesign.com location.</a>.
                 </small>
                 <p className="lead">
-                  <Button color="darker" href="#">Get Started</Button>
+                  <Button color="darker" href="/quote/step1">Get Started</Button>
                 </p>
               </div>
             </div>

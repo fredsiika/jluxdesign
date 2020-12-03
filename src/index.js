@@ -46,84 +46,86 @@ import Result from './components/Forms/Result'
 
 ReactDOM.render(
 	<>
-		<BrowserRouter>
-			<Switch>
-				<Route
-					path="/landing-page"
-					exact
-					render={(props) => <Landing {...props} />}
-				/>
-				<Route
-					path="/landing"
-					exact
-					render={(props) => <Landing {...props} />}
-				/>
-				<Route path="/" exact render={(props) => <Landing {...props} />} />
-				<Route path="/home" exact render={(props) => <Landing {...props} />} />
-				<Route
-					path="/about"
-					exact
-					render={(props) => <AboutPage title="About Us" {...props} />}
-				/>
-				<Route
-					path="/contact"
-					exact
-					render={(props) => <Contact {...props} />}
-				/>
-				<Route
-					path="/knowledge-base"
-					exact
-					render={(props) => <KnowledgeBase {...props} />}
-				/>
-				<Route
-					path="/services"
-					exact
-					render={(props) => <ServicesPage title="Our Services" {...props} />}
-				/>
-				<Route
-					path="/products"
-					exact
-					render={(props) => <Products {...props} />}
-				/>
-				<Route
-					path="/login"
-					exact render={props => <Login {...props} />}
-				/>
-				<Route
-					path="/profile-page"
-					exact render={props => <Profile {...props} />}
-				/>
-				<Route
-					path="/register"
-					exact render={props => <Register {...props} />}
-				/>
-				<Route
-					path="/quote"
-					exact
-					render={props => <QuotePage {...props} />}
-				/>
+		<DataProvider>
+			<BrowserRouter>
+				<Switch>
+					<Route
+						path="/landing-page"
+						exact
+						render={(props) => <Landing {...props} />}
+					/>
+					<Route
+						path="/landing"
+						exact
+						render={(props) => <Landing {...props} />}
+					/>
+					<Route path="/" exact render={(props) => <Landing {...props} />} />
+					<Route path="/home" exact render={(props) => <Landing {...props} />} />
+					<Route
+						path="/about"
+						exact
+						render={(props) => <AboutPage title="About Us" {...props} />}
+					/>
+					<Route
+						path="/contact"
+						exact
+						render={(props) => <Contact {...props} />}
+					/>
+					<Route
+						path="/knowledge-base"
+						exact
+						render={(props) => <KnowledgeBase {...props} />}
+					/>
+					<Route
+						path="/services"
+						exact
+						render={(props) => <ServicesPage title="Our Services" {...props} />}
+					/>
+					<Route
+						path="/products"
+						exact
+						render={(props) => <Products {...props} />}
+					/>
+					<Route
+						path="/login"
+						exact render={props => <Login {...props} />}
+					/>
+					<Route
+						path="/profile-page"
+						exact render={props => <Profile {...props} />}
+					/>
+					<Route
+						path="/register"
+						exact render={props => <Register {...props} />}
+					/>
+					<Route
+						path="/quote"
+						exact
+						render={props => <QuotePage {...props} />}
+					/>
 
-				<Route path="/quote-form" exact render={props => <QuotePage {...props} />} />
-				<Route path="/quote/step-1" exact component={Step1} />
-				<Route path="/quote/step1" exact component={Step1} />
+					<Route path="/quote-form" exact render={props => <QuotePage {...props} />} />
+					<Route path="/quote/step-1" exact component={Step1} />
+					<Route path="/quote/step1" exact component={Step1} />
 
-				<Route path="/quote/step-2" exact component={Step2} />
-				<Route path="/quote/step2" exact component={Step2} />
+					<Route path="/quote/step-2" exact component={Step2} />
+					<Route path="/quote/step2" exact component={Step2} />
 
-				<Route path="/quote/step-3" exact component={Step3} />
-				<Route path="/quote/step3" exact component={Step3} />
+					<Route path="/quote/step-3" exact component={Step3} />
+					<Route path="/quote/step3" exact component={Step3} />
 
-				<Route path="/quote/step-4" exact component={Step4} />
-				<Route path="/quote/step4" exact component={Step4} />
+					<Route path="/quote/step-4" exact component={Step4} />
+					<Route path="/quote/step4" exact component={Step4} />
 
-				<Route path="/quote/step-5" exact component={Step5} />
-				<Route path="/quote/step5" exact component={Step5} />
+					<Route path="/quote/step-5" exact component={Step5} />
+					<Route path="/quote/step5" exact component={Step5} />
 
-				<Route path="/quote/result" exact component={Result} />
-				<Route path="/404" exact render={(props) => <NotFound {...props} />} />
-				<Redirect to="/404" />
-			</Switch>
-		</BrowserRouter>
+					<Route path="/quote/result" exact component={Result} />
+					<Route path="/404" exact render={(props) => <NotFound {...props} />} />
+					<Redirect to="/404" />
+				</Switch>
+			</BrowserRouter>
+		</DataProvider>
 	</>,
 	document.getElementById('root')
 )

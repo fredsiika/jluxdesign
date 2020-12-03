@@ -1,6 +1,5 @@
 import React, { Children } from 'react'
 import { useForm } from 'react-hook-form'
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {
   Container,
   // Col,
@@ -19,20 +18,19 @@ import { Step4 } from "./Step4";
 import { Step5 } from "./Step5";
 import { Result } from "./Result";
 import { Step } from 'semantic-ui-react';
+import JumbotronFluid from 'components/Jumbotrons/JumbotronFluid';
 
 const LogoBlack = (<img src={require("../../assets/img/logos/logo-black.png")}></img>)
 
-const ReactHookForm = ({ Children }) => {
+const ReactHookForm = ({ children, ...props }) => {
   const { register, handleSubmit, watch, errors } = useForm();
   const onSubmit = (data) => console.log(data);
 
   return (
     <>
       <div className="main">
-        {Children}
-
-        <Step1 />
-        <Step2 />
+        <JumbotronFluid />
+        {children}
       </div>
     </>
   )

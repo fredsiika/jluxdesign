@@ -1,11 +1,31 @@
-import React from 'react'
+import React from "react";
+import Container from "@material-ui/core/Container";
+import { makeStyles } from "@material-ui/core/styles";
+import JumbotronFluid from '../Jumbotrons/JumbotronFluid'
+const useStyles = makeStyles((theme) => ({
+  root: {
+    marginTop: theme.spacing(4),
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  },
+}));
 
-export const MainContainer = () => {
+export const MainContainer = ({ children, ...props }) => {
+  const styles = useStyles();
+
   return (
-    <div>
+    <>
+    <Container
+      className={styles.root}
+      component="main"
+      maxWidth="xs"
+      {...props}
+    >
 
-    </div>
-  )
-}
+      {children}
+    </Container>
+    </>
+  );
+};
 
-export default MainContainer
