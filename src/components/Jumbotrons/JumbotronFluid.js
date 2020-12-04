@@ -4,10 +4,9 @@ import { Container, Col, Jumbotron, Row } from 'reactstrap'
 const JumbotronFluid = (props) => {
 	return (
 		<div>
-			<Jumbotron fluid>
+			<Jumbotron className="bg-darker" fluid>
 				<h1
-					className="display-3 text-center"
-					defaultValue="Fluid Jumbotron title">
+					className="hero-animation display-3 text-center mt-5 text-white" defaultValue="Fluid Jumbotron title">
 					Countertop Quote Estimator Form
 				</h1>
 			</Jumbotron>

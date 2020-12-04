@@ -1,12 +1,15 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
-// import { Link } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
+
+import * as yup from 'yup'
+import { yupResolver } from '@hookform/resolvers'
 import { useData } from '../../DataContext'
 import { FileInput } from './FileInput'
 import { Form } from './Form'
 import JumbotronFluid from '../Jumbotrons/JumbotronFluid'
 import {
+	Alert,
 	Button,
 	Container,
 	Col,
@@ -21,14 +24,24 @@ import {
 // import Typography from '@material-ui/core/Typography'
 // import { MainContainer } from './MainContainer'
 
+const schema = yup.object().shape({
+	textarea: yup
+		.string()
+})
+
 export const Step3 = () => {
 	const history = useHistory()
 	const { data, setValues } = useData()
-	const { control, handleSubmit } = useForm({
+	const { register, handleSubmit, control, watch } = useForm({
 		defaultValues: {
 			files: data.files,
+			textarea: data.textarea,
 		},
+		mode: 'onClick',
+		resolver: yupResolver(schema),
 	})
+
+	const textarea = watch('textarea')
 
 	const onSubmit = (data) => {
 		history.push('./result')
@@ -43,7 +56,25 @@ I need some help finding a tile that looks like wood planks or concrete, to thos
 
 Thanks!
 <mark>[Your name]</mark>
-`
+	`
+	const uploadTooltip = (
+		<div className="uploadTooltip" style={{  }}>
+			<Row>
+				<Col md="6">
+					<div className="good-example mt-5">
+						<p className="text-success lead">Good Example</p>
+						<img src="https://heyremodelers.com/demo/countertops/wp-content/uploads/2020/04/good.jpg"></img>
+					</div>
+				</Col>
+				<Col md="6">
+					<div className="good-example mt-5">
+						<p className="text-warning lead">Bad Example</p>
+						<img src="https://heyremodelers.com/demo/countertops/wp-content/uploads/2020/04/bad.jpg"></img>
+					</div>
+				</Col>
+			</Row>
+		</div>
+	)
 
 	return (
 		<>
@@ -53,17 +84,24 @@ Thanks!
 					<span
 						className="text-left d-sm-inline"
 						role="img"
-						aria-label="Canera Emoji">
+						aria-label="Camera Emoji">
 						📷
 					</span>{' '}
 					Step 3 - Upload Photos
 				</h3>
-				<p className="display-4">
+				<span className="h3 text-muted">
 					Add 2-4 pictures from different angles. Up to 5 images, max 5 MB each.
-				</p>
+				</span>
+				<hr className="w-100" />
+				<Alert color="primary">
+					<strong>Tip:{' '}</strong><br />
+					Good photos should have clear shots of your counter
+					area and relative size references to cabinets and/or appliances. Use the good and bad photos guideline at the bottom of this page for the most accurate estimate. <span className="" rol="img" aria-label="downwards-black-arrow emoji snippet">⬇</span>
+				</Alert>
+				<hr className="w-100" />
+
 				<Form onSubmit={handleSubmit(onSubmit)}>
 					<FileInput name="files" control={control} />
-
 					<FormGroup>
 						<Label for="additionalInfo">
 							<span className="h4 text-primary">
@@ -74,17 +112,16 @@ Thanks!
 								</small>
 							</span>
 						</Label>
-						<Input type="textarea" name="text" id="additionalInfo" rows="12" defaultValue={sampleContactLetter} />
+						{/* <Input
+							inputRef={register}
+							type="textarea"
+							name="textarea"
+							id="textarea"
+							rows="12"
+							defaultValue={sampleContactLetter}
+							control={control}
+						/> */}
 						<FormText color="muted" className="small">
-						</FormText>
-					</FormGroup>
-					<hr />
-					<FormGroup>
-						<Label for="exampleFile">File</Label>
-						<Input type="file" name="file" id="exampleFile" />
-						<FormText color="muted">
-							This is some placeholder block-level help text for the above input.
-							It's a bit lighter and easily wraps to a new line.
 						</FormText>
 					</FormGroup>
 
@@ -102,30 +139,8 @@ Thanks!
 							</Col>
 						</Row>
 					</div>
-					<Row>
-						<Col md="6" className="pr-1">
-							<div className="good-example mt-5">
-								<p className="text-success lead">Good Example</p>
-								<img src="https://heyremodelers.com/demo/countertops/wp-content/uploads/2020/04/good.jpg"></img>
-							</div>
-						</Col>
-						<Col md="6">
-							<div className="good-example mt-5">
-								<p className="text-warning lead">Bad Example</p>
-								<img src="https://heyremodelers.com/demo/countertops/wp-content/uploads/2020/04/bad.jpg"></img>
-							</div>
-						</Col>
-						<div className="photo-tips mt-5">
-							<Label className="lead">Tip</Label>
-							<p className="lead text-default">
-								Use the good and bad photos as a guideline for the most accurate
-								estimate. Good photos should have clear shots of your counter
-								area and relative size references to cabinets and/or appliances.
-							</p>
-						</div>
-					</Row>
-					<hr />
 				</Form>
+				{uploadTooltip}
 			</Container>
 		</>
 	)

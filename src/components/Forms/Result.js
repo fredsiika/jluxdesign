@@ -52,7 +52,7 @@ export const Result = () => {
 			formData.append(entry[0], entry[1])
 		})
 
-		const res = await fetch('https://jluxdesign.com/quote/success', {
+		const res = await fetch('http://localhost:4000', {
 			method: 'POST',
 			body: formData,
 		})
