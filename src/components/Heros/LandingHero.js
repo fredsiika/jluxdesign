@@ -1,8 +1,6 @@
 import React from 'react'
 import HeroProducts from './HeroProducts'
 import GetStartedBtn from '../Buttons/GetStartedBtn'
-import { Button } from 'reactstrap'
-import CTAButton from '../Buttons/CtaButton'
 import HeroWebCopy from '../Heros/HeroWebCopy'
 
 const LandingHero = () => {

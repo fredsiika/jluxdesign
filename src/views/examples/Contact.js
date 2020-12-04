@@ -4,8 +4,6 @@ import SimpleFooter from '../../components/Footers/SimpleFooter'
 import HeroSecondary from 'components/Heros/HeroSecondary'
 import { Container, Col, Row } from 'reactstrap'
 import '../../components/Heros/HeroSection.css'
-import SVGSeparator from 'components/Icons/SVGSeparator';
-
 
 const Contact = () => (
 	<>
@@ -44,6 +42,7 @@ const Contact = () => (
 									<p>Illustration</p>
 									<img
 										src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/illustration.jpg"
+										alt="..."
 										className="illustration"></img>
 								</div>
 							</Col>

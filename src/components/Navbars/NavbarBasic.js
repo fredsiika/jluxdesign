@@ -244,7 +244,7 @@ class NavbarBasic extends React.Component {
 												<Media
 													className="d-flex align-items-center"
 													href="/contact"
-													target="_blank">
+													target="_self">
 													<div className="icon icon-shape bg-gradient-primary rounded-circle text-darker">
 														<i className="ni ni-spaceship" />
 													</div>
@@ -261,7 +261,7 @@ class NavbarBasic extends React.Component {
 												<Media
 													className="d-flex align-items-center"
 													href="/knowledge-base"
-													target="_blank">
+													target="_self">
 													<div className="icon icon-shape bg-gradient-primary rounded-circle text-darker">
 														<i className="ni ni-hat-3" />
 													</div>
@@ -279,7 +279,7 @@ class NavbarBasic extends React.Component {
 												<Media
 													className="d-flex align-items-center"
 													href="#!"
-													target="_blank">
+													target="_self">
 													<div className="icon icon-shape bg-gradient-primary rounded-circle text-darker">
 														<i className="ni ni-atom" />
 													</div>

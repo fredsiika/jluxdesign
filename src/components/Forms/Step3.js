@@ -1,16 +1,25 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { useData } from '../../DataContext'
-import { MainContainer } from './MainContainer'
 import { FileInput } from './FileInput'
-import { BackButton, PrimaryButton } from './PrimaryButton'
-import Typography from '@material-ui/core/Typography'
 import { Form } from './Form'
-import PageAnalytics from './PageAnalytics'
 import JumbotronFluid from '../Jumbotrons/JumbotronFluid'
-import { Button, Container, Col, Label, Row } from 'reactstrap'
+import {
+	Button,
+	Container,
+	Col,
+	FormGroup,
+	FormText,
+	Input,
+	Label,
+	Row,
+	Textarea
+} from 'reactstrap'
+// import { BackButton, PrimaryButton } from './PrimaryButton'
+// import Typography from '@material-ui/core/Typography'
+// import { MainContainer } from './MainContainer'
 
 export const Step3 = () => {
 	const history = useHistory()
@@ -25,6 +34,16 @@ export const Step3 = () => {
 		history.push('./result')
 		setValues(data)
 	}
+
+	const sampleContactLetter = `Hi, my name is <mark>[insert first name]</mark>.
+
+I'm interested in browsing your catalog of materials for my <mark>kitchen | bath | outdoor | fireplace | other> project.<mark>
+
+I need some help finding a tile that looks like wood planks or concrete, to those that give a classic, modern or rustic look, find the ideal material based on your vision for space.
+
+Thanks!
+<mark>[Your name]</mark>
+`
 
 	return (
 		<>
@@ -44,16 +63,31 @@ export const Step3 = () => {
 				</p>
 				<Form onSubmit={handleSubmit(onSubmit)}>
 					<FileInput name="files" control={control} />
-					<div className="additional-info">
-						<p className="lead">
-							Please provide any additional info to help provide a quote and
-							enter all sizes of tops needed.
-						</p>
-						<textarea
-							className=""
-							placeholder="i.e. I'd like to get some help selecting the right marble materials."></textarea>
-					</div>
+
+					<FormGroup>
+						<Label for="additionalInfo">
+							<span className="h4 text-primary">
+								Additional Info{' '}
+								<small className="text-muted">
+									Please provide any additional info to help provide a quote and
+									enter all sizes of tops needed.
+								</small>
+							</span>
+						</Label>
+						<Input type="textarea" name="text" id="additionalInfo" rows="12" defaultValue={sampleContactLetter} />
+						<FormText color="muted" className="small">
+						</FormText>
+					</FormGroup>
 					<hr />
+					<FormGroup>
+						<Label for="exampleFile">File</Label>
+						<Input type="file" name="file" id="exampleFile" />
+						<FormText color="muted">
+							This is some placeholder block-level help text for the above input.
+							It's a bit lighter and easily wraps to a new line.
+						</FormText>
+					</FormGroup>
+
 					<div className="pb-6">
 						<Row>
 							<Col sm="6">

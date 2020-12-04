@@ -2,7 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../../components/Navbars/NavbarBasic'
 import Footer from '../../components/Footers/SimpleFooter'
-import { Button, Col, Container, Row } from 'reactstrap'
+import {
+	Button,
+	Col,
+	Container,
+	Row
+} from 'reactstrap'
 
 const KnowledgeBase = () => {
 	return (
@@ -27,10 +32,13 @@ const KnowledgeBase = () => {
 						<Container>
 							<Row>
 								<Col className="hero-animation-1">
-									<div className="">
+									<div className="heading-group">
 										<p className="lead text-left text-uppercase text-primary">Our Products</p>
 										<h3 className="display-2 text-gray-dark">Sourced from high quality distributors</h3>
 										<p className="display-4 text-left text-muted">We offer a large inventory of high quality stone countertops.</p>
+										<div className="btn-group">
+										<Button type="button" className="hero-animation-1 text-left-sm" color="darker">Explore More Styles</Button>
+										</div>
 									</div>
 								</Col>
 								<div className="w-100 py-1 bg-secondary" />
@@ -64,6 +72,13 @@ const KnowledgeBase = () => {
 							</div>
 						</Container>
 
+					</section>
+
+					<section className="section section-lg mt-lg-200">
+						<span className="h3">
+							Fancy display heading{" "}
+							<small className="text-muted">With faded secondary text</small>
+						</span>
 					</section>
 				</div>
 			<Footer />
