@@ -178,7 +178,7 @@ export const Step2 = () => {
 							</FormGroup>
 							<FormGroup>
 								<Label for="address2">Address 2</Label>
-								<Input ref={register} type="text" name="address2" id="address2" placeholder="Apartment, studio, or floor" error={!!errors.address2} helperText={errors?.address2?.message} />
+								<Input ref={register} type="text" name="address2" id="address2" placeholder="Apartment, studio, or floor" />
 							</FormGroup>
 							<Row form>
 								<Col md={6}>
@@ -213,25 +213,25 @@ export const Step2 = () => {
 							</FormGroup>
 							<FormGroup>
 								<Label for="address2">Address 2</Label>
-								<Input type="text" name="address2" id="address2" placeholder="Apartment, studio, or floor"/>
+								<Input ref={register} type="text" name="address2" id="address2" placeholder="Apartment, studio, or floor"/>
 							</FormGroup>
 							<Row form>
 								<Col md={6}>
 									<FormGroup>
 										<Label for="city">City</Label>
-										<Input type="text" name="city" id="city" placeholder="Dallas" />
+										<Input ref={register} type="text" name="city" id="city" placeholder="Dallas" />
 									</FormGroup>
 								</Col>
 								<Col md={4}>
 									<FormGroup>
 										<Label for="stateAddress">State</Label>
-										<Input type="text" name="stateAddress" id="stateAddress" placeholder="TX" />
+										<Input ref={register} type="text" name="stateAddress" id="stateAddress" placeholder="TX" />
 									</FormGroup>
 								</Col>
 								<Col md={2}>
 									<FormGroup>
 										<Label for="zipcode">Zip</Label>
-										<Input type="text" name="zipcode" id="zipcode" placeholder="75201"/>
+										<Input ref={register} type="text" name="zipcode" id="zipcode" placeholder="75201"/>
 									</FormGroup>
 								</Col>
 							</Row>
@@ -254,29 +254,29 @@ export const Step2 = () => {
 
 							<FormGroup>
 								<Label for="address">Address</Label>
-								<Input type="text" name="address" id="address" placeholder="42069 Main St"/>
+								<Input ref={register} type="text" name="address" id="address" placeholder="42069 Main St"/>
 							</FormGroup>
 							<FormGroup>
 								<Label for="address2">Address 2</Label>
-								<Input type="text" name="address2" id="address2" placeholder="Apartment, studio, or floor"/>
+								<Input ref={register} type="text" name="address2" id="address2" placeholder="Apartment, studio, or floor"/>
 							</FormGroup>
 							<Row form>
 								<Col md={6}>
 									<FormGroup>
 										<Label for="city">City</Label>
-										<Input type="text" name="city" id="city" placeholder="Dallas" />
+										<Input ref={register} type="text" name="city" id="city" placeholder="Dallas" />
 									</FormGroup>
 								</Col>
 								<Col md={4}>
 									<FormGroup>
 										<Label for="stateAddress">State</Label>
-										<Input type="text" name="stateAddress" id="stateAddress" placeholder="TX" />
+										<Input ref={register} type="text" name="stateAddress" id="stateAddress" placeholder="TX" />
 									</FormGroup>
 								</Col>
 								<Col md={2}>
 									<FormGroup>
 										<Label for="zipcode">Zip</Label>
-										<Input type="text" name="zipcode" id="zipcode" placeholder="75201"/>
+										<Input ref={register} type="text" name="zipcode" id="zipcode" placeholder="75201"/>
 									</FormGroup>
 								</Col>
 							</Row>
