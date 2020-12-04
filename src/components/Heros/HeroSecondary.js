@@ -8,11 +8,11 @@ import HomeNavbar from 'components/Navbars/HomeNavbar'
 
 const HeroSecondary = (props) => {
 	return (
-		<div className="position-relative">
+		<div className="hero-animation position-relative">
 			{/* shape Hero */}
 			<section className="section section-lg section-shaped pb-250">
 				{/* Circles */}
-				<div className="shape shape-style-1 shape-default">
+				<div className="shape shape-style-3 shape-default">
 					<span />
 					<span />
 					<span />
@@ -28,19 +28,19 @@ const HeroSecondary = (props) => {
 					<div class="point point-floating-1"></div>
 					<div class="point point-floating-2"></div>
 					<div class="point point-floating-3"></div>
-					<div class="point point-floating-4"></div>
-					<div class="point point-floating-5"></div>
-					<div class="point point-floating-6"></div>
-					<div class="point point-floating-7"></div>
-					<div class="point point-floating-8"></div>
-					<div class="point point-floating-9"></div>
+					<div class="hero-animation-ltr-3 point point-floating-4"></div>
+					<div class="hero-animation-2 point point-floating-5"></div>
+					<div class="hero-animation-ltr-2 point point-floating-6"></div>
+					<div class="hero-animation-ltr-1 point point-floating-7"></div>
+					<div class="hero-animation-ltr point point-floating-8"></div>
+					<div class="hero-animation point point-floating-9"></div>
 				</div>
 
 				<Container className="py-lg-md d-flex">
 					<div className="col px-0">
 						<Row>
 							<Col lg="6">
-								<h1 className="display-3 title text-center">
+								<h1 className="hero-animation display-3 title text-center">
 									Launch the perfect
 									<br /> home renovation project{' '}
 									<span className="desc">
@@ -49,29 +49,29 @@ const HeroSecondary = (props) => {
 								</h1>
 
 								<hr className="my-2" />
-								<p className="lead text-white text-center">
+								<p className="hero-animation-3 lead text-white text-center">
 									We'll help you locate, select and install your custom stone
 									contertop and backsplash.
 									<br />
 									Start designing your dream home.
 								</p>
-								<div className="btn-wrapper">
+								<div className="hero-animation-ltr btn-wrapper text-center">
 									<Button
 										className="btn-icon mb-3 mb-sm-0"
-										color="info"
-										href="/services-page">
+										color="success"
+										href="/services">
 										<span className="btn-inner--icon mr-1">
-											<i className="fa fa-code" />
+											<i className="fa fa-phone" />
 										</span>
-										<span className="btn-inner--text">Services</span>
+										<span className="btn-inner--text">Call Us</span>
 									</Button>
 
 									<Button
-										className="btn-white btn-icon mb-3 mb-sm-0 ml-1"
-										color="default"
-										href="https://www.creative-tim.com/product/argon-design-system-react?ref=adsr-landing-page">
+										className="btn-style btn-white btn-icon mb-3 mb-sm-0 ml-1"
+										color="darker"
+										href="/quote">
 										<span className="btn-inner--icon mr-1">
-											<i className="ni ni-cloud-download-95" />
+											<i className="ni ni-spaceship" />
 										</span>
 										<span className="btn-inner--text">Get Started</span>
 									</Button>
@@ -90,7 +90,7 @@ const HeroSecondary = (props) => {
 						viewBox="0 0 2560 100"
 						x="0"
 						y="0">
-						<polygon className="fill-white" points="2560 0 2560 100 0 100" />
+						<polygon className="fill-darker" points="2560 0 2560 100 0 100" />
 					</svg>
 				</div>
 			</section>

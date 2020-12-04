@@ -66,7 +66,7 @@ class Hero extends React.Component {
 							</div>
 						</div>
 						<div className="space-110"></div>
-						{/* <div className="card card-plain"></div> */}
+						<div className="card card-plain"></div>
 					</div>
 				</div>
 			</>

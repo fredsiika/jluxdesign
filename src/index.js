@@ -1,18 +1,3 @@
-/*!
-
-=========================================================
-* J Lux Design System - v1.0.1
-=========================================================
-
-* Product Page: https://fredsiika.github.io/jluxdesign.com
-* Copyright 2020 Fred Siika (https://www.github.com/fredsiika)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md)
-
-* Coded by Fred C. Siika
-
-=========================================================
-*/
-
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
@@ -121,8 +106,16 @@ ReactDOM.render(
 					<Route path="/quote/step3" exact component={Step3} />
 
 					<Route path="/quote/result" exact component={Result} />
-					<Route path="/quote/complete" exact render={(props) => <Complete />} />
-					<Route path="/404" exact render={(props) => <NotFound {...props} />} />
+					<Route
+						path="/quote/complete"
+						exact
+						render={(props) => <Complete />}
+					/>
+					<Route
+						path="/404"
+						exact
+						render={(props) => <NotFound {...props} />}
+					/>
 					<Redirect to="/404" />
 				</Switch>
 			</BrowserRouter>

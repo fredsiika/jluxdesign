@@ -75,7 +75,9 @@ class NavbarBasic extends React.Component {
 							{/* End Navbar Logo */}
 
 							{/* CTA Button on mobile devices */}
-							<NavItem className="d-lg-none d-sm-block ml-sm-4 ml-md-8 mr-sm-auto mr-md-auto" pills>
+							<NavItem
+								className="d-none d-sm-block py-sm-2 ml-md-9 d-lg-none"
+								>
 								<Button
 									className="btn-icon"
 									color="primary"
@@ -84,16 +86,17 @@ class NavbarBasic extends React.Component {
 									<span className="btn-inner--icon">
 										<i className="ni ni-spaceship" />
 									</span>
-									<span className="nav-link-inner--text ml-1">
-										Get Started
-									</span>
+									<span className="nav-link-inner--text ml-1">Get Started</span>
 								</Button>
 							</NavItem>
 							{/* End CTA Button on mobile devices */}
+
 							{/* Navbar Button Icon Toggler*/}
-							<button className="navbar-toggler" id="navbar_global">
-								<span className="navbar-toggler-icon" />
-							</button>
+							<NavItem className="d-sm-block list-unstyled mr-sm-1">
+								<button className="navbar-toggler" id="navbar_global">
+									<span className="navbar-toggler-icon" />
+								</button>
+							</NavItem>
 							{/* End Navbar Button Icon Toggler */}
 
 							{/* UncontrolledCollapse */}
@@ -132,15 +135,15 @@ class NavbarBasic extends React.Component {
 								{/* End Opened Navbar Logo */}
 
 								{/* Navbar CTA Mobile Section */}
-								<Nav className="navbar-nav-hover align-items-sm-left" navbar>
+								<Nav className="navbar-nav-hover align-items-sm-center" navbar>
 									{/* CTA Button on mobile devices */}
-									<NavItem className="d-lg-none d-sm-block ml-sm-2">
+									<NavItem className="d-lg-none d-sm-block ml-sm-4">
 										<Button
 											className="btn-icon"
-											color="primary"
+											color="darker"
 											href="/quote"
 											target="_self"
-											>
+											block>
 											<span className="btn-inner--icon">
 												<i className="ni ni-spaceship" />
 											</span>
@@ -465,8 +468,8 @@ class NavbarBasic extends React.Component {
 									</NavItem>
 									{/* End Houzz Button */}
 
-									{/* CTA Button on desktop devices */}
-									<NavItem className="d-none d-lg-block ml-lg-4">
+									{/* CTA Button on lg and xl devices */}
+									<NavItem className="d-none d-lg-block ml-lg-2">
 										<Button
 											className="btn-icon"
 											color="primary"

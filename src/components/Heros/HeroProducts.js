@@ -6,7 +6,7 @@ function HeroProducts() {
 	return (
 		<div className="bg-dark text-white space-2 overflow-hidden">
 			<div className="container-fluid">
-				<div class="row no-gutters align-items-center">
+				<div class="hero-animation-ltr row no-gutters align-items-center">
 					<div className="col-lg-5 mt-0 mb-lg-0 pl-lg-5">
 						<h6 className="text-uppercase font-weight-medium letter-spacing-0_06 mb-3 mt-0 pt-0 text-white">
 							Get inspired

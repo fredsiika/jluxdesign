@@ -12,11 +12,10 @@ import { Form } from './Form'
 import { Input } from './Input'
 import * as yup from 'yup'
 import { parsePhoneNumberFromString } from 'libphonenumber-js'
-import JumbotronBasic from 'components/Jumbotrons/JumbotronBasic';
-import { Button, Col, NavbarBrand, Row } from 'reactstrap';
+import JumbotronBasic from 'components/Jumbotrons/JumbotronBasic'
+import { Button, Col, NavbarBrand, Row } from 'reactstrap'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import Checkbox from '@material-ui/core/Checkbox'
-
 
 // import { Button, Container, Col, Row } from 'reactstrap'
 // import Typography from '@material-ui/core/Typography'
@@ -36,10 +35,10 @@ const schema = yup.object().shape({
 		.string()
 		.email('Email should have correct format')
 		.required('Email is a required field'),
-  phoneNumber: yup
-    .number()
-    // .matches(null, 'Please fill out phone number')
-    .required('Phone number is a required field.')
+	phoneNumber: yup
+		.number()
+		// .matches(null, 'Please fill out phone number')
+		.required('Phone number is a required field.'),
 })
 
 const normalizePhoneNumber = (value) => {
@@ -59,15 +58,15 @@ export const Step1 = () => {
 			firstName: data.firstName,
 			lastName: data.lastName,
 			email: data.email,
-      hasPhone: data.hasPhone,
-      phoneNumber: data.phoneNumber,
+			hasPhone: data.hasPhone,
+			phoneNumber: data.phoneNumber,
 		},
 		mode: 'onBlur',
 		resolver: yupResolver(schema),
 	})
 
-  const hasPhone = watch('hasPhone')
-  const phoneNumber = watch('phoneNumber')
+	const hasPhone = watch('hasPhone')
+	const phoneNumber = watch('phoneNumber')
 
 	const onSubmit = (data) => {
 		history.push('./step2')
@@ -78,8 +77,8 @@ export const Step1 = () => {
 
 	return (
 		<>
-      <NavbarBasic />
-      <JumbotronFluid />
+			<NavbarBasic />
+			<JumbotronFluid />
 			<MainContainer>
 				<section className="section section-lg pt-0">
 					<p className="text-center display-3 text-primary">
@@ -117,46 +116,53 @@ export const Step1 = () => {
 							error={!!errors.email}
 							helperText={errors?.email?.message}
 						/>
-				<FormControlLabel
-					control={
-						<Checkbox
-							defaultValue={data.hasPhone}
-							defaultChecked={data.hasPhone}
-							color="primary"
-							inputRef={register}
-							name="hasPhone"
+						<FormControlLabel
+							control={
+								<Checkbox
+									defaultValue={data.hasPhone}
+									defaultChecked={data.hasPhone}
+									color="primary"
+									inputRef={register}
+									name="hasPhone"
+								/>
+							}
+							label="Do you have a phone"
 						/>
-					}
-					label="Do you have a phone"
-				/>
 
-				{hasPhone && (
-					<Input
-						ref={register}
-						id="phoneNumber"
-						type="tel"
-						label="Phone Number"
-						name="phoneNumber"
-						onChange={(event) => {
-							event.target.value = normalizePhoneNumber(event.target.value)
-						}}
-					/>
-				)}
-        <hr />
-        <div className="pb-6">
-          <Row>
-            <Col sm="6">
-              <Button href="/quote/" color="darker" block disabled>Back</Button>
-            </Col>
-            <Col sm="6">
-              <Button color="primary" onClick={handleSubmit(onSubmit)} block>Next</Button>
-            </Col>
-          </Row>
-        </div>
-      </Form>
+						{hasPhone && (
+							<Input
+								ref={register}
+								id="phoneNumber"
+								type="tel"
+								label="Phone Number"
+								name="phoneNumber"
+								onChange={(event) => {
+									event.target.value = normalizePhoneNumber(event.target.value)
+								}}
+							/>
+						)}
+						<hr />
+						<div className="pb-6">
+							<Row>
+								<Col sm="6">
+									<Button href="/quote/" color="darker" block disabled>
+										Back
+									</Button>
+								</Col>
+								<Col sm="6">
+									<Button
+										color="primary"
+										onClick={handleSubmit(onSubmit)}
+										block>
+										Next
+									</Button>
+								</Col>
+							</Row>
+						</div>
+					</Form>
 				</section>
 			</MainContainer>
-      <SimpleFooter />
+			<SimpleFooter />
 		</>
 	)
 }

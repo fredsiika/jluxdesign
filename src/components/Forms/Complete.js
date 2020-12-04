@@ -13,21 +13,27 @@ const Complete = (props) => {
                 Get a<br /> Countertop<br d-none />{''}quote in less<br />{' '}than a minute.<br />{' '}
               </h1> */}
 								<h1 className="text display-1">
-									What's next<br /> since completing<br /> your
-									<span className="text-underline text-primary d-sm-inline">{' '}form.</span>
+									What's next
+									<br /> since completing
+									<br /> your
+									<span className="text-underline text-primary d-sm-inline">
+										{' '}
+										form.
+									</span>
 								</h1>
 								<div className="header-description">
 									<p className="display-3">
-                    Do you need a hole cut for a sink?<br className="d-sm-none" />
-                    What type? Undermounted, drop in, Farm,
-                    Vessel hole. Do you need any other holes? Like a cooktop, slide in range,
-                    ect…
+										Do you need a hole cut for a sink?
+										<br className="d-sm-none" />
+										What type? Undermounted, drop in, Farm, Vessel hole. Do you
+										need any other holes? Like a cooktop, slide in range, ect…
 									</p>
 
 									<hr className="my-2" />
 									<p className="lead">
-										<span className="text-primary display-4">Relax</span><br />{' '}
-                    A member of our staff will get in contact with you soon.
+										<span className="text-primary display-4">Relax</span>
+										<br /> A member of our staff will get in contact with you
+										soon.
 									</p>
 									<p className="lead">
 										<Button color="darker" href="/">

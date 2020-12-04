@@ -27,7 +27,7 @@ const LogoBlack = (
 const QuotePage = () => {
 	return (
 		<>
-      <QuoteFormHeader />
+			<QuoteFormHeader />
 			<Router>
 				<Switch>
 					<Route

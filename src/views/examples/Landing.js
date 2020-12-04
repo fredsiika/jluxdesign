@@ -138,7 +138,7 @@ class Landing extends React.Component {
 													className="btn-round"
 													color="darker"
 													size="lg"
-													onSubmit={e => e.preventDefault()}
+													onSubmit={(e) => e.preventDefault()}
 													block>
 													Get Started
 												</Button>
