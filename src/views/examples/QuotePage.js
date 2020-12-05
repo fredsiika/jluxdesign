@@ -1,33 +1,23 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-// import { DataProvider } from '../../DataContext'
-// import ReactHookForm from '../../components/Forms/ReactHookForm'
-// import SimpleFooter from '../../components/Footers/SimpleFooter.js'
-// import NavbarBasic from '../../components/Navbars/NavbarBasic'
-// import JumbotronBasic from '../../components/Jumbotrons/JumbotronBasic'
-// import JumbotronFluid from '../../components/Jumbotrons/JumbotronFluid'
-// const LogoBlack = (<img src={require("../../assets/img/logos/logo-black.png")}></img>)
-// const LogoWhite = (<img src={require("../../assets/img/logos/logo-white.png")}></img>)
+// import { DataProvider } from 'DataContext'
+import NavbarBasic from 'components/Navbars/NavbarBasic'
+import SimpleFooter from 'components/Footers/SimpleFooter'
 
-// import { QuoteFormHeader } from "./components/Forms/QuoteFormHeader";
-// import ContactForm from './ContactForm'
-
-import { Step1 } from '../../components/Forms/Step1'
-import { Step2 } from '../../components/Forms/Step2'
-import { Step3 } from '../../components/Forms/Step3'
-import { Step4 } from '../../components/Forms/Step4'
-import { Step5 } from '../../components/Forms/Step5'
-import { Result } from '../../components/Forms/Result'
-import { QuoteFormHeader } from 'components/Forms/QuoteFormHeader'
-
-const LogoBlack = (
-	<img src={require('../../assets/img/logos/logo-black.png')}></img>
-)
+import { Step1 } from 'components/Forms/Step1'
+import { Step2 } from 'components/Forms/Step2'
+import { Step3 } from 'components/Forms/Step3'
+import { Result } from 'components/Forms/Result'
+// import { QuoteFormHeader } from 'components/Forms/QuoteFormHeader'
+// import { NavbarBrand } from 'reactstrap';
+import LayoutForm from 'components/Forms/LayoutForm'
+import JumbotronBasic from 'components/Jumbotrons/JumbotronBasic'
 
 const QuotePage = () => {
 	return (
 		<>
-			<QuoteFormHeader />
+			<NavbarBasic />
+			<JumbotronBasic />
 			<Router>
 				<Switch>
 					<Route
@@ -58,6 +48,7 @@ const QuotePage = () => {
 					/>
 				</Switch>
 			</Router>
+			<SimpleFooter />
 		</>
 	)
 }

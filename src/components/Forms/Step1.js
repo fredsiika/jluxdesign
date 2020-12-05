@@ -16,7 +16,8 @@ import JumbotronBasic from 'components/Jumbotrons/JumbotronBasic'
 import { Button, Col, NavbarBrand, Row } from 'reactstrap'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import Checkbox from '@material-ui/core/Checkbox'
-
+import LayoutForm from 'components/Forms/LayoutForm'
+import { ProgressBar1 } from 'components/Forms/ProgressBar'
 // import { Button, Container, Col, Row } from 'reactstrap'
 // import Typography from '@material-ui/core/Typography'
 // import PageAnalytics from './PageAnalytics'
@@ -55,15 +56,26 @@ export const Step1 = () => {
 	const history = useHistory()
 	const { register, handleSubmit, watch, errors } = useForm({
 		defaultValues: {
-			firstName: data.firstName,
-			lastName: data.lastName,
-			email: data.email,
-			hasPhone: data.hasPhone,
-			phoneNumber: data.phoneNumber,
+			firstName: "Carol",
+			lastName: "Baskins",
+			email: "carol.baskins@gmail.com",
+			hasPhone: true,
+			phoneNumber: "+1469420496969",
 		},
 		mode: 'onBlur',
 		resolver: yupResolver(schema),
 	})
+
+	// defaultValues: {
+	// 		firstName: data.firstName,
+	// 		lastName: data.lastName,
+	// 		email: data.email,
+	// 		hasPhone: data.hasPhone,
+	// 		phoneNumber: data.phoneNumber,
+	// 	},
+	// 	mode: 'onBlur',
+	// 	resolver: yupResolver(schema),
+	// })
 
 	const hasPhone = watch('hasPhone')
 	const phoneNumber = watch('phoneNumber')
@@ -77,92 +89,92 @@ export const Step1 = () => {
 
 	return (
 		<>
-			<NavbarBasic />
-			<JumbotronFluid />
-			<MainContainer>
-				<section className="section section-lg pt-0">
-					<p className="text-center display-3 text-primary">
-						<span className="d-sm-inline" role="img" aria-label="Memo Emoji">
-							📝
-						</span>{' '}
-						Step 1: Enter Contact Info
-					</p>
+			<LayoutForm>
+				<ProgressBar1 />
+				<MainContainer>
+					<section className="hero-animation-2 section section-lg pt-0">
+						<p className="text-center display-3 text-primary">
+							<span className="d-sm-inline" role="img" aria-label="Memo Emoji">
+								📝
+							</span>{' '}
+							Step 1: Enter Contact Info
+						</p>
 
-					<Form onSubmit={handleSubmit(onSubmit)}>
-						<Input
-							ref={register}
-							id="firstName"
-							type="text"
-							label="First Name"
-							name="firstName"
-							error={!!errors.firstName}
-							helperText={errors?.firstName?.message}
-						/>
-						<Input
-							ref={register}
-							id="lastName"
-							type="text"
-							label="Last Name"
-							name="lastName"
-							error={!!errors.lastName}
-							helperText={errors?.lastName?.message}
-						/>
-						<Input
-							ref={register}
-							id="email"
-							type="email"
-							label="Email"
-							name="email"
-							error={!!errors.email}
-							helperText={errors?.email?.message}
-						/>
-						<FormControlLabel
-							control={
-								<Checkbox
-									defaultValue={data.hasPhone}
-									defaultChecked={data.hasPhone}
-									color="primary"
-									inputRef={register}
-									name="hasPhone"
-								/>
-							}
-							label="Do you have a phone"
-						/>
-
-						{hasPhone && (
+						<Form onSubmit={handleSubmit(onSubmit)}>
 							<Input
 								ref={register}
-								id="phoneNumber"
-								type="tel"
-								label="Phone Number"
-								name="phoneNumber"
-								onChange={(event) => {
-									event.target.value = normalizePhoneNumber(event.target.value)
-								}}
+								id="firstName"
+								type="text"
+								label="First Name"
+								name="firstName"
+								error={!!errors.firstName}
+								helperText={errors?.firstName?.message}
 							/>
-						)}
-						<hr />
-						<div className="pb-6">
-							<Row>
-								<Col sm="6">
-									<Button href="/quote/" color="darker" block disabled>
-										Back
-									</Button>
-								</Col>
-								<Col sm="6">
-									<Button
+							<Input
+								ref={register}
+								id="lastName"
+								type="text"
+								label="Last Name"
+								name="lastName"
+								error={!!errors.lastName}
+								helperText={errors?.lastName?.message}
+							/>
+							<Input
+								ref={register}
+								id="email"
+								type="email"
+								label="Email"
+								name="email"
+								error={!!errors.email}
+								helperText={errors?.email?.message}
+							/>
+							<FormControlLabel
+								control={
+									<Checkbox
+										defaultValue={data.hasPhone}
+										defaultChecked={true}
 										color="primary"
-										onClick={handleSubmit(onSubmit)}
-										block>
-										Next
-									</Button>
-								</Col>
-							</Row>
-						</div>
-					</Form>
-				</section>
-			</MainContainer>
-			<SimpleFooter />
+										inputRef={register}
+										name="hasPhone"
+									/>
+								}
+								label="Do you have a phone"
+							/>
+
+							{hasPhone && (
+								<Input
+									ref={register}
+									id="phoneNumber"
+									type="tel"
+									label="Phone Number"
+									name="phoneNumber"
+									onChange={(event) => {
+										event.target.value = normalizePhoneNumber(event.target.value)
+									}}
+								/>
+							)}
+							<hr />
+							<div className="pb-6">
+								<Row>
+									<Col sm="6">
+										<Button href="/quote/" color="darker" block disabled>
+											Back
+										</Button>
+									</Col>
+									<Col sm="6">
+										<Button
+											color="primary"
+											onClick={handleSubmit(onSubmit)}
+											block>
+											Next
+										</Button>
+									</Col>
+								</Row>
+							</div>
+						</Form>
+					</section>
+				</MainContainer>
+			</LayoutForm>
 		</>
 	)
 }

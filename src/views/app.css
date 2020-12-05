@@ -12,6 +12,19 @@ a {
 	text-decoration: none;
 	font-weight: 600;
 }
+@counter-style thumbs {
+  system: cyclic;
+  symbols: "\1F44D";
+  suffix: " ";
+}
+
+ul {
+  list-style: inherit;
+}
+
+ul li::before {
+  content: "\200B";
+}
 
 .btn-custom:hover {
 	background-color: #5334f5;

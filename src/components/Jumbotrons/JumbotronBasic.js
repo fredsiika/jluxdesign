@@ -4,7 +4,7 @@ import { Button, Container, Col, Jumbotron, Row } from 'reactstrap'
 const JumbotronBasic = (props) => {
 	return (
 		<div>
-			<Jumbotron className="hero-animation hero-bg-kitchen-06 gradient-overlay-dark-v1 bg-img-hero">
+			<Jumbotron className="Hero hero-animation hero-bg-kitchen-06 gradient-overlay-dark-v1 bg-img-hero mb-0">
 				<Container className="mt-5">
 					<Row>
 						<Col>

@@ -4,7 +4,8 @@ import { Button } from 'reactstrap'
 const GetStartedBtn = (props) => {
 	return (
 		<Button
-			className="btn-custom btn-icon mb-3 mb-sm-0"
+			type="submit"
+			className="btn-icon mb-3 mb-sm-0 btn-custom"
 			color={props.color}
 			href={props.href}
 			block>

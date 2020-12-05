@@ -11,7 +11,7 @@ const LandingHero = () => {
 					{/* Title */}
 					<HeroWebCopy />
 					{/* CTA Buttons */}
-					<GetStartedBtn cta="Get Estimate" color="darker" block />
+					<GetStartedBtn href="/quote" cta="Get Estimate" color="darker" block />
 				</div>
 				{/* Hero Products */}
 				<HeroProducts />

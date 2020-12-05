@@ -4,7 +4,8 @@ import Swal from 'sweetalert2'
 import { makeStyles } from '@material-ui/core/styles'
 import { Link } from 'react-router-dom'
 import { useData } from '../../DataContext'
-// import { MainContainer } from "./MainContainer";
+import { MainContainer } from "./MainContainer";
+import LayoutForm from 'components/Forms/LayoutForm'
 import { PrimaryButton } from './PrimaryButton'
 import Table from '@material-ui/core/Table'
 import TableBody from '@material-ui/core/TableBody'
@@ -20,6 +21,8 @@ import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import InsertDriveFile from '@material-ui/icons/InsertDriveFile'
 import { Container } from 'reactstrap'
+import { ProgressBarReview } from 'components/Forms/ProgressBar'
+
 
 const useStyles = makeStyles({
 	root: {
@@ -82,7 +85,9 @@ export const Result = () => {
 
 	return (
 		<>
-			<Container>
+			<LayoutForm>
+				<ProgressBarReview />
+				<MainContainer>
 				<h3 className="text-center display-3 text-primary">
 					<span
 						className="text-left d-sm-inline"
@@ -132,9 +137,10 @@ export const Result = () => {
 						</List>
 					</>
 				)}
-				<PrimaryButton onClick={onSubmit}>Submit</PrimaryButton>
-				<Link to="/quote">Start over</Link>
-			</Container>
+				<PrimaryButton type="submit" onClick={onSubmit}>Submit</PrimaryButton>
+				<Link to="/quote/step1">Start over</Link>
+				</MainContainer>
+			</LayoutForm>
 		</>
 	)
 }
