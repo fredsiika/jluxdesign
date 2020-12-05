@@ -18,15 +18,14 @@ import {
 	Input,
 	Label,
 	Row,
-	Textarea
+	Textarea,
 } from 'reactstrap'
 // import { BackButton, PrimaryButton } from './PrimaryButton'
 // import Typography from '@material-ui/core/Typography'
 // import { MainContainer } from './MainContainer'
 
 const schema = yup.object().shape({
-	textarea: yup
-		.string()
+	textarea: yup.string(),
 })
 
 export const Step3 = () => {
@@ -58,7 +57,7 @@ Thanks!
 <mark>[Your name]</mark>
 	`
 	const uploadTooltip = (
-		<div className="uploadTooltip" style={{  }}>
+		<div className="uploadTooltip" style={{}}>
 			<Row>
 				<Col md="6">
 					<div className="good-example mt-5">
@@ -94,9 +93,18 @@ Thanks!
 				</span>
 				<hr className="w-100" />
 				<Alert color="primary">
-					<strong>Tip:{' '}</strong><br />
-					Good photos should have clear shots of your counter
-					area and relative size references to cabinets and/or appliances. Use the good and bad photos guideline at the bottom of this page for the most accurate estimate. <span className="" rol="img" aria-label="downwards-black-arrow emoji snippet">⬇</span>
+					<strong>Tip: </strong>
+					<br />
+					Good photos should have clear shots of your counter area and relative
+					size references to cabinets and/or appliances. Use the good and bad
+					photos guideline at the bottom of this page for the most accurate
+					estimate.{' '}
+					<span
+						className=""
+						rol="img"
+						aria-label="downwards-black-arrow emoji snippet">
+						⬇
+					</span>
 				</Alert>
 				<hr className="w-100" />
 
@@ -121,8 +129,7 @@ Thanks!
 							defaultValue={sampleContactLetter}
 							control={control}
 						/> */}
-						<FormText color="muted" className="small">
-						</FormText>
+						<FormText color="muted" className="small"></FormText>
 					</FormGroup>
 
 					<div className="pb-6">

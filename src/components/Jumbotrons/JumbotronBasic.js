@@ -13,7 +13,9 @@ const JumbotronBasic = (props) => {
                 Get a<br /> Countertop<br d-none />{''}quote in less<br />{' '}than a minute.<br />{' '}
               </h1> */}
 								<h1 className="display-1 text-gradient-primary">
-									Countertop<br />{' '}estimation made <span className="text-white">simple.</span>
+									Countertop
+									<br /> estimation made{' '}
+									<span className="text-white">simple.</span>
 								</h1>
 								<div className="hero-animation-1 header-description">
 									<p className="lead text-secondary">

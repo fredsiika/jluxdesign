@@ -8,8 +8,9 @@ const HeroWebCopy = (props) => {
 				<br /> next stone and tile countertop with us.
 			</h2>
 			<p className="hero-animation-4 lead text-white p-4">
-				The modern way to a seamless and efficient<br className="d-none d-md-inline-block" />{' '}
-				stone and tile countertop renovation.
+				The modern way to a seamless and efficient
+				<br className="d-none d-md-inline-block" /> stone and tile countertop
+				renovation.
 			</p>
 		</div>
 	)

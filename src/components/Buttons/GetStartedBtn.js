@@ -8,9 +8,9 @@ const GetStartedBtn = (props) => {
 			color={props.color}
 			href={props.href}
 			block>
-				<span className="btn-inner--icon mr-1">
-					<i className="ni ni-spaceship" />
-				</span>
+			<span className="btn-inner--icon mr-1">
+				<i className="ni ni-spaceship" />
+			</span>
 			<span className="btn-inner--text">{props.cta}</span>
 		</Button>
 	)

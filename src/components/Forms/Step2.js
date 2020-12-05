@@ -171,67 +171,131 @@ export const Step2 = () => {
 					{isKitchen && (
 						<div className="isOther-container">
 							<p className="text-primary display-4">Kitchen Project</p>
-							<p className="lead">What is the address associated with this project?</p>
+							<p className="lead">
+								What is the address associated with this project?
+							</p>
 							<FormGroup>
 								<Label for="address">Address</Label>
-								<Input ref={register} type="text" name="address1" id="address" placeholder="42069 Main St" error={!!errors.address1} helperText={errors?.address1?.message} />
+								<Input
+									ref={register}
+									type="text"
+									name="address1"
+									id="address"
+									placeholder="42069 Main St"
+									error={!!errors.address1}
+									helperText={errors?.address1?.message}
+								/>
 							</FormGroup>
 							<FormGroup>
 								<Label for="address2">Address 2</Label>
-								<Input ref={register} type="text" name="address2" id="address2" placeholder="Apartment, studio, or floor" />
+								<Input
+									ref={register}
+									type="text"
+									name="address2"
+									id="address2"
+									placeholder="Apartment, studio, or floor"
+								/>
 							</FormGroup>
 							<Row form>
 								<Col md={6}>
 									<FormGroup>
 										<Label for="city">City</Label>
-										<Input ref={register} type="text" name="city" id="city" placeholder="Dallas" />
+										<Input
+											ref={register}
+											type="text"
+											name="city"
+											id="city"
+											placeholder="Dallas"
+										/>
 									</FormGroup>
 								</Col>
 								<Col md={4}>
 									<FormGroup>
 										<Label for="stateAddress">State</Label>
-										<Input ref={register} type="text" name="stateAddress" id="stateAddress" placeholder="TX" />
+										<Input
+											ref={register}
+											type="text"
+											name="stateAddress"
+											id="stateAddress"
+											placeholder="TX"
+										/>
 									</FormGroup>
 								</Col>
 								<Col md={2}>
 									<FormGroup>
 										<Label for="zipcode">Zip</Label>
-										<Input ref={register} type="text" name="zipcode" id="zipcode" placeholder="75201"/>
+										<Input
+											ref={register}
+											type="text"
+											name="zipcode"
+											id="zipcode"
+											placeholder="75201"
+										/>
 									</FormGroup>
 								</Col>
 							</Row>
 						</div>
-
 					)}
 					{isBathroom && (
 						<div className="isOther-container">
 							<p className="text-primary display-4">Bathroom Project</p>
-							<p className="lead">What is the address associated with this project?</p>
+							<p className="lead">
+								What is the address associated with this project?
+							</p>
 							<FormGroup>
 								<Label for="address">Address</Label>
-								<Input type="text" name="address" id="address" placeholder="42069 Main St"/>
+								<Input
+									type="text"
+									name="address"
+									id="address"
+									placeholder="42069 Main St"
+								/>
 							</FormGroup>
 							<FormGroup>
 								<Label for="address2">Address 2</Label>
-								<Input ref={register} type="text" name="address2" id="address2" placeholder="Apartment, studio, or floor"/>
+								<Input
+									ref={register}
+									type="text"
+									name="address2"
+									id="address2"
+									placeholder="Apartment, studio, or floor"
+								/>
 							</FormGroup>
 							<Row form>
 								<Col md={6}>
 									<FormGroup>
 										<Label for="city">City</Label>
-										<Input ref={register} type="text" name="city" id="city" placeholder="Dallas" />
+										<Input
+											ref={register}
+											type="text"
+											name="city"
+											id="city"
+											placeholder="Dallas"
+										/>
 									</FormGroup>
 								</Col>
 								<Col md={4}>
 									<FormGroup>
 										<Label for="stateAddress">State</Label>
-										<Input ref={register} type="text" name="stateAddress" id="stateAddress" placeholder="TX" />
+										<Input
+											ref={register}
+											type="text"
+											name="stateAddress"
+											id="stateAddress"
+											placeholder="TX"
+										/>
 									</FormGroup>
 								</Col>
 								<Col md={2}>
 									<FormGroup>
 										<Label for="zipcode">Zip</Label>
-										<Input ref={register} type="text" name="zipcode" id="zipcode" placeholder="75201"/>
+										<Input
+											ref={register}
+											type="text"
+											name="zipcode"
+											id="zipcode"
+											placeholder="75201"
+										/>
 									</FormGroup>
 								</Col>
 							</Row>
@@ -249,34 +313,68 @@ export const Step2 = () => {
 				)} */}
 					{isOther && (
 						<div className="isOther-container">
-							<p className="text-primary display-4">Need something else done?</p>
-							<p className="lead">What is the address associated with this project?</p>
+							<p className="text-primary display-4">
+								Need something else done?
+							</p>
+							<p className="lead">
+								What is the address associated with this project?
+							</p>
 
 							<FormGroup>
 								<Label for="address">Address</Label>
-								<Input ref={register} type="text" name="address" id="address" placeholder="42069 Main St"/>
+								<Input
+									ref={register}
+									type="text"
+									name="address"
+									id="address"
+									placeholder="42069 Main St"
+								/>
 							</FormGroup>
 							<FormGroup>
 								<Label for="address2">Address 2</Label>
-								<Input ref={register} type="text" name="address2" id="address2" placeholder="Apartment, studio, or floor"/>
+								<Input
+									ref={register}
+									type="text"
+									name="address2"
+									id="address2"
+									placeholder="Apartment, studio, or floor"
+								/>
 							</FormGroup>
 							<Row form>
 								<Col md={6}>
 									<FormGroup>
 										<Label for="city">City</Label>
-										<Input ref={register} type="text" name="city" id="city" placeholder="Dallas" />
+										<Input
+											ref={register}
+											type="text"
+											name="city"
+											id="city"
+											placeholder="Dallas"
+										/>
 									</FormGroup>
 								</Col>
 								<Col md={4}>
 									<FormGroup>
 										<Label for="stateAddress">State</Label>
-										<Input ref={register} type="text" name="stateAddress" id="stateAddress" placeholder="TX" />
+										<Input
+											ref={register}
+											type="text"
+											name="stateAddress"
+											id="stateAddress"
+											placeholder="TX"
+										/>
 									</FormGroup>
 								</Col>
 								<Col md={2}>
 									<FormGroup>
 										<Label for="zipcode">Zip</Label>
-										<Input ref={register} type="text" name="zipcode" id="zipcode" placeholder="75201"/>
+										<Input
+											ref={register}
+											type="text"
+											name="zipcode"
+											id="zipcode"
+											placeholder="75201"
+										/>
 									</FormGroup>
 								</Col>
 							</Row>

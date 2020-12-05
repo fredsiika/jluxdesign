@@ -16,7 +16,7 @@ a {
 .btn-custom:hover {
 	background-color: #5334f5;
 	color: white;
-	animation: ease
+	animation: ease;
 }
 
 .btn-custom-outline:hover {
@@ -82,22 +82,22 @@ a {
 
 .hero-animation-ltr {
 	position: relative;
-	animation: LeftToRight  3s 0.5s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+	animation: LeftToRight 3s 0.5s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .hero-animation-ltr-1 {
 	position: relative;
-	animation: LeftToRight  3s 0.5s forwards ease-in;
+	animation: LeftToRight 3s 0.5s forwards ease-in;
 }
 
 .hero-animation-ltr-2 {
 	position: relative;
-	animation: LeftToRight  3s 0.5s forwards ease-out;
+	animation: LeftToRight 3s 0.5s forwards ease-out;
 }
 
 .hero-animation-ltr-3 {
 	position: relative;
-	animation: LeftToRight  3s 0.5s forwards ease-in-out;
+	animation: LeftToRight 3s 0.5s forwards ease-in-out;
 }
 
 @keyframes LeftToRight {

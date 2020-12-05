@@ -75,9 +75,7 @@ class NavbarBasic extends React.Component {
 							{/* End Navbar Logo */}
 
 							{/* CTA Button on mobile devices */}
-							<NavItem
-								className="d-none d-sm-block py-sm-2 ml-md-9 d-lg-none"
-								>
+							<NavItem className="d-none d-sm-block py-sm-2 ml-md-9 d-lg-none">
 								<Button
 									className="btn-icon"
 									color="primary"
