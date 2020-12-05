@@ -19,7 +19,7 @@ a {
 }
 
 ul {
-  list-style: inherit;
+  list-style: none;
 }
 
 ul li::before {

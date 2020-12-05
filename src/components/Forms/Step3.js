@@ -1,5 +1,5 @@
 import React from 'react'
-import { useHistory, Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers'
@@ -29,15 +29,13 @@ const schema = yup.object().shape({
 		.string()
 })
 
-
-
 export const Step3 = () => {
 	const history = useHistory()
 	const { data, setValues } = useData()
-	const { register, handleSubmit, control, watch } = useForm({
+	const { register, handleSubmit, control, watch, errors } = useForm({
 		defaultValues: {
 			files: data.files,
-			textarea: sampleTextarea,
+			textarea: data.textarea
 		},
 		mode: 'onClick',
 		resolver: yupResolver(schema),
@@ -45,9 +43,17 @@ export const Step3 = () => {
 
 	const textarea = watch('textarea')
 
+	const goBack = (data) => {
+		history.push('./step2')
+		setValues(data)
+
+		console.log('Back Button pressed. Navigating back to "/page2".\n', data)
+	}
 	const onSubmit = (data) => {
 		history.push('./result')
 		setValues(data)
+		console.log('"Next" button pressed. Navigating to "/results"\n', data)
+
 	}
 
 	const UploadTooltip = (
@@ -99,7 +105,7 @@ export const Step3 = () => {
 					<Form onSubmit={handleSubmit(onSubmit)}>
 						<FileInput name="files" control={control} />
 						<FormGroup>
-							<Label for="additionalInfo">
+							<Label htmlFor="additionalInfo">
 								<span className="h4 text-primary">
 									Additional Info{' '}
 									<small className="text-muted">
@@ -113,9 +119,12 @@ export const Step3 = () => {
 								name="textarea"
 								id="textarea"
 								rows="12"
-								inputRef={register}
-								defaultValue={sampleTextarea}
+								ref={register}
+								defaultValue={textarea}
 								control={control}
+								error={!!errors?.textarea.message}
+								helperText={errors?.textarea.message}
+
 							/>
 							<FormText color="muted" className="small">
 							</FormText>
@@ -123,7 +132,7 @@ export const Step3 = () => {
 						<div className="mb-5">
 							<Row>
 								<Col xs="6">
-									<Button type="submit" href="/quote/step2" color="darker" block>
+									<Button color="dark" block onClick={handleSubmit(goBack)}>
 										Back
 									</Button>
 								</Col>

@@ -1,27 +1,27 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
+import styled from 'styled-components'
 import { useData } from '../../DataContext'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers'
-import NavbarBasic from '../Navbars/NavbarBasic'
-import SimpleFooter from '../Footers/SimpleFooter'
-import JumbotronFluid from '../Jumbotrons/JumbotronFluid'
 import { MainContainer } from './MainContainer'
 import { PrimaryButton } from './PrimaryButton'
 import { Form } from './Form'
 import { Input } from './Input'
 import * as yup from 'yup'
 import { parsePhoneNumberFromString } from 'libphonenumber-js'
-import JumbotronBasic from 'components/Jumbotrons/JumbotronBasic'
-import { Button, Col, NavbarBrand, Row } from 'reactstrap'
-import FormControlLabel from '@material-ui/core/FormControlLabel'
+import { Button, Col, Row } from 'reactstrap'
+
+// Material UI components
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormControl from '@material-ui/core/FormControl';
+import FormLabel from '@material-ui/core/FormLabel';
 import Checkbox from '@material-ui/core/Checkbox'
 import LayoutForm from 'components/Forms/LayoutForm'
 import { ProgressBar1 } from 'components/Forms/ProgressBar'
-// import { Button, Container, Col, Row } from 'reactstrap'
-// import Typography from '@material-ui/core/Typography'
-// import PageAnalytics from './PageAnalytics'
-// import ReactHookForm from './ReactHookForm'
+import RadioButtons from 'components/Inputs/RadioButtons'
 
 const schema = yup.object().shape({
 	firstName: yup
@@ -37,8 +37,8 @@ const schema = yup.object().shape({
 		.email('Email should have correct format')
 		.required('Email is a required field'),
 	phoneNumber: yup
-		.number()
-		// .matches(null, 'Please fill out phone number')
+		.string()
+		.matches(/^([^A-Za-z]*)$/, 'Phone number must not contain letters.')
 		.required('Phone number is a required field.'),
 })
 
@@ -47,9 +47,103 @@ const normalizePhoneNumber = (value) => {
 	if (!phoneNumber) {
 		return value
 	}
-
 	return phoneNumber.formatInternational()
 }
+
+{/* ================ */}
+			// const CustomRadioGroup = () => {
+			// 	const [value, setValue] = React.useState('homeowner');
+
+
+			// 	return (
+			// 		<FormControl>
+			// 			<FormLabel component="legend">Job Title</FormLabel>
+			// 			<RadioGroup aria-label="Homeowner" name="title" value={value} onChange={(event) => { setValue(event.target.value); }}>
+			// 			<FormControlLabel
+			// 				control={
+			// 					<Radio
+			// 						defaultValue={data.isHomeowner}
+			// 						defaultChecked={data.isHomeowner}
+			// 						color="primary"
+			// 						inputRef={register}
+			// 						name="isHomeowner"
+			// 					/>
+			// 				}
+			// 				label="Homeowner"
+			// 				labelPlacement="right"
+			// 			/>
+
+			// 			<FormControlLabel
+			// 				control={
+			// 					<Radio
+			// 						defaultValue={data.isBuilder}
+			// 						defaultChecked={data.isBuilder}
+			// 						color="primary"
+			// 						inputRef={register}
+			// 						name="isBuilder"
+			// 					/>
+			// 				}
+			// 				label="Builder"
+			// 				labelPlacement="right"
+			// 			/>
+
+			// 			<FormControlLabel
+			// 				control={
+			// 					<Radio
+			// 						defaultValue={data.isContractor}
+			// 						defaultChecked={data.isContractor}
+			// 						color="primary"
+			// 						inputRef={register}
+			// 						name="isContractor"
+			// 					/>
+			// 				}
+			// 				label="Contractor"
+			// 				labelPlacement="right"
+			// 			/>
+
+			// 			<FormControlLabel
+			// 				control={
+			// 					<Radio
+			// 						defaultValue={data.isDesigner}
+			// 						defaultChecked={data.isDesigner}
+			// 						color="primary"
+			// 						inputRef={register}
+			// 						name="isDesigner"
+			// 					/>
+			// 				}
+			// 				label="Designer"
+			// 				labelPlacement="right"
+			// 			/>
+			// 			<FormControlLabel
+			// 				control={
+			// 					<Radio
+			// 						defaultValue={data.hasOtherTitle}
+			// 						defaultChecked={data.hasOtherTitle}
+			// 						color="primary"
+			// 						inputRef={register}
+			// 						name="hasOtherTitle"
+			// 					/>
+			// 				}
+			// 				label="Other Title"
+			// 				labelPlacement="right"
+			// 			/>
+			// 			{/* Error Handling */}
+			// 			{/* {hasOtherTitle && (
+			// 				<Input
+			// 					ref={register}
+			// 					id="phoneNumber"
+			// 					type="tel"
+			// 					label="Phone Number"
+			// 					name="phoneNumber"
+			// 					onChange={(event) => {
+			// 						event.target.value = normalizePhoneNumber(event.target.value)
+			// 					}}
+			// 				/>
+			// 			)} */}
+			// 			</RadioGroup>
+			// 		</FormControl>
+			// 	)
+			// }
 
 export const Step1 = () => {
 	const { setValues, data } = useData()
@@ -59,8 +153,9 @@ export const Step1 = () => {
 			firstName: "Carol",
 			lastName: "Baskins",
 			email: "carol.baskins@gmail.com",
-			hasPhone: true,
 			phoneNumber: "+1469420496969",
+			title: data.title,
+			hasOtherTitle: data.hasOtherTitle
 		},
 		mode: 'onBlur',
 		resolver: yupResolver(schema),
@@ -79,7 +174,7 @@ export const Step1 = () => {
 
 	const hasPhone = watch('hasPhone')
 	const phoneNumber = watch('phoneNumber')
-
+	const hasOtherTitle = watch('hasOtherTitle')
 	const onSubmit = (data) => {
 		history.push('./step2')
 		setValues(data)
@@ -128,36 +223,28 @@ export const Step1 = () => {
 								error={!!errors.email}
 								helperText={errors?.email?.message}
 							/>
-							<FormControlLabel
-								control={
-									<Checkbox
-										defaultValue={data.hasPhone}
-										defaultChecked={true}
-										color="primary"
-										inputRef={register}
-										name="hasPhone"
-									/>
-								}
-								label="Do you have a phone"
+							<Input
+								ref={register}
+								id="phoneNumber"
+								type="tel"
+								label="Phone Number"
+								name="phoneNumber"
+								error={!!errors.phoneNumber}
+								helperText={errors?.phoneNumber?.message}
+								onChange={(event) => { event.target.value = normalizePhoneNumber(event.target.value)} }
 							/>
 
-							{hasPhone && (
-								<Input
-									ref={register}
-									id="phoneNumber"
-									type="tel"
-									label="Phone Number"
-									name="phoneNumber"
-									onChange={(event) => {
-										event.target.value = normalizePhoneNumber(event.target.value)
-									}}
-								/>
-							)}
+
 							<hr />
 							<div className="pb-6">
 								<Row>
 									<Col sm="6">
-										<Button href="/quote/" color="darker" block disabled>
+										<Button
+											type="submit"
+											href="/quote/"
+											color="darker"
+											block
+											disabled>
 											Back
 										</Button>
 									</Col>
@@ -180,3 +267,60 @@ export const Step1 = () => {
 }
 
 export default Step1
+
+{/*
+<div className="project-type">
+		<FormControlLabel
+			control={
+				<Checkbox
+					defaultValue={data.isKitchen}
+					defaultChecked={data.isKitchen}
+					color="primary"
+					inputRef={register}
+					name="iskitchen"
+				/>
+			}
+			label="Kitchen"
+			labelPlacement="bottom"
+		/>
+		<FormControlLabel
+			control={
+				<Checkbox
+					defaultValue={data.isBathroom}
+					defaultChecked={data.isBathroom}
+					color="primary"
+					inputRef={register}
+					name="isbathroom"
+				/>
+			}
+			label="Bathroom"
+			labelPlacement="bottom"
+		/>
+		<FormControlLabel
+			control={
+				<Checkbox
+					defaultValue={data.isOther}
+					defaultChecked={data.isOther}
+					color="primary"
+					inputRef={register}
+					name="isOther"
+				/>
+			}
+			label="Other"
+			labelPlacement="bottom"
+		/>
+
+		{hasPhone && (
+			<Input
+				ref={register}
+				id="phoneNumber"
+				type="tel"
+				label="Phone Number"
+				name="phoneNumber"
+				onChange={(event) => {
+					event.target.value = normalizePhoneNumber(event.target.value)
+				}}
+			/>
+	)}
+</div>
+*/}

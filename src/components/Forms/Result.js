@@ -22,7 +22,7 @@ import ListItemText from '@material-ui/core/ListItemText'
 import InsertDriveFile from '@material-ui/icons/InsertDriveFile'
 import { Container } from 'reactstrap'
 import { ProgressBarReview } from 'components/Forms/ProgressBar'
-
+import JumbotronBasic from 'components/Jumbotrons/JumbotronBasic'
 
 const useStyles = makeStyles({
 	root: {

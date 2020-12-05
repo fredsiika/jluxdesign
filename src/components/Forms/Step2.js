@@ -21,8 +21,13 @@ import { Input } from './Input'
 
 const schema = yup.object().shape({
 	isKitchen: yup
-		.string()
-		.matches(/^([^0-9]*)$/, 'Project type should not contain numbers')
+		.boolean()
+		.required('Project type is a required field'),
+	isBathroom: yup
+		.boolean()
+		.required('Project type is a required field'),
+	isBathroom: yup
+		.boolean()
 		.required('Project type is a required field'),
 })
 
@@ -39,17 +44,14 @@ export const Step2 = () => {
 	const history = useHistory()
 	const { register, handleSubmit, watch, errors } = useForm({
 	defaultValues: {
-			projectType: data.projectType,
 			isKitchen: data.isKitchen,
 			isBathroom: data.isBathroom,
 			isOther: data.isOther,
-			hasPhone: data.hasPhone,
-			phoneNumber: data.phoneNumber,
-			address1: "42069 Main St",
+			address1: data.address,
 			address2: data.address2,
-			city: "Dallas",
-			stateAddress: "TX",
-			zipcode: "75082",
+			city: data.city,
+			stateAddress: data.stateAddress,
+			zipcode: data.zipcode,
 		},
 		mode: 'onBlur',
 		resolver: yupResolver(schema),
@@ -64,9 +66,18 @@ export const Step2 = () => {
 	const isKitchen = watch('isKitchen')
 	const isOther = watch('isOther')
 
+	const goBack = (data) => {
+		history.push('./step1')
+		setValues(data)
+
+		console.log('Back Button pressed. Navigating back one page.\n', data)
+	}
+
 	const onSubmit = (data) => {
 		history.push('./step3')
+
 		setValues(data)
+		console.log('"Next" button pressed. Navigating to "/step3\n', data)
 	}
 
 	return (
@@ -86,10 +97,8 @@ export const Step2 = () => {
 						</p>
 					</div>
 
-					<div className="form-container">
-						<ol className="display-3 text-primary">
-							<li>What type of project?</li>
-						</ol>
+					<div className="form-container mb-4">
+							<h3 className="display-3 text-primary">What type of project?</h3>
 					</div>
 
 					<Form onSubmit={handleSubmit(onSubmit)}>
@@ -102,7 +111,7 @@ export const Step2 = () => {
 									defaultChecked={data.isKitchen}
 									color="primary"
 									error={!!errors.isKitchen}
-									helperText={errors?.isKitchen?.message}
+									helperText={!!errors?.isKitchen?.message}
 									required
 								/>
 							}
@@ -382,7 +391,7 @@ export const Step2 = () => {
 						<div className="py-6">
 							<Row>
 								<Col sm="6">
-									<Button href="/quote/step1" color="darker" block>
+									<Button color="dark" block onClick={handleSubmit(goBack)}>
 										Back
 									</Button>
 								</Col>
@@ -393,7 +402,6 @@ export const Step2 = () => {
 								</Col>
 							</Row>
 						</div>
-						{/* <PageAnalytics /> */}
 					</Form>
 				</MainContainer>
 			</LayoutForm>

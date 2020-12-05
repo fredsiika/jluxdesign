@@ -71,7 +71,7 @@ export const ProgressBar1 = ({children, ...props}) => {
           </StepList>
           <StepList>
             <Button type="submit" className="text-center" color="dark">
-                Review<br />
+                Step 4<br />
               <Circle />
             </Button>
           </StepList>
@@ -106,7 +106,7 @@ export const ProgressBar2 = ({children, ...props}) => {
           </StepList>
           <StepList>
             <Button type="submit" className="text-center" color="dark">
-                Review<br />
+                Step 4<br />
               <Circle />
             </Button>
           </StepList>
@@ -141,7 +141,7 @@ export const ProgressBar3 = ({children, ...props}) => {
           </StepList>
           <StepList>
             <Button type="submit" className="text-center" color="dark" disabled>
-                Review<br />
+                Step 4<br />
               <Circle />
             </Button>
           </StepList>
@@ -176,7 +176,7 @@ export const ProgressBarReview = ({children, ...props}) => {
           </StepList>
           <StepList>
             <Button type="submit" className="text-center" color="primary">
-                Review<br />
+                Step 4<br />
               <CircleCurrent />
             </Button>
           </StepList>
@@ -211,7 +211,7 @@ export const ProgressBar = ({children, ...props}) => {
           </StepList>
           <StepList>
             <Button type="submit" className="text-center" color="dark">
-                Review<br />
+                Step 4<br />
               <Circle />
             </Button>
           </StepList>
