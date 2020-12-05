@@ -4,7 +4,7 @@
 	"embeddedLanguageFormatting": "auto",
 	"htmlWhitespaceSensitivity": "css",
 	"insertPragma": false,
-	"jsxBracketSameLine": true,
+	"jsxBracketSameLine": false,
 	"jsxSingleQuote": false,
 	"printWidth": 80,
 	"proseWrap": "preserve",
@@ -14,5 +14,6 @@
 	"singleQuote": true,
 	"tabWidth": 2,
 	"trailingComma": "es5",
-	"useTabs": true
+	"useTabs": true,
+	"endOfLine": "auto"
 }

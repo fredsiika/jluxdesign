@@ -40,10 +40,9 @@
 		"minify-sass": "node-sass src/assets/scss/argon-design-system-react.scss src/assets/css/argon-design-system-react.min.css --output-style compressed",
 		"map-sass": "node-sass src/assets/scss/argon-design-system-react.scss src/assets/css/argon-design-system-react.css --source-map true",
 		"start:server": "node ./server.js",
-		"dev": "concurrently --kill-others \"npm run start:server\" \"npm run start\""
-	},
-	"eslintConfig": {
-		"extends": "react-app"
+		"dev": "concurrently --kill-others \"npm run start:server\" \"npm run start\"",
+		"lint": "eslint src/**/*.{js,jsx}",
+		"format": "prettier --write \"src/**/*.{js,jsx,ts,css,less,scss,vue,json,gql,md}\""
 	},
 	"browserslist": [
 		">0.2%",
@@ -94,16 +93,24 @@
 		"@types/googlemaps": "3.39.2",
 		"@types/markerclustererplus": "2.1.33",
 		"@types/react": "16.9.19",
+		"concurrently": "^5.2.0",
+		"cors": "^2.8.5",
+		"eslint": "^7.14.0",
+		"eslint-config-airbnb": "^18.2.1",
+		"eslint-config-prettier": "^6.15.0",
 		"eslint-plugin-flowtype": "3.13.0",
+		"eslint-plugin-import": "^2.22.1",
+		"eslint-plugin-jsx-a11y": "^6.4.1",
+		"eslint-plugin-prettier": "^3.2.0",
+		"eslint-plugin-react": "^7.21.5",
+		"eslint-plugin-react-hooks": "^4.2.0",
+		"express": "^4.17.1",
+		"express-fileupload": "^1.1.7-alpha.3",
 		"gulp": "4.0.2",
 		"gulp-append-prepend": "1.0.8",
 		"jquery": "3.4.1",
-		"prettier": "2.2.1",
-		"typescript": "3.7.5",
-		"concurrently": "^5.2.0",
-		"cors": "^2.8.5",
-		"express": "^4.17.1",
-		"express-fileupload": "^1.1.7-alpha.3",
-		"morgan": "^1.10.0"
+		"morgan": "^1.10.0",
+		"prettier": "^2.2.1",
+		"typescript": "3.7.5"
 	}
 }
