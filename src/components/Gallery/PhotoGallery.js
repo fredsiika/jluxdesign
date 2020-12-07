@@ -4,6 +4,7 @@ import Gallery from 'react-photo-gallery'
 import Carousel, { Modal, ModalGateway } from 'react-images'
 import { photos } from 'components/Gallery/photos'
 import { GalleryTitle } from 'components/Gallery/GalleryTitle'
+import { Container } from 'reactstrap'
 
 const PhotoGallery = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -21,10 +22,25 @@ const PhotoGallery = () => {
 
   return (
     <section className="section section-lg pt-lg-0 section-contact-us">
-      <GalleryTitle />
-      <Gallery photos={photos} onClick={openLightBox} />
+      <Container>
+        <GalleryTitle />
+        <Gallery photos={photos} onClick={openLightBox} />
+        <ModalGateway>
+          {viewerIsOpen ? (
+            <Modal onClose={closeLightbox}>
+              <Carousel
+                currentIndex={currentImage}
+                views={photos.map(x => ({
+                  ...x,
+                  srcset: x.srcSet,
+                  caption: x.title
+                }))}
+              />
+            </Modal>
+          ) : null}
+        </ModalGateway>
+        </Container>
     </section>
-
   )
 }
 

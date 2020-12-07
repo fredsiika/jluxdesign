@@ -51,15 +51,15 @@ class Landing extends React.Component {
 					{/* <ServiceSectionSimple /> */}
 					<ServicesGrid />
 					<BenefitsGrid />
-					<OverviewSection />
+					{/* <OverviewSection /> */}
 					<LogoBrandsGroup
 						title="Our Brands"
 						text="Great Pricing, Premium Quality Product and Excellent Customer Service!"
 					/>
 					<OurProcessSection />
+					<PhotoGallery />
 					<MaterialSelection />
 					<PlanningSection />
-					<PhotoGallery />
 					<OurTeamSection />
 					<CTABanner />
 					<NewsletterSection
