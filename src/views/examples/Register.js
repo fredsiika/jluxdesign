@@ -16,8 +16,8 @@ import {
 } from 'reactstrap'
 
 // core components
-import DemoNavbar from 'components/Navbars/DemoNavbar.js'
-import SimpleFooter from 'components/Footers/SimpleFooter.js'
+import NavbarBasic from 'components/Navbars/NavbarBasic'
+import SimpleFooter from 'components/Footers/SimpleFooter'
 
 class Register extends React.Component {
 	componentDidMount() {
@@ -28,10 +28,10 @@ class Register extends React.Component {
 	render() {
 		return (
 			<>
-				<DemoNavbar />
+				<NavbarBasic />
 				<main ref="main">
-					<section className="section section-shaped section-lg">
-						<div className="shape shape-style-1 bg-gradient-default">
+					<section className="section section-shaped section-lg hero-animation">
+						<div className="shape shape-style-1 bg-gradient-darker">
 							<span />
 							<span />
 							<span />
@@ -44,13 +44,13 @@ class Register extends React.Component {
 						<Container className="pt-lg-7">
 							<Row className="justify-content-center">
 								<Col lg="5">
-									<Card className="bg-secondary shadow border-0">
+									<Card className="bg-secondary shadow border-0 mt-9">
 										<CardHeader className="bg-white pb-5">
 											<div className="text-muted text-center mb-3">
 												<small>Sign up with</small>
 											</div>
 											<div className="text-center">
-												<Button
+												{/* <Button
 													className="btn-neutral btn-icon mr-4"
 													color="default"
 													href="#pablo"
@@ -62,12 +62,13 @@ class Register extends React.Component {
 														/>
 													</span>
 													<span className="btn-inner--text">Github</span>
-												</Button>
+												</Button> */}
 												<Button
+													type="submit"
 													className="btn-neutral btn-icon ml-1"
 													color="default"
-													href="#pablo"
-													onClick={(e) => e.preventDefault()}>
+													href=""
+													onClick={(e) => console.log('Button Pressed! Sign up with Google button pressed!')}>
 													<span className="btn-inner--icon mr-1">
 														<img
 															alt="..."
@@ -119,7 +120,7 @@ class Register extends React.Component {
 												</FormGroup>
 												<div className="text-muted font-italic">
 													<small>
-														password strength:{' '}
+														Password strength:{' '}
 														<span className="text-success font-weight-700">
 															strong
 														</span>
@@ -139,7 +140,7 @@ class Register extends React.Component {
 																<span>
 																	I agree with the{' '}
 																	<a
-																		href="#pablo"
+																		href="/privacy"
 																		onClick={(e) => e.preventDefault()}>
 																		Privacy Policy
 																	</a>
@@ -150,9 +151,11 @@ class Register extends React.Component {
 												</Row>
 												<div className="text-center">
 													<Button
+														type="submit"
 														className="mt-4"
-														color="primary"
-														type="button">
+														color="darker"
+														type="button"
+														onClick={(e) => console.log('Creacte Account Button was pressed!')}>
 														Create account
 													</Button>
 												</div>

@@ -53,7 +53,7 @@ const CardScroll = (props) => {
 							...style,
 							background: `url(${src})`,
 						}}
-						alt="Design instpiration"
+						alt="Design inspiration"
 					/>
 				))}
 			</div>

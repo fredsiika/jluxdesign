@@ -18,20 +18,21 @@ import {
 } from 'reactstrap'
 
 // core components
-import NavbarBasic from '../../components/Navbars/NavbarBasic'
-import SimpleFooter from '../../components/Footers/SimpleFooter'
-import OverviewSection from '../../components/Containers/OverviewSection'
-import OurProcessSection from '../../components/Sections/OurProcessSection'
+import NavbarBasic from 'components/Navbars/NavbarBasic'
+import SimpleFooter from 'components/Footers/SimpleFooter'
+import OverviewSection from 'components/Containers/OverviewSection'
+import OurProcessSection from 'components/Sections/OurProcessSection'
 import LandingHero from 'components/Heros/LandingHero'
-import CTABanner from '../../components/Sections/CTABanner'
-import PlanningSection from '../../components/Sections/PlanningSection'
-import ServicesGrid from '../../components/Sections/ServicesGrid'
-import LogoBrandsGroup from '../../components/Icons/LogoBrands'
-import MaterialSelection from '../../components/Sections/MaterialSelection'
-import OurTeamSection from '../../components/Sections/OurTeamSection'
-import NewsletterSection from '../../components/Sections/NewsletterSection'
-import WorkCTAForm from '../../components/Sections/WorkCTAForm'
-import BenefitsGrid from '../../components/Features/BenefitsGrid'
+import CTABanner from 'components/Sections/CTABanner'
+import PlanningSection from 'components/Sections/PlanningSection'
+import ServicesGrid from 'components/Sections/ServicesGrid'
+import LogoBrandsGroup from 'components/Icons/LogoBrands'
+import MaterialSelection from 'components/Sections/MaterialSelection'
+import OurTeamSection from 'components/Sections/OurTeamSection'
+import NewsletterSection from 'components/Sections/NewsletterSection'
+import WorkCTAForm from 'components/Sections/WorkCTAForm'
+import BenefitsGrid from 'components/Features/BenefitsGrid'
+import PhotoGallery from 'components/Gallery/PhotoGallery'
 
 class Landing extends React.Component {
 	state = {}
@@ -58,6 +59,7 @@ class Landing extends React.Component {
 					<OurProcessSection />
 					<MaterialSelection />
 					<PlanningSection />
+					<PhotoGallery />
 					<OurTeamSection />
 					<CTABanner />
 					<NewsletterSection

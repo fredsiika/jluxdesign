@@ -120,11 +120,7 @@ export const Step3 = () => {
 								id="textarea"
 								rows="12"
 								ref={register}
-								defaultValue={textarea}
-								control={control}
-								error={!!errors?.textarea.message}
-								helperText={errors?.textarea.message}
-
+								defaultValue={sampleTextarea}
 							/>
 							<FormText color="muted" className="small">
 							</FormText>

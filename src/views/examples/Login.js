@@ -16,8 +16,8 @@ import {
 } from 'reactstrap'
 
 // core components
-import DemoNavbar from 'components/Navbars/DemoNavbar.js'
-import SimpleFooter from 'components/Footers/SimpleFooter.js'
+import NavbarBasic from 'components/Navbars/NavbarBasic'
+import SimpleFooter from 'components/Footers/SimpleFooter'
 
 class Login extends React.Component {
 	componentDidMount() {
@@ -28,10 +28,10 @@ class Login extends React.Component {
 	render() {
 		return (
 			<>
-				<DemoNavbar />
+				<NavbarBasic />
 				<main ref="main">
-					<section className="section section-shaped section-lg">
-						<div className="shape shape-style-1 bg-gradient-default">
+					<section className="section section-shaped section-lg hero-animation">
+						<div className="shape shape-style-1 bg-gradient-darker">
 							<span />
 							<span />
 							<span />
@@ -41,16 +41,16 @@ class Login extends React.Component {
 							<span />
 							<span />
 						</div>
-						<Container className="pt-lg-7">
+						<Container className="pt-lg-7 hero-animation-1">
 							<Row className="justify-content-center">
 								<Col lg="5">
-									<Card className="bg-secondary shadow border-0">
+									<Card className="bg-secondary shadow border-0 mt-9">
 										<CardHeader className="bg-white pb-5">
 											<div className="text-muted text-center mb-3">
-												<small>Sign in with</small>
+												<small className="lead text-gray">Sign in with</small>
 											</div>
 											<div className="btn-wrapper text-center">
-												<Button
+												{/* <Button
 													className="btn-neutral btn-icon"
 													color="default"
 													href="#pablo"
@@ -62,8 +62,9 @@ class Login extends React.Component {
 														/>
 													</span>
 													<span className="btn-inner--text">Github</span>
-												</Button>
+												</Button> */}
 												<Button
+													type="submit"
 													className="btn-neutral btn-icon ml-1"
 													color="default"
 													href="#pablo"
@@ -79,7 +80,7 @@ class Login extends React.Component {
 											</div>
 										</CardHeader>
 										<CardBody className="px-lg-5 py-lg-5">
-											<div className="text-center text-muted mb-4">
+											<div className="text-center lead text-gray mb-4">
 												<small>Or sign in with credentials</small>
 											</div>
 											<Form role="form">
@@ -122,8 +123,11 @@ class Login extends React.Component {
 												<div className="text-center">
 													<Button
 														className="my-4"
-														color="primary"
-														type="button">
+														color="darker"
+														type="submit"
+														onChange={(e) => console.log('Submit button clicked')}
+														block
+														>
 														Sign in
 													</Button>
 												</div>
@@ -142,8 +146,8 @@ class Login extends React.Component {
 										<Col className="text-right" xs="6">
 											<a
 												className="text-light"
-												href="#pablo"
-												onClick={(e) => e.preventDefault()}>
+												href="/register"
+												>
 												<small>Create new account</small>
 											</a>
 										</Col>
@@ -153,7 +157,7 @@ class Login extends React.Component {
 						</Container>
 					</section>
 				</main>
-				<SimpleFooter />
+				{/* <SimpleFooter /> */}
 			</>
 		)
 	}

@@ -1,16 +1,17 @@
+// eslint-disable-next-line
 import React from 'react'
 import styled from 'styled-components'
 import { Button, Container } from 'reactstrap'
 
-const primary = '#5e72e4'
-const darker = '#000'
-const disabled = '#212529'
+// const primary = '#5e72e4'
+// const darker = '#000'
+// const disabled = '#212529'
 const dark = '#212529'
 const white = '#fff'
 const success = '#2dce89'
-const warning = '#f5365c'
-const btnComplete = '#212529'
-const btnCurrent = '#5d72e4'
+// const warning = '#f5365c'
+// const btnComplete = '#212529'
+// const btnCurrent = '#5d72e4'
 
 const CircleO = (<img style={{ width: '20px', height: '20px'}}src={require('../../assets/svg/black/svg/circle-o.svg')}></img>)
 const CircleO_Filled = (<img style={{ width: '20px', height: '20px' }}src={require('../../assets/svg/black/svg/circle.svg')}></img>)
