@@ -27,6 +27,7 @@ import Step2 from './components/Forms/Step2'
 import Step3 from './components/Forms/Step3'
 import Result from './components/Forms/Result'
 import Complete from './components/Forms/Complete'
+import Success from 'components/Forms/ContactForm/Success'
 
 ReactDOM.render(
 	<>
@@ -111,6 +112,9 @@ ReactDOM.render(
 						exact
 						render={(props) => <Complete />}
 					/>
+					<Route exact path="/success/" render={(props) => <Success {...props} />} />
+					{/* <Route exact path="/thank-you/" render={(props) => <Thankyou {...props} />} /> */}
+
 					<Route
 						path="/404"
 						exact

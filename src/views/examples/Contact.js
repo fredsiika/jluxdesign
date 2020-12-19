@@ -3,14 +3,16 @@ import NavbarBasic from '../../components/Navbars/NavbarBasic'
 import SimpleFooter from '../../components/Footers/SimpleFooter'
 import HeroSecondary from 'components/Heros/HeroSecondary'
 import { Container, Col, Row } from 'reactstrap'
-import '../../components/Heros/HeroSection.css'
+import 'components/Heros/HeroSection.css'
+import ContactFormSimple from 'components/Forms/ContactForm/ContactFormSimple'
 
 const Contact = () => (
 	<>
 		<NavbarBasic />
 		<HeroSecondary />
 		<div className="main">
-			<div className="position-relative">
+			<ContactFormSimple />
+			<div className="position-relative mt-6 py-9">
 				<section className="section section-header">
 					<div className="points">
 						<div class="point point-floating-1"></div>
@@ -38,7 +40,7 @@ const Contact = () => (
 								</p>
 							</Col>
 							<Col md="6">
-								<div className="illustration">
+								<div className="illustration mb-5">
 									<p>Illustration</p>
 									<img
 										src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/illustration.jpg"
