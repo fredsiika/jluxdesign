@@ -100,7 +100,7 @@ class SimpleFooter extends React.Component {
 							</Col>
 						</Row>
 						<hr />
-						<Row className=" align-items-center justify-content-md-between">
+						<Row className="align-items-center justify-content-md-between">
 							<Col md="6">
 								<div className=" copyright">
 									Copyright© {new Date().getFullYear()}{' '}
@@ -111,7 +111,7 @@ class SimpleFooter extends React.Component {
 								</div>
 							</Col>
 							<Col md="6">
-								<Nav className=" nav-footer justify-content-end">
+								<Nav className="nav-footer justify-content-end">
 									<NavItem>
 										<NavLink href="#!" target="_blank">
 											Privacy
@@ -124,13 +124,13 @@ class SimpleFooter extends React.Component {
 									</NavItem>
 									<NavItem>
 										<NavLink
-											href="https://jluxdesign-blog.netlify.app"
-											target="_blank">
-											Blog
+											href="/contact"
+											target="_self">
+											Contact
 										</NavLink>
 									</NavItem>
 									<NavItem>
-										<NavLink href="/about" target="_blank">
+										<NavLink href="/about" target="_self">
 											About Us
 										</NavLink>
 									</NavItem>

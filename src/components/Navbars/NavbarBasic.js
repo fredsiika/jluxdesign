@@ -230,6 +230,7 @@ class NavbarBasic extends React.Component {
 									{/* End Services Tab */}
 
 									{/* Resources */}
+									{/*
 									<UncontrolledDropdown nav>
 										<DropdownToggle caret color="primary" nav>
 											<i className="ni ni-books d-lg-none mr-1" />
@@ -237,7 +238,7 @@ class NavbarBasic extends React.Component {
 										</DropdownToggle>
 
 										<DropdownMenu className="dropdown-menu-xl">
-											{/* Getting Started  */}
+
 											<div className="dropdown-menu-inner">
 												<Media
 													className="d-flex align-items-center"
@@ -295,6 +296,7 @@ class NavbarBasic extends React.Component {
 											</div>
 										</DropdownMenu>
 									</UncontrolledDropdown>
+									  */}
 									{/* End Resources */}
 
 									{/* About Us */}
@@ -309,7 +311,8 @@ class NavbarBasic extends React.Component {
 										<DropdownMenu className="dropdown-menu-lg">
 											{/* Getting Started  */}
 											<div className="dropdown-menu-inner">
-												<Media
+
+												{/* <Media
 													className="d-flex align-items-center"
 													href="/about"
 													target="_self">
@@ -325,8 +328,9 @@ class NavbarBasic extends React.Component {
 															Design.
 														</p>
 													</Media>
-												</Media>
-												<Media
+												</Media> */}
+
+												{/* <Media
 													className="d-flex align-items-center"
 													href="/about#our-team"
 													target="_self">
@@ -343,7 +347,7 @@ class NavbarBasic extends React.Component {
 															amazing team
 														</p>
 													</Media>
-												</Media>
+												</Media> */}
 												<Media
 													className="d-flex align-items-center"
 													href="/contact"

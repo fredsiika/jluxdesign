@@ -37,29 +37,33 @@ const HeroSecondary = (props) => {
 				</div>
 
 				<Container className="py-lg-md d-flex">
-					<div className="col px-0">
+					<div className="col pt-5 by-">
 						<Row>
-							<Col lg="6">
-								<h1 className="hero-animation display-3 title text-center">
-									Launch the perfect
-									<br /> home renovation project{' '}
-									<span className="desc">
-										Commercial and residential stone countertop solutions.
-									</span>
-								</h1>
+							<Col sm="12">
+									<div className="header__first">
+										<h1 className="display-1 hero-animation display-3 text-center">
+											Launch the perfect
+											<br /> home renovation project{' '}
+											<span className="desc text-left-lg">
+												Commercial and residential<br className="d-none-md" /> stone countertop solutions.
+											</span>
+										</h1>
 
-								<hr className="my-2" />
-								<p className="hero-animation-3 lead text-white text-center">
-									We'll help you locate, select and install your custom stone
-									contertop and backsplash.
-									<br />
-									Start designing your dream home.
-								</p>
-								<div className="hero-animation-ltr btn-wrapper text-center">
+
+									<hr className="my-2" />
+										<p className="hero-animation-3 lead text-white text-center">
+											We'll help you locate, select and install your<br className="d-none-md" /> custom stone
+											contertop and backsplash.
+											<br />
+											Start designing your dream home.
+										</p>
+								</div>
+
+								<div className="btn-wrapper text-center pt-4 mx-auto">
 									<Button
 										className="btn-icon mb-3 mb-sm-0"
 										color="success"
-										href="/services">
+										href="tel:+121420214">
 										<span className="btn-inner--icon mr-1">
 											<i className="fa fa-phone" />
 										</span>

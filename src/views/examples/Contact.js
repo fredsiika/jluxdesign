@@ -12,7 +12,7 @@ const Contact = () => (
 		<HeroSecondary />
 		<div className="main">
 			<ContactFormSimple />
-			<div className="position-relative mt-6 py-9">
+			{/* <div className="position-relative mt-6 py-9">
 				<section className="section section-header">
 					<div className="points">
 						<div class="point point-floating-1"></div>
@@ -53,7 +53,7 @@ const Contact = () => (
 					<div className="space-110"></div>
 					<div className="card card-plain"></div>
 				</section>
-			</div>
+			</div> */}
 		</div>
 		<SimpleFooter />
 	</>
